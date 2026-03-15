@@ -18,14 +18,15 @@ jobs:
       - name: 安裝與導出 Godot 專案
         uses: firebelley/godot-export@v6.0.0
         with:
-          # 修正後的網址：移除了 _headless 關鍵字
           godot_executable_download_url: https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_linux.x86_64.zip
           godot_export_templates_download_url: https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_export_templates.tpz
           presets_to_export: "Web"
-          relative_export_path: "index.html"
+          # 修正重點：這裡告訴機器人把導出的檔案直接放在這裡，不要另外建資料夾
+          relative_export_path: "." 
 
       - name: 部署到 GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          # 這裡也要對齊，讓部署機器人去正確的資料夾抓東西
           publish_dir: ./build/web
