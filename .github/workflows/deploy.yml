@@ -21,12 +21,15 @@ jobs:
           godot_executable_download_url: https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_linux.x86_64.zip
           godot_export_templates_download_url: https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_export_templates.tpz
           presets_to_export: "Web"
-          # 修正重點：這裡告訴機器人把導出的檔案直接放在這裡，不要另外建資料夾
-          relative_export_path: "." 
+          # 這裡我們強制指定一個名字叫 out 的資料夾
+          relative_export_path: "out"
+
+      - name: 檢查檔案在哪裡 (除錯用)
+        run: ls -R
 
       - name: 部署到 GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          # 嘗試改用這個路徑，這會抓取機器人導出後的所有檔案
-          publish_dir: ./build/web
+          # 修正重點：對齊上面的路徑，去 build/out 搬東西
+          publish_dir: ./build/out
