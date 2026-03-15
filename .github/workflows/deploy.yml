@@ -28,5 +28,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          # 這裡也要對齊，讓部署機器人去正確的資料夾抓東西
+          # 嘗試改用這個路徑，這會抓取機器人導出後的所有檔案
           publish_dir: ./build/web
