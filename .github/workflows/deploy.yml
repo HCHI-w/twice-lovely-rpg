@@ -1,0 +1,35 @@
+# 機器人的名字
+name: "自動部署遊戲到網頁"
+
+# 觸發條件：當我把程式碼 "push" (上傳) 到 "main" 分支時執行
+on:
+  push:
+    branches:
+      - main
+
+# 機器人要做的具體工作
+jobs:
+  export_game:
+    runs-on: ubuntu-latest  # 使用 Linux 系統當作虛擬廚房
+    permissions:
+      contents: write       # 給予機器人寫入檔案的權限
+    
+    steps:
+      # 1. 把你的程式碼從倉庫拿出來
+      - name: 檢查程式碼
+        uses: actions/checkout@v4
+
+      # 2. 下載並安裝 Godot 引擎 (使用 4.x 版本)
+      - name: 安裝 Godot
+        uses: firebelley/godot-export@v6.0.0
+        with:
+          godot_executable_download_url: https://downloads.tuxfamily.org/godotengine/4.3/Godot_v4.3-stable_linux_headless.64.zip
+          export_preset_name: Web     # 必須跟你 Godot 導出面板裡的名字一模一樣
+          export_path: index.html     # 輸出的主檔名
+
+      # 3. 把做好的「便當」(網頁檔) 推送到 github-pages 分支
+      - name: 部署到 GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/web    # 機器人導出後的資料夾位置
