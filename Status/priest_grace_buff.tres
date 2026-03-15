@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="BuffData" format=3 uid="uid://w6midy0ypjgy"]
+
+[ext_resource type="Script" uid="uid://o5byigwq6jju" path="res://Status/BuffData.gd" id="1_ay0kp"]
+
+[resource]
+script = ExtResource("1_ay0kp")
+buff_id = "priest_grace_buff"
+name = "全數值小幅提升"
+description = "全數值小幅提升"
+stats_flat = {
+"def": 5,
+"dex": 5,
+"hp": 0,
+"int": 5,
+"luk": 5,
+"mp": 0,
+"str": 5
+}
+metadata/_custom_type_script = "uid://o5byigwq6jju"

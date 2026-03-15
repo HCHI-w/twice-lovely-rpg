@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://cr4rtdx7l64lj"]
+
+[ext_resource type="Theme" uid="uid://bbn6ayd5lv4e2" path="res://Fonts/ThemeFonts.tres" id="1_nvalr"]
+[ext_resource type="Script" uid="uid://c63bwri5phrp4" path="res://Scenes/PlayerStatusItem.gd" id="1_vslfr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vslfr"]
+bg_color = Color(0.22, 0.22, 0.22, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nvalr"]
+bg_color = Color(0.7607843, 0.23529412, 0.23529412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q3mxq"]
+bg_color = Color(0.21960784, 0.21960784, 0.21960784, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gdsav"]
+bg_color = Color(0.101960786, 0.5411765, 0.83137256, 1)
+
+[node name="PlayerStatusItem" type="HBoxContainer" unique_id=1064158033]
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+theme = ExtResource("1_nvalr")
+script = ExtResource("1_vslfr")
+
+[node name="MainGrid" type="GridContainer" parent="." unique_id=1836059425]
+layout_mode = 2
+columns = 2
+
+[node name="NameLabel" type="Label" parent="MainGrid" unique_id=347835534]
+layout_mode = 2
+
+[node name="Empty" type="Control" parent="MainGrid" unique_id=774385098]
+layout_mode = 2
+
+[node name="HPBar" type="ProgressBar" parent="MainGrid" unique_id=1260163944]
+custom_minimum_size = Vector2(150, 18)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/background = SubResource("StyleBoxFlat_vslfr")
+theme_override_styles/fill = SubResource("StyleBoxFlat_nvalr")
+step = 1.0
+show_percentage = false
+
+[node name="HPLabel" type="Label" parent="MainGrid" unique_id=324718333]
+layout_mode = 2
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="MPBar" type="ProgressBar" parent="MainGrid" unique_id=948722038]
+custom_minimum_size = Vector2(150, 18)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/background = SubResource("StyleBoxFlat_q3mxq")
+theme_override_styles/fill = SubResource("StyleBoxFlat_gdsav")
+step = 1.0
+show_percentage = false
+
+[node name="MPLabel" type="Label" parent="MainGrid" unique_id=720106990]
+layout_mode = 2

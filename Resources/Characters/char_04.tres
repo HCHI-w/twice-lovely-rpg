@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://c11y214q5chfh"]
+
+[ext_resource type="Texture2D" uid="uid://be5re8s0e32l" path="res://0Picture/Character_pic/Sana.png" id="1_8ii43"]
+[ext_resource type="Script" uid="uid://c23f8i5d0ig5d" path="res://Resources/Characters/CharacterData.gd" id="1_twjwk"]
+[ext_resource type="SpriteFrames" uid="uid://cg8wg1fm6874r" path="res://0Animations/Sana.tres" id="2_tnyi5"]
+[ext_resource type="Texture2D" uid="uid://dvc1dstbt22il" path="res://0Picture/CharacterIcon/Sana_icon.png" id="3_h18w6"]
+
+[resource]
+script = ExtResource("1_twjwk")
+id = "Sana"
+display_name = "Sana"
+base_hp = 60
+base_mp = 16
+base_str = 6
+base_def = 6
+base_int = 7
+base_dex = 13
+base_luk = 18
+battle_texture = ExtResource("1_8ii43")
+character_icon = ExtResource("3_h18w6")
+description = "幸運數值偏高，爆擊機率偏高"
+camp_animations = ExtResource("2_tnyi5")
+metadata/_custom_type_script = "uid://c23f8i5d0ig5d"

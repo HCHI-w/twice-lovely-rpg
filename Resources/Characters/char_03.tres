@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://cmcaq1b70c727"]
+
+[ext_resource type="Script" uid="uid://c23f8i5d0ig5d" path="res://Resources/Characters/CharacterData.gd" id="1_4ohqo"]
+[ext_resource type="Texture2D" uid="uid://bfjse4x367gjc" path="res://0Picture/Character_pic/Momo.png" id="1_s7crl"]
+[ext_resource type="SpriteFrames" uid="uid://bdf8qtuh3njd5" path="res://0Animations/Momo.tres" id="2_kxd6c"]
+[ext_resource type="Texture2D" uid="uid://cd8mdeyt5f0pv" path="res://0Picture/CharacterIcon/Momo_icon.png" id="3_qxbky"]
+
+[resource]
+script = ExtResource("1_4ohqo")
+id = "Momo"
+display_name = "Momo"
+base_hp = 70
+base_mp = 10
+base_str = 20
+base_def = 9
+base_int = 4
+base_dex = 12
+base_luk = 5
+battle_texture = ExtResource("1_s7crl")
+character_icon = ExtResource("3_qxbky")
+description = "物理攻擊最高"
+camp_animations = ExtResource("2_kxd6c")
+metadata/_custom_type_script = "uid://c23f8i5d0ig5d"

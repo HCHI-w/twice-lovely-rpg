@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://crhiyeqefpaxf"]
+
+[ext_resource type="Resource" uid="uid://df0w542e6kel6" path="res://Data/Collectibles/ketchup_common.tres" id="1_5oh75"]
+[ext_resource type="Texture2D" uid="uid://bje4464an6efn" path="res://0Picture/Enemy_pic/ketchup.png" id="1_b4hkx"]
+[ext_resource type="Script" uid="uid://tsqw8d1qr6ck" path="res://Resources/Enemy/EnemyData.gd" id="1_kbx4x"]
+[ext_resource type="Resource" uid="uid://bnbtrt5ird4s" path="res://Data/Collectibles/ketchup_rare.tres" id="2_b4hkx"]
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="2_rvsrf"]
+[ext_resource type="Resource" uid="uid://iokfpv8o4cfm" path="res://Resources/Skill/ketchup_shoot.tres" id="3_emqhp"]
+
+[resource]
+script = ExtResource("1_kbx4x")
+enemy_id = "ketchup"
+name = "番茄醬"
+base_hp = 80
+base_mp = 35
+base_str = 10
+base_def = 6
+base_int = 12
+base_dex = 16
+base_luk = 10
+skill_list = Array[ExtResource("2_rvsrf")]([ExtResource("3_emqhp")])
+battle_texture = ExtResource("1_b4hkx")
+drop_common = ExtResource("1_5oh75")
+drop_rare = ExtResource("2_b4hkx")
+metadata/_custom_type_script = "uid://tsqw8d1qr6ck"

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="ClassData" format=3 uid="uid://c83e0ga8rriop"]
+
+[ext_resource type="Script" uid="uid://d3vo0qru2isr2" path="res://Resources/Classes/ClassData.gd" id="1_udv32"]
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="2_0xw5w"]
+[ext_resource type="Resource" uid="uid://27n82qxagswc" path="res://Resources/Skill/ranger_shoot.tres" id="3_vdlnw"]
+
+[resource]
+script = ExtResource("1_udv32")
+class_id = "ranger"
+display_name = "遊俠"
+hp_multiplier = 1.1
+mp_multiplier = 0.8
+str_multiplier = 1.8
+def_multiplier = 0.8
+int_multiplier = 0.8
+dex_multiplier = 1.7
+luk_multiplier = 1.5
+description = "技能為施放物理攻擊
+【營地 buff】物理攻擊 +10、敏捷 +10、幸運 +5 (單人)
+(技能、營地 buff 效果皆持續 3 回合)"
+skill_list = Array[ExtResource("2_0xw5w")]([ExtResource("3_vdlnw")])
+camp_buff_ids = Array[String](["ranger_focus"])
+metadata/_custom_type_script = "uid://d3vo0qru2isr2"

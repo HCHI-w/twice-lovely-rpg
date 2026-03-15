@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://4doid1b4bgjn"]
+
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="1_r4q1y"]
+
+[resource]
+script = ExtResource("1_r4q1y")
+attack_type = 1
+effect_type = 1
+skill_name = "狗狗好朋友"
+mp_cost = 2
+power = 20
+target_type = "all_allies"
+description = "被有活力的狗狗包圍，也跟著有活力是很正常的吧
+恢復全體隊友部分生命值↑"
+metadata/_custom_type_script = "uid://c5uq70lmdvwfw"

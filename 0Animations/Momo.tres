@@ -1,0 +1,56 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bdf8qtuh3njd5"]
+
+[ext_resource type="Texture2D" uid="uid://ly6qmytj8se1" path="res://0Picture/CharacterRecline/Momo_recline_00.png" id="1_8dce7"]
+[ext_resource type="Texture2D" uid="uid://cuw0381g23ufh" path="res://0Picture/CharacterRecline/Momo_recline_01.png" id="2_hib32"]
+[ext_resource type="Texture2D" uid="uid://dgowsxkneaq4a" path="res://0Picture/CharacterRecline/Momo_recline_02.png" id="3_t8guq"]
+[ext_resource type="Texture2D" uid="uid://dcxwo1kvamr0u" path="res://0Picture/CharacterRecline/Momo_recline_03.png" id="4_s1epm"]
+[ext_resource type="Texture2D" uid="uid://bmoj7qij7vbhs" path="res://0Picture/CharacterStretch/Momo_stretch_00.png" id="5_j25mh"]
+[ext_resource type="Texture2D" uid="uid://d3n6lddkp66n0" path="res://0Picture/CharacterStretch/Momo_stretch_01.png" id="6_0n7ff"]
+[ext_resource type="Texture2D" uid="uid://cngpt56wi01yo" path="res://0Picture/CharacterStretch/Momo_stretch_02.png" id="7_6w7po"]
+[ext_resource type="Texture2D" uid="uid://b8l5d1cikru8b" path="res://0Picture/CharacterStretch/Momo_stretch_03.png" id="8_d38qs"]
+[ext_resource type="Texture2D" uid="uid://bl8llw7w6dxba" path="res://0Picture/CharacterStretch/Momo_stretch_04.png" id="9_kfjmd"]
+[ext_resource type="Texture2D" uid="uid://cq6k1uh5ahvyx" path="res://0Picture/CharacterStretch/Momo_stretch_05.png" id="10_pwdor"]
+
+[resource]
+resource_name = "Momo"
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8dce7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_hib32")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_t8guq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_s1epm")
+}],
+"loop": true,
+"name": &"recline",
+"speed": 1.3
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_j25mh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0n7ff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6w7po")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_d38qs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_kfjmd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_pwdor")
+}],
+"loop": true,
+"name": &"stretch",
+"speed": 1.3
+}]

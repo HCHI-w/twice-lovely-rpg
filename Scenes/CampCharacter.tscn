@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://by4j7ok573c0x"]
+
+[ext_resource type="Script" uid="uid://y010dfkia22l" path="res://Scenes/CampCharacter.gd" id="1_jb3bp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jb3bp"]
+size = Vector2(243, 256.625)
+
+[node name="CampCharacter" type="CharacterBody2D" unique_id=2007563963]
+script = ExtResource("1_jb3bp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=999296952]
+scale = Vector2(1.2, 1.2)
+animation = &""
+offset = Vector2(0, -10)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=780524486]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1386870312]
+shape = SubResource("RectangleShape2D_jb3bp")
+
+[node name="BubbleAnchor" type="Marker2D" parent="." unique_id=174378979]
+position = Vector2(10, -90)

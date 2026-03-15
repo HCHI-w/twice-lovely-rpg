@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://cpppi4ak2enwf"]
+
+[ext_resource type="Script" uid="uid://c23f8i5d0ig5d" path="res://Resources/Characters/CharacterData.gd" id="1_3t38r"]
+[ext_resource type="Texture2D" uid="uid://cf0ttoigy2pxx" path="res://0Picture/Character_pic/Mina.png" id="1_r3b71"]
+[ext_resource type="SpriteFrames" uid="uid://bs3788gm8wkn1" path="res://0Animations/Mina.tres" id="2_dmvxx"]
+[ext_resource type="Texture2D" uid="uid://6dr5ua7sh28q" path="res://0Picture/CharacterIcon/Mina_icon.png" id="3_rcgv0"]
+
+[resource]
+script = ExtResource("1_3t38r")
+id = "Mina"
+display_name = "Mina"
+base_hp = 60
+base_str = 5
+base_def = 5
+base_int = 20
+base_dex = 13
+base_luk = 7
+battle_texture = ExtResource("1_r3b71")
+character_icon = ExtResource("3_rcgv0")
+description = "魔力數值最高，魔法攻擊最高"
+camp_animations = ExtResource("2_dmvxx")
+metadata/_custom_type_script = "uid://c23f8i5d0ig5d"

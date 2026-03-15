@@ -1,0 +1,338 @@
+[gd_scene format=3 uid="uid://ccqn2y4ifxh5t"]
+
+[ext_resource type="Script" uid="uid://cus7r46hu4gxd" path="res://Scenes/TitleScreen.gd" id="1_uebgo"]
+[ext_resource type="Theme" uid="uid://bbn6ayd5lv4e2" path="res://Fonts/ThemeFonts.tres" id="1_vmg2h"]
+[ext_resource type="Texture2D" uid="uid://c2vw6hpystnar" path="res://0Picture/Logo.png" id="3_8l4an"]
+[ext_resource type="PackedScene" uid="uid://cnjdeb2q3ray4" path="res://Scenes/CharacterIcon.tscn" id="4_awp6w"]
+[ext_resource type="Texture2D" uid="uid://bb8gw6kyxyqwe" path="res://0Picture/CharacterBreathing/64pxChaeyoung_up.png" id="5_qu6cc"]
+[ext_resource type="Texture2D" uid="uid://ccn8qlq43xabh" path="res://0Picture/CharacterBreathing/64pxDahyun_up.png" id="6_4hokt"]
+[ext_resource type="Texture2D" uid="uid://djemuok543t6e" path="res://0Picture/CharacterBreathing/64pxChaeyoung_dn.png" id="6_i5sur"]
+[ext_resource type="Texture2D" uid="uid://bu8qvoqsxqoga" path="res://0Picture/CharacterBreathing/64pxTuzyu_up.png" id="7_swiah"]
+[ext_resource type="Texture2D" uid="uid://cm7o5lukjrwbd" path="res://0Picture/CharacterBreathing/64pxDahyun_dn.png" id="8_5c2t2"]
+[ext_resource type="Texture2D" uid="uid://ctcn73f7pvi85" path="res://0Picture/CharacterBreathing/64pxSana_up.png" id="8_75epk"]
+[ext_resource type="Texture2D" uid="uid://c3r0sf51p072v" path="res://0Picture/CharacterBreathing/64pxMina_up.png" id="9_3ah5x"]
+[ext_resource type="Texture2D" uid="uid://gpummy1v0cui" path="res://0Picture/CharacterBreathing/64pxMomo_up.png" id="10_jhb10"]
+[ext_resource type="Texture2D" uid="uid://h5dcxw0c6p0b" path="res://0Picture/CharacterBreathing/64pxTuzyu_dn.png" id="10_qfyqv"]
+[ext_resource type="Texture2D" uid="uid://biuw7lcpqd2y1" path="res://0Picture/CharacterBreathing/64pxNayeon_up.png" id="11_deutk"]
+[ext_resource type="Texture2D" uid="uid://cwio2y42mman8" path="res://0Picture/CharacterBreathing/64pxMina_dn.png" id="12_2jiiu"]
+[ext_resource type="Texture2D" uid="uid://bb030vly0jd1d" path="res://0Picture/CharacterBreathing/64pxJeongyeon_up.png" id="12_fvr0n"]
+[ext_resource type="Texture2D" uid="uid://bwqlvqipn3yga" path="res://0Picture/CharacterBreathing/64pxJiyho_up.png" id="13_o6bmn"]
+[ext_resource type="Texture2D" uid="uid://b43s4tuvtcwgw" path="res://0Picture/CharacterBreathing/64pxSana_dn.png" id="14_qu6cc"]
+[ext_resource type="Texture2D" uid="uid://h5yienxc57qw" path="res://0Picture/CharacterBreathing/64pxMomo_dn.png" id="16_swiah"]
+[ext_resource type="Texture2D" uid="uid://cu5hgerqk347a" path="res://0Picture/CharacterBreathing/64pxNayeon_dn.png" id="18_3ah5x"]
+[ext_resource type="Texture2D" uid="uid://dyccdfkgkmoww" path="res://0Picture/CharacterBreathing/64pxJeongyeon_dn.png" id="20_deutk"]
+[ext_resource type="Texture2D" uid="uid://cahxatqggy0t5" path="res://0Picture/CharacterBreathing/64pxJiyho_dn.png" id="22_o6bmn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7whhf"]
+resource_name = "Chaeyoung"
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_qu6cc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_i5sur")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.8
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5c2t2"]
+resource_name = "Dahyun"
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_4hokt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5c2t2")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.8
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bawyk"]
+resource_name = "Tuzyu"
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_swiah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_qfyqv")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.8
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qfyqv"]
+resource_name = "Mina"
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_3ah5x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_2jiiu")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.8
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2jiiu"]
+resource_name = "Sana"
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_75epk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_qu6cc")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.8
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qu6cc"]
+resource_name = "Momo"
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_jhb10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_swiah")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.8
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_swiah"]
+resource_name = "Nayeon"
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_deutk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_3ah5x")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.8
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3ah5x"]
+resource_name = "Jeongyeon"
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_fvr0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_deutk")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.8
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_deutk"]
+resource_name = "Jiyho"
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_o6bmn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_o6bmn")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.8
+}]
+
+[node name="TitleScreen" type="Control" unique_id=489346516]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_vmg2h")
+script = ExtResource("1_uebgo")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=893774374]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.98, 0.97183335, 0.96040004, 1)
+
+[node name="SafeArea" type="MarginContainer" parent="." unique_id=1618820919]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="MainVBox" type="VBoxContainer" parent="SafeArea" unique_id=422420055]
+layout_mode = 2
+alignment = 1
+
+[node name="LogoRect" type="TextureRect" parent="SafeArea/MainVBox" unique_id=1806569537]
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 2
+size_flags_vertical = 10
+texture = ExtResource("3_8l4an")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CharacterGrid" type="GridContainer" parent="SafeArea/MainVBox" unique_id=1048612471]
+custom_minimum_size = Vector2(100, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+size_flags_stretch_ratio = 2.0
+columns = 9
+
+[node name="CharacterIcon" parent="SafeArea/MainVBox/CharacterGrid" unique_id=1775284072 instance=ExtResource("4_awp6w")]
+custom_minimum_size = Vector2(60, 80)
+layout_mode = 2
+size_flags_vertical = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AnimatedSprite2D" parent="SafeArea/MainVBox/CharacterGrid/CharacterIcon" index="0" unique_id=864414961]
+sprite_frames = SubResource("SpriteFrames_7whhf")
+autoplay = "idle"
+
+[node name="CharacterIcon2" parent="SafeArea/MainVBox/CharacterGrid" unique_id=1355102106 instance=ExtResource("4_awp6w")]
+custom_minimum_size = Vector2(60, 80)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AnimatedSprite2D" parent="SafeArea/MainVBox/CharacterGrid/CharacterIcon2" index="0" unique_id=864414961]
+sprite_frames = SubResource("SpriteFrames_5c2t2")
+autoplay = "idle"
+
+[node name="CharacterIcon3" parent="SafeArea/MainVBox/CharacterGrid" unique_id=2061745169 instance=ExtResource("4_awp6w")]
+custom_minimum_size = Vector2(60, 80)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AnimatedSprite2D" parent="SafeArea/MainVBox/CharacterGrid/CharacterIcon3" index="0" unique_id=864414961]
+sprite_frames = SubResource("SpriteFrames_bawyk")
+autoplay = "idle"
+
+[node name="CharacterIcon4" parent="SafeArea/MainVBox/CharacterGrid" unique_id=335330971 instance=ExtResource("4_awp6w")]
+custom_minimum_size = Vector2(60, 80)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AnimatedSprite2D" parent="SafeArea/MainVBox/CharacterGrid/CharacterIcon4" index="0" unique_id=864414961]
+sprite_frames = SubResource("SpriteFrames_qfyqv")
+autoplay = "idle"
+
+[node name="CharacterIcon5" parent="SafeArea/MainVBox/CharacterGrid" unique_id=1811281547 instance=ExtResource("4_awp6w")]
+custom_minimum_size = Vector2(60, 80)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AnimatedSprite2D" parent="SafeArea/MainVBox/CharacterGrid/CharacterIcon5" index="0" unique_id=864414961]
+sprite_frames = SubResource("SpriteFrames_2jiiu")
+autoplay = "idle"
+
+[node name="CharacterIcon6" parent="SafeArea/MainVBox/CharacterGrid" unique_id=1503134012 instance=ExtResource("4_awp6w")]
+custom_minimum_size = Vector2(60, 80)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AnimatedSprite2D" parent="SafeArea/MainVBox/CharacterGrid/CharacterIcon6" index="0" unique_id=864414961]
+sprite_frames = SubResource("SpriteFrames_qu6cc")
+autoplay = "idle"
+
+[node name="CharacterIcon7" parent="SafeArea/MainVBox/CharacterGrid" unique_id=2075863486 instance=ExtResource("4_awp6w")]
+custom_minimum_size = Vector2(60, 80)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AnimatedSprite2D" parent="SafeArea/MainVBox/CharacterGrid/CharacterIcon7" index="0" unique_id=864414961]
+sprite_frames = SubResource("SpriteFrames_swiah")
+autoplay = "idle"
+
+[node name="CharacterIcon8" parent="SafeArea/MainVBox/CharacterGrid" unique_id=1956167992 instance=ExtResource("4_awp6w")]
+custom_minimum_size = Vector2(60, 80)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AnimatedSprite2D" parent="SafeArea/MainVBox/CharacterGrid/CharacterIcon8" index="0" unique_id=864414961]
+sprite_frames = SubResource("SpriteFrames_3ah5x")
+autoplay = "idle"
+
+[node name="CharacterIcon9" parent="SafeArea/MainVBox/CharacterGrid" unique_id=707089846 instance=ExtResource("4_awp6w")]
+custom_minimum_size = Vector2(60, 80)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AnimatedSprite2D" parent="SafeArea/MainVBox/CharacterGrid/CharacterIcon9" index="0" unique_id=864414961]
+sprite_frames = SubResource("SpriteFrames_deutk")
+autoplay = "idle"
+
+[node name="MenuButtons" type="VBoxContainer" parent="SafeArea/MainVBox" unique_id=2074863800]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="StartButton" type="Button" parent="SafeArea/MainVBox/MenuButtons" unique_id=635389768]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 18
+text = "START"
+
+[node name="CollectiblesButton" type="Button" parent="SafeArea/MainVBox/MenuButtons" unique_id=1176274267]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 18
+text = "物品圖鑑"
+
+[node name="MemoLabel" type="Label" parent="SafeArea/MainVBox/MenuButtons" unique_id=863077054]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+theme_override_colors/font_color = Color(0.39, 0.39, 0.39, 1)
+theme_override_font_sizes/font_size = 16
+text = "- 請搭配喜歡的TWICE專輯一起遊玩 -"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[editable path="SafeArea/MainVBox/CharacterGrid/CharacterIcon"]
+[editable path="SafeArea/MainVBox/CharacterGrid/CharacterIcon2"]
+[editable path="SafeArea/MainVBox/CharacterGrid/CharacterIcon3"]
+[editable path="SafeArea/MainVBox/CharacterGrid/CharacterIcon4"]
+[editable path="SafeArea/MainVBox/CharacterGrid/CharacterIcon5"]
+[editable path="SafeArea/MainVBox/CharacterGrid/CharacterIcon6"]
+[editable path="SafeArea/MainVBox/CharacterGrid/CharacterIcon7"]
+[editable path="SafeArea/MainVBox/CharacterGrid/CharacterIcon8"]
+[editable path="SafeArea/MainVBox/CharacterGrid/CharacterIcon9"]

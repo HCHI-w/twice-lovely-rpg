@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CollectibleData" format=3 uid="uid://df0w542e6kel6"]
+
+[ext_resource type="Texture2D" uid="uid://hvuurhf80r0u" path="res://Data/Collectibles/ketchup_common.png" id="1_oll7n"]
+[ext_resource type="Script" uid="uid://cennh40dcrbxh" path="res://Data/Collectibles/CollectibleData.gd" id="1_qrwoe"]
+
+[resource]
+script = ExtResource("1_qrwoe")
+id = "ketchup_common"
+display_name = "包裝紙 (空)"
+description = "被開封過的番茄醬包"
+icon = ExtResource("1_oll7n")
+metadata/_custom_type_script = "uid://cennh40dcrbxh"

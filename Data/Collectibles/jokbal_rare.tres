@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CollectibleData" format=3 uid="uid://bcxyfmpjsrvpb"]
+
+[ext_resource type="Texture2D" uid="uid://ddmslu78pcjv3" path="res://0Picture/Enemy_pic/jokbal.png" id="1_07t7p"]
+[ext_resource type="Script" uid="uid://cennh40dcrbxh" path="res://Data/Collectibles/CollectibleData.gd" id="1_gao74"]
+
+[resource]
+script = ExtResource("1_gao74")
+id = "jokbal_rare"
+display_name = "紅燒豬腳"
+description = "燉煮的十分入味，滿滿的膠原蛋白"
+icon = ExtResource("1_07t7p")
+metadata/_custom_type_script = "uid://cennh40dcrbxh"

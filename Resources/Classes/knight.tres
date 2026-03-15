@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="ClassData" format=3 uid="uid://y04l1q1ma80e"]
+
+[ext_resource type="Script" uid="uid://d3vo0qru2isr2" path="res://Resources/Classes/ClassData.gd" id="1_c8qot"]
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="2_bif6o"]
+[ext_resource type="Resource" uid="uid://c7mhg421yhlk" path="res://Resources/Skill/knight_command.tres" id="3_gk5qd"]
+
+[resource]
+script = ExtResource("1_c8qot")
+class_id = "knight"
+display_name = "騎士"
+hp_multiplier = 1.9
+mp_multiplier = 0.7
+str_multiplier = 1.4
+def_multiplier = 2.5
+int_multiplier = 0.6
+dex_multiplier = 0.5
+luk_multiplier = 0.9
+description = "技能為施放 buff，效果為是防禦數值提升 (全體)
+【營地 buff】防禦 +20、物理攻擊 +5 (單人)
+(技能、buff 效果皆持續 3 回合)"
+skill_list = Array[ExtResource("2_bif6o")]([ExtResource("3_gk5qd")])
+camp_buff_ids = Array[String](["knight_guard"])
+metadata/_custom_type_script = "uid://d3vo0qru2isr2"

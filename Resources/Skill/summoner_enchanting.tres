@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://yjygtq1tgaf8"]
+
+[ext_resource type="Resource" uid="uid://b43pcu6rgksk2" path="res://Status/debuff_poison.tres" id="1_ggji3"]
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="1_oyi5s"]
+
+[resource]
+script = ExtResource("1_oyi5s")
+attack_type = 1
+skill_name = "元素召喚！"
+mp_cost = 3
+power = 15
+target_type = "all_enemies"
+description = "活用各式元素，猶如化學般引發爆炸造成傷害
+(造成持續傷害 3 回合)"
+buff_data = ExtResource("1_ggji3")
+metadata/_custom_type_script = "uid://c5uq70lmdvwfw"

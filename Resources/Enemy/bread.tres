@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://c1a2nlc6lm36j"]
+
+[ext_resource type="Texture2D" uid="uid://cn15swpgl5wsm" path="res://0Picture/Enemy_pic/bread.png" id="1_dj5pl"]
+[ext_resource type="Resource" uid="uid://jvvwaqea471q" path="res://Data/Collectibles/bread_common.tres" id="1_qbjih"]
+[ext_resource type="Script" uid="uid://tsqw8d1qr6ck" path="res://Resources/Enemy/EnemyData.gd" id="1_xohkw"]
+[ext_resource type="Resource" uid="uid://px7mh4ls50ua" path="res://Data/Collectibles/bread_rare.tres" id="2_dj5pl"]
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="2_vuic7"]
+[ext_resource type="Resource" uid="uid://db4wpa7fl8hq0" path="res://Resources/Skill/bread_punch.tres" id="3_6cnnq"]
+
+[resource]
+script = ExtResource("1_xohkw")
+enemy_id = "bread"
+name = "普通麵包"
+base_hp = 160
+base_mp = 25
+base_str = 8
+base_def = 16
+base_int = 8
+base_dex = 6
+base_luk = 10
+skill_list = Array[ExtResource("2_vuic7")]([ExtResource("3_6cnnq")])
+battle_texture = ExtResource("1_dj5pl")
+drop_common = ExtResource("1_qbjih")
+drop_rare = ExtResource("2_dj5pl")
+metadata/_custom_type_script = "uid://tsqw8d1qr6ck"

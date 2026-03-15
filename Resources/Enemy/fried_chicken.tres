@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://6hu6cdm3jy51"]
+
+[ext_resource type="Script" uid="uid://tsqw8d1qr6ck" path="res://Resources/Enemy/EnemyData.gd" id="1_8w0cq"]
+[ext_resource type="Texture2D" uid="uid://kuu0hq1w0y8n" path="res://0Picture/Enemy_pic/fried_chicken.png" id="1_817cl"]
+[ext_resource type="Resource" uid="uid://chyxj4pototw1" path="res://Data/Collectibles/fried_chicken_common.tres" id="1_bam67"]
+[ext_resource type="Resource" uid="uid://cy2jvhqj3f2cv" path="res://Data/Collectibles/fried_chicken_rare.tres" id="2_817cl"]
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="2_cv5e2"]
+[ext_resource type="Resource" uid="uid://2vhq511dhcvd" path="res://Resources/Skill/fried_chicken_party.tres" id="3_3hmws"]
+
+[resource]
+script = ExtResource("1_8w0cq")
+enemy_id = "fried_chicken"
+name = "炸雞桶"
+base_hp = 180
+base_mp = 30
+base_str = 18
+base_def = 12
+base_int = 10
+base_dex = 14
+base_luk = 20
+skill_list = Array[ExtResource("2_cv5e2")]([ExtResource("3_3hmws")])
+battle_texture = ExtResource("1_817cl")
+drop_common = ExtResource("1_bam67")
+drop_rare = ExtResource("2_817cl")
+metadata/_custom_type_script = "uid://tsqw8d1qr6ck"

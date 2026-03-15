@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://ptr3dmec3kv2"]
+
+[ext_resource type="Script" uid="uid://tsqw8d1qr6ck" path="res://Resources/Enemy/EnemyData.gd" id="1_866jm"]
+[ext_resource type="Resource" uid="uid://bwb466bpvtdkb" path="res://Data/Collectibles/jokbal_common.tres" id="1_jjpun"]
+[ext_resource type="Texture2D" uid="uid://ddmslu78pcjv3" path="res://0Picture/Enemy_pic/jokbal.png" id="1_qk1rc"]
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="2_1hwcb"]
+[ext_resource type="Resource" uid="uid://bcxyfmpjsrvpb" path="res://Data/Collectibles/jokbal_rare.tres" id="2_qk1rc"]
+[ext_resource type="Resource" uid="uid://cje1pkpyofdvb" path="res://Resources/Skill/jokbal_punch.tres" id="3_uunqf"]
+
+[resource]
+script = ExtResource("1_866jm")
+enemy_id = "jokbal"
+name = "豬腳"
+base_hp = 200
+base_mp = 15
+base_str = 16
+base_def = 20
+base_int = 4
+base_dex = 6
+base_luk = 8
+skill_list = Array[ExtResource("2_1hwcb")]([ExtResource("3_uunqf")])
+battle_texture = ExtResource("1_qk1rc")
+drop_common = ExtResource("1_jjpun")
+drop_rare = ExtResource("2_qk1rc")
+metadata/_custom_type_script = "uid://tsqw8d1qr6ck"

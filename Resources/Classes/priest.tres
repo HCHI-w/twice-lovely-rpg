@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="ClassData" format=3 uid="uid://cr8epbbat0m63"]
+
+[ext_resource type="Script" uid="uid://d3vo0qru2isr2" path="res://Resources/Classes/ClassData.gd" id="1_jsnl8"]
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="2_gjprd"]
+[ext_resource type="Resource" uid="uid://dc8o4q4t4kep1" path="res://Resources/Skill/priest_grace.tres" id="3_sct3t"]
+
+[resource]
+script = ExtResource("1_jsnl8")
+class_id = "priest"
+display_name = "祭司"
+hp_multiplier = 1.1
+mp_multiplier = 1.8
+def_multiplier = 0.8
+int_multiplier = 1.8
+dex_multiplier = 0.6
+luk_multiplier = 1.4
+description = "技能可以把瀕死的隊友叫起來
+【營地 buff】生命值 +10、魔法攻擊 +10、幸運 +5 (單人)
+(技能、營地 buff 效果皆持續 3 回合)"
+skill_list = Array[ExtResource("2_gjprd")]([ExtResource("3_sct3t")])
+camp_buff_ids = Array[String](["priest_bless"])
+metadata/_custom_type_script = "uid://d3vo0qru2isr2"

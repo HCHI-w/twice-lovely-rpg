@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CollectibleData" format=3 uid="uid://d353l2dpb63cq"]
+
+[ext_resource type="Texture2D" uid="uid://d1uww8flxsc2n" path="res://Data/Collectibles/yogurt_common.png" id="1_7dowc"]
+[ext_resource type="Script" uid="uid://cennh40dcrbxh" path="res://Data/Collectibles/CollectibleData.gd" id="1_vc2ga"]
+
+[resource]
+script = ExtResource("1_vc2ga")
+id = "yogurt_common"
+display_name = "湯匙"
+description = "就只是支湯匙"
+icon = ExtResource("1_7dowc")
+metadata/_custom_type_script = "uid://cennh40dcrbxh"

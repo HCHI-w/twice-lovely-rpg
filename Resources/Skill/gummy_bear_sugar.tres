@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://dvevrg4o5talu"]
+
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="1_x0s7b"]
+
+[resource]
+script = ExtResource("1_x0s7b")
+skill_name = "Sugar High !"
+mp_cost = 2
+power = 15
+target_type = "all_enemies"
+metadata/_custom_type_script = "uid://c5uq70lmdvwfw"

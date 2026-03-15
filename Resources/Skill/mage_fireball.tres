@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://b2l71t8mq3fhn"]
+
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="1_nc6mb"]
+
+[resource]
+script = ExtResource("1_nc6mb")
+attack_type = 1
+skill_name = "普通火球術"
+mp_cost = 2
+power = 30
+target_type = "all_enemies"
+description = "十分熟練的火球術，威力比平時更高"
+metadata/_custom_type_script = "uid://c5uq70lmdvwfw"

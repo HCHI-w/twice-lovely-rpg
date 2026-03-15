@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://ht8kyrneh2xp"]
+
+[ext_resource type="Texture2D" uid="uid://d3fucfaihvvbm" path="res://0Picture/Character_pic/Yzuyu.png" id="1_6kslt"]
+[ext_resource type="Script" uid="uid://c23f8i5d0ig5d" path="res://Resources/Characters/CharacterData.gd" id="1_fhdwg"]
+[ext_resource type="Texture2D" uid="uid://cl75k3eunymn3" path="res://0Picture/CharacterSit/Tzuyu_sit_00.png" id="2_ytso4"]
+[ext_resource type="Texture2D" uid="uid://d1ufy3vs8n5c" path="res://0Picture/CharacterSit/Tzuyu_sit_01.png" id="3_cgvby"]
+[ext_resource type="Texture2D" uid="uid://b416qduxlivmv" path="res://0Picture/CharacterSit/Tzuyu_sit_02.png" id="4_t5c88"]
+[ext_resource type="Texture2D" uid="uid://ck5eo70xqc2d3" path="res://0Picture/CharacterSit/Tzuyu_sit_03.png" id="5_5fep6"]
+[ext_resource type="Texture2D" uid="uid://80h8eaoehlo5" path="res://0Picture/CharacterSit/Tzuyu_sit_04.png" id="6_wsotj"]
+[ext_resource type="Texture2D" uid="uid://bxco2vgr475xi" path="res://0Picture/CharacterIcon/Tzuyu_icon.png" id="7_ytso4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ypvne"]
+resource_name = "Tzuyu"
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ytso4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cgvby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_t5c88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5fep6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wsotj")
+}],
+"loop": true,
+"name": &"sit",
+"speed": 1.5
+}]
+
+[resource]
+script = ExtResource("1_fhdwg")
+id = "Tzuyu"
+display_name = "Tzuyu"
+base_hp = 80
+base_mp = 13
+base_str = 13
+base_def = 8
+base_int = 9
+base_dex = 13
+base_luk = 7
+battle_texture = ExtResource("1_6kslt")
+character_icon = ExtResource("7_ytso4")
+description = "物理攻擊偏高，其餘數值較平均"
+camp_animations = SubResource("SpriteFrames_ypvne")
+metadata/_custom_type_script = "uid://c23f8i5d0ig5d"

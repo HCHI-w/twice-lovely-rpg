@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://2vhq511dhcvd"]
+
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="1_bq6og"]
+[ext_resource type="Resource" uid="uid://c51dxgi8qsag3" path="res://Status/debuff_stun.tres" id="1_kfolj"]
+
+[resource]
+script = ExtResource("1_bq6og")
+skill_name = "快樂兒童餐"
+mp_cost = 2
+power = 15
+target_type = "all_enemies"
+effect_chance = 0.6
+buff_data = ExtResource("1_kfolj")
+metadata/_custom_type_script = "uid://c5uq70lmdvwfw"

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="ClassData" format=3 uid="uid://byuunsubv1nq0"]
+
+[ext_resource type="Script" uid="uid://d3vo0qru2isr2" path="res://Resources/Classes/ClassData.gd" id="1_138ys"]
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="2_pmim1"]
+[ext_resource type="Resource" uid="uid://3dhk8vjjv0fc" path="res://Resources/Skill/bard_song.tres" id="3_ajevn"]
+
+[resource]
+script = ExtResource("1_138ys")
+class_id = "bard"
+display_name = "吟遊詩人"
+hp_multiplier = 0.9
+mp_multiplier = 1.3
+str_multiplier = 0.6
+def_multiplier = 0.7
+int_multiplier = 1.4
+dex_multiplier = 1.1
+luk_multiplier = 2.5
+description = "技能為施放 buff，效果是物理、魔法攻擊提升 (全體)
+【營地 buff】防禦、幸運 +10、魔法攻擊 +5 (單人)
+(技能、buff 效果皆持續 3 回合)"
+skill_list = Array[ExtResource("2_pmim1")]([ExtResource("3_ajevn")])
+camp_buff_ids = Array[String](["bard_inspire"])
+metadata/_custom_type_script = "uid://d3vo0qru2isr2"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://c0yll4he3dvg4"]
+
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="1_c7f5p"]
+
+[resource]
+script = ExtResource("1_c7f5p")
+attack_type = 1
+skill_name = "優格冰沙射擊"
+mp_cost = 2
+power = 15
+target_type = "all_enemies"
+metadata/_custom_type_script = "uid://c5uq70lmdvwfw"

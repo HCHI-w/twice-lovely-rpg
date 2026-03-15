@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CollectibleData" format=3 uid="uid://bnbtrt5ird4s"]
+
+[ext_resource type="Texture2D" uid="uid://bje4464an6efn" path="res://0Picture/Enemy_pic/ketchup.png" id="1_obg2e"]
+[ext_resource type="Script" uid="uid://cennh40dcrbxh" path="res://Data/Collectibles/CollectibleData.gd" id="1_skt08"]
+
+[resource]
+script = ExtResource("1_skt08")
+id = "ketchup_rare"
+display_name = "番茄醬"
+description = "跟任何東西都很搭，家中必備"
+icon = ExtResource("1_obg2e")
+metadata/_custom_type_script = "uid://cennh40dcrbxh"

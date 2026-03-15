@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://di0ybl24s5nvj"]
+
+[ext_resource type="Script" uid="uid://vqs3twfpxjc3" path="res://Scenes/GameOverScene.gd" id="1_re8an"]
+[ext_resource type="Theme" uid="uid://bbn6ayd5lv4e2" path="res://Fonts/ThemeFonts.tres" id="2_543kh"]
+
+[node name="GameOverScene" type="Node2D" unique_id=1613023031]
+script = ExtResource("1_re8an")
+
+[node name="Control" type="Control" parent="." unique_id=1418377263]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=1949737749]
+custom_minimum_size = Vector2(1200, 600)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_543kh")
+color = Color(0.07450981, 0.07450981, 0.07450981, 1)
+
+[node name="MainContainer" type="VBoxContainer" parent="Control" unique_id=1848315153]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -360.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_543kh")
+alignment = 1
+
+[node name="GameOverLabel" type="Label" parent="Control/MainContainer" unique_id=1360517996]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 58
+text = "Game Over"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="IconContainer" type="HBoxContainer" parent="Control/MainContainer" unique_id=901550908]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2

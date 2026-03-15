@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://dsl613bul2jit"]
+
+[ext_resource type="Script" uid="uid://c23f8i5d0ig5d" path="res://Resources/Characters/CharacterData.gd" id="1_0b21f"]
+[ext_resource type="Texture2D" uid="uid://dspdn1xvvuj2o" path="res://0Picture/Character_pic/Nayeon.png" id="1_hd73x"]
+[ext_resource type="SpriteFrames" uid="uid://dktpcjjwfm1bp" path="res://0Animations/Nayeon.tres" id="2_tuojb"]
+[ext_resource type="Texture2D" uid="uid://bms4jc3jgckl4" path="res://0Picture/CharacterIcon/Nayeon_icon.png" id="3_vq3i6"]
+
+[resource]
+script = ExtResource("1_0b21f")
+id = "Nayeon"
+display_name = "Nayeon"
+base_hp = 70
+base_mp = 16
+base_str = 6
+base_def = 8
+base_int = 6
+base_luk = 20
+battle_texture = ExtResource("1_hd73x")
+character_icon = ExtResource("3_vq3i6")
+description = "幸運數值最高，爆擊機率高"
+camp_animations = ExtResource("2_tuojb")
+metadata/_custom_type_script = "uid://c23f8i5d0ig5d"

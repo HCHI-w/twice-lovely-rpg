@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CollectibleData" format=3 uid="uid://cy2jvhqj3f2cv"]
+
+[ext_resource type="Script" uid="uid://cennh40dcrbxh" path="res://Data/Collectibles/CollectibleData.gd" id="1_frkp3"]
+[ext_resource type="Texture2D" uid="uid://dq5t2xxmr7ry6" path="res://Data/Collectibles/fried_chicken_rare.png" id="1_qqr8i"]
+
+[resource]
+script = ExtResource("1_frkp3")
+id = "fried_chicken_rare"
+display_name = "炸雞腿"
+description = "鮮嫩多汁炸雞腿"
+icon = ExtResource("1_qqr8i")
+metadata/_custom_type_script = "uid://cennh40dcrbxh"

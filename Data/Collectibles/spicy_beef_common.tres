@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CollectibleData" format=3 uid="uid://bvnlp3xfnh6tg"]
+
+[ext_resource type="Script" uid="uid://cennh40dcrbxh" path="res://Data/Collectibles/CollectibleData.gd" id="1_5pxue"]
+[ext_resource type="Texture2D" uid="uid://1nagvg8sg2uj" path="res://Data/Collectibles/spicy_beef_common.png" id="1_xvkg5"]
+
+[resource]
+script = ExtResource("1_5pxue")
+id = "spicy_beef_common"
+display_name = "空碗"
+description = "平平無奇，就只是空碗"
+icon = ExtResource("1_xvkg5")
+metadata/_custom_type_script = "uid://cennh40dcrbxh"

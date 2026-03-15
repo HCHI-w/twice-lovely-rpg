@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://gbb0wh0eq1gx"]
+
+[ext_resource type="Texture2D" uid="uid://cr7mrmrv330od" path="res://0Picture/Character_pic/Jiyho.png" id="1_et3iy"]
+[ext_resource type="Script" uid="uid://c23f8i5d0ig5d" path="res://Resources/Characters/CharacterData.gd" id="1_hqrje"]
+[ext_resource type="SpriteFrames" uid="uid://bsgh4uaq3xtvw" path="res://0Animations/Jihyo.tres" id="2_mj5be"]
+[ext_resource type="Texture2D" uid="uid://ch4frqbs8m5eg" path="res://0Picture/CharacterIcon/Jihyo_icon.png" id="3_wla3u"]
+
+[resource]
+script = ExtResource("1_hqrje")
+id = "Jihyo"
+display_name = "Jihyo"
+base_mp = 14
+base_str = 18
+base_def = 11
+base_int = 7
+base_dex = 8
+base_luk = 6
+battle_texture = ExtResource("1_et3iy")
+character_icon = ExtResource("3_wla3u")
+description = "生命數值最高，物理攻擊偏高"
+camp_animations = ExtResource("2_mj5be")
+metadata/_custom_type_script = "uid://c23f8i5d0ig5d"

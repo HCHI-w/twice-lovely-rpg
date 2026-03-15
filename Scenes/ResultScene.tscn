@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://2ouajgd4lqru"]
+
+[ext_resource type="Script" uid="uid://bolbqq7fhoje7" path="res://Scenes/ResultScene.gd" id="1_02o64"]
+[ext_resource type="Theme" uid="uid://bbn6ayd5lv4e2" path="res://Fonts/ThemeFonts.tres" id="2_k2vhl"]
+
+[node name="ResultScene" type="Node2D" unique_id=516440301]
+script = ExtResource("1_02o64")
+
+[node name="Control" type="Control" parent="." unique_id=310611008]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=1844236057]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.07450981, 0.07450981, 0.07450981, 1)
+
+[node name="DropPanel" type="VBoxContainer" parent="Control" unique_id=1137838818]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.5
+offset_top = -64.5
+offset_right = 72.5
+offset_bottom = 64.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_stretch_ratio = 3.0
+theme = ExtResource("2_k2vhl")
+alignment = 1
+
+[node name="WINLabel" type="Label" parent="Control/DropPanel" unique_id=1740513935]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 58
+text = "WIN !"
+horizontal_alignment = 1
+
+[node name="DropLabel" type="Label" parent="Control/DropPanel" unique_id=1595799948]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="DropList" type="HBoxContainer" parent="Control/DropPanel" unique_id=1104201739]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="Control/DropPanel" unique_id=1351584036]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "- 點擊畫面繼續 -"
+
+[node name="WalkContainer" type="HBoxContainer" parent="Control" unique_id=1175134307]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.75
+anchor_right = 0.5
+anchor_bottom = 0.75
+offset_left = -500.0
+offset_top = -50.0
+offset_right = 500.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_k2vhl")
+alignment = 1
+
+[node name="Player1" type="Node" parent="Control/WalkContainer" unique_id=1251695266]
+
+[node name="Player2" type="Node" parent="Control/WalkContainer" unique_id=1332495061]
+
+[node name="Player3" type="Node" parent="Control/WalkContainer" unique_id=2108108191]

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CollectibleData" format=3 uid="uid://pibh64di7p30"]
+
+[ext_resource type="Script" uid="uid://cennh40dcrbxh" path="res://Data/Collectibles/CollectibleData.gd" id="1_48c8l"]
+[ext_resource type="Texture2D" uid="uid://ce0lxtx0fsia7" path="res://Data/Collectibles/chocolate_common.png" id="1_xl020"]
+
+[resource]
+script = ExtResource("1_48c8l")
+id = "chocolate_common"
+display_name = "錫箔紙"
+description = "剩下來的包裝紙"
+icon = ExtResource("1_xl020")
+metadata/_custom_type_script = "uid://cennh40dcrbxh"

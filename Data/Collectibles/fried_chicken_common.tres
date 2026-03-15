@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CollectibleData" format=3 uid="uid://chyxj4pototw1"]
+
+[ext_resource type="Texture2D" uid="uid://dxc6hmjqk4pfi" path="res://Data/Collectibles/fried_chicken_common.png" id="1_7al1c"]
+[ext_resource type="Script" uid="uid://cennh40dcrbxh" path="res://Data/Collectibles/CollectibleData.gd" id="1_awu26"]
+
+[resource]
+script = ExtResource("1_awu26")
+id = "fried_chicken_common"
+display_name = "炸麵衣"
+description = "掉落的炸麵衣，有調味"
+icon = ExtResource("1_7al1c")
+metadata/_custom_type_script = "uid://cennh40dcrbxh"

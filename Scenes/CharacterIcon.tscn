@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cnjdeb2q3ray4"]
+
+[ext_resource type="Script" uid="uid://iyje8mncayai" path="res://Scenes/CharacterIcon.gd" id="1_jkktk"]
+[ext_resource type="Texture2D" uid="uid://bb8gw6kyxyqwe" path="res://0Picture/CharacterBreathing/64pxChaeyoung_up.png" id="1_pv40j"]
+[ext_resource type="Texture2D" uid="uid://djemuok543t6e" path="res://0Picture/CharacterBreathing/64pxChaeyoung_dn.png" id="2_qejrh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dnl3h"]
+resource_name = "Chaeyoung"
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pv40j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_qejrh")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.8
+}]
+
+[node name="CharacterIcon" type="TextureRect" unique_id=1775284072]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+script = ExtResource("1_jkktk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=864414961]
+position = Vector2(30, 40)
+scale = Vector2(1.07, 1.07)
+sprite_frames = SubResource("SpriteFrames_dnl3h")
+animation = &"idle"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

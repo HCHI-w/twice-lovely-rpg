@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://dw8p1h2n4comj"]
+
+[ext_resource type="Script" uid="uid://61ciig02rpu4" path="res://Scenes/TransitionScene.gd" id="1_5d8m0"]
+[ext_resource type="Theme" uid="uid://bbn6ayd5lv4e2" path="res://Fonts/ThemeFonts.tres" id="2_ng4y5"]
+
+[sub_resource type="Animation" id="Animation_ho15i"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5d8m0"]
+resource_name = "transition"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 2, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ng4y5"]
+_data = {
+&"RESET": SubResource("Animation_ho15i"),
+&"transition": SubResource("Animation_5d8m0")
+}
+
+[node name="TransitionScene" type="CanvasLayer" unique_id=89919089]
+layer = 10
+script = ExtResource("1_5d8m0")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1819676907]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_ng4y5")
+color = Color(0.07450981, 0.07450981, 0.07450981, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1461432473]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = -11.5
+offset_right = 47.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_ng4y5")
+theme_override_colors/font_color = Color(1, 1, 1, 0)
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=425880128]
+libraries/ = SubResource("AnimationLibrary_ng4y5")
+metadata/transition = false

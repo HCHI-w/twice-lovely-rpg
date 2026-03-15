@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://dg64tum07tfrb"]
+
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="1_3veqd"]
+
+[resource]
+script = ExtResource("1_3veqd")
+skill_name = "大步奔走！"
+mp_cost = 2
+power = 20
+target_type = "all_enemies"
+effect_chance = 0.6
+description = "奔走的加速，讓打擊更有威力
+(有機率造成暈眩效果)"
+metadata/_custom_type_script = "uid://c5uq70lmdvwfw"

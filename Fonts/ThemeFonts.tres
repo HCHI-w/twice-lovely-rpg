@@ -1,0 +1,6 @@
+[gd_resource type="Theme" format=3 uid="uid://bbn6ayd5lv4e2"]
+
+[ext_resource type="FontFile" uid="uid://ccyu2gj22r2n5" path="res://Fonts/Cubic_11.ttf" id="1_7lqp4"]
+
+[resource]
+default_font = ExtResource("1_7lqp4")

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CollectibleData" format=3 uid="uid://jvvwaqea471q"]
+
+[ext_resource type="Script" uid="uid://cennh40dcrbxh" path="res://Data/Collectibles/CollectibleData.gd" id="1_4fndw"]
+[ext_resource type="Texture2D" uid="uid://785r8tcm5yl" path="res://Data/Collectibles/bread_common.png" id="1_tugk3"]
+
+[resource]
+script = ExtResource("1_4fndw")
+id = "bread_common"
+display_name = "麵包屑"
+description = "掉落的麵包屑，跟著走可以找到什麼呢？"
+icon = ExtResource("1_tugk3")
+metadata/_custom_type_script = "uid://cennh40dcrbxh"

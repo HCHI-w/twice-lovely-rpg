@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CollectibleData" format=3 uid="uid://bwb466bpvtdkb"]
+
+[ext_resource type="Texture2D" uid="uid://cy80abqtg0l42" path="res://Data/Collectibles/jokbal_common.png" id="1_d63wq"]
+[ext_resource type="Script" uid="uid://cennh40dcrbxh" path="res://Data/Collectibles/CollectibleData.gd" id="1_xme52"]
+
+[resource]
+script = ExtResource("1_xme52")
+id = "jokbal_common"
+display_name = "骨頭"
+description = "只剩下骨頭了，啃得好乾淨"
+icon = ExtResource("1_d63wq")
+metadata/_custom_type_script = "uid://cennh40dcrbxh"

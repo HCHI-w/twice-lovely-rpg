@@ -4,10 +4,13 @@
 
 # Godot-specific ignores
 .import/
-export.cfg
+# export.cfg
 export_credentials.cfg
 
-# Imported translations (automatically generated from CSV files)
+# 強制確保導出設定檔會被上傳 (加上嘆號代表「不要無視它」)
+!export_presets.cfg
+
+# Imported translations
 *.translation
 
 # Mono-specific ignores

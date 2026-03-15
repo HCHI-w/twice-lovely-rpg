@@ -1,0 +1,35 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bek6jesf74hsg"]
+
+[ext_resource type="Texture2D" uid="uid://c6b2ow5451313" path="res://0Picture/CharacterStretch/Dahyun_stretch_00.png" id="1_pus3k"]
+[ext_resource type="Texture2D" uid="uid://cxnxuhbuq5bx3" path="res://0Picture/CharacterStretch/Dahyun_stretch_01.png" id="2_dnbmx"]
+[ext_resource type="Texture2D" uid="uid://dphul23m5fjsa" path="res://0Picture/CharacterStretch/Dahyun_stretch_02.png" id="3_ddlgm"]
+[ext_resource type="Texture2D" uid="uid://tj7lca1nrpxc" path="res://0Picture/CharacterStretch/Dahyun_stretch_03.png" id="4_24ixq"]
+[ext_resource type="Texture2D" uid="uid://dd340ad5de5ac" path="res://0Picture/CharacterStretch/Dahyun_stretch_04.png" id="5_nd26k"]
+[ext_resource type="Texture2D" uid="uid://0n0odoic6l8w" path="res://0Picture/CharacterStretch/Dahyun_stretch_05.png" id="6_keljm"]
+
+[resource]
+resource_name = "Dahyun"
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pus3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_dnbmx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ddlgm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_24ixq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nd26k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_keljm")
+}],
+"loop": true,
+"name": &"stretch",
+"speed": 1.3
+}]

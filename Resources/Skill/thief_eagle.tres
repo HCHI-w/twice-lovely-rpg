@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://bh8qn2k3uhin8"]
+
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="1_tvg00"]
+
+[resource]
+script = ExtResource("1_tvg00")
+skill_name = "去吧 ! 玻璃獸"
+mp_cost = 3
+power = 20
+target_type = "all_enemies"
+effect_chance = 0.5
+description = "趁玻璃獸讓敵人分心之際，繞到背後對敵人造成傷害
+(有機率造成暈眩效果)"
+metadata/_custom_type_script = "uid://c5uq70lmdvwfw"

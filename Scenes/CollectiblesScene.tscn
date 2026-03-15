@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://c2univd55sla3"]
+
+[ext_resource type="Theme" uid="uid://bbn6ayd5lv4e2" path="res://Fonts/ThemeFonts.tres" id="1_d2bpa"]
+[ext_resource type="Script" uid="uid://cp4i2pscauqu7" path="res://Scenes/CollectiblesScene.gd" id="1_urbv4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d2bpa"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="CollectiblesScene" type="Control" unique_id=1815841099]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_d2bpa")
+script = ExtResource("1_urbv4")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1224311075]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1649434604]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="MarginContainer" unique_id=1788195262]
+layout_mode = 2
+
+[node name="CollectionLabel" type="Label" parent="MarginContainer/Panel" unique_id=1957759410]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 5.0
+offset_right = 120.0
+offset_bottom = 35.0
+vertical_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/Panel" unique_id=1735833565]
+custom_minimum_size = Vector2(1150, 600)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.05
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d2bpa")
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/Panel/PanelContainer" unique_id=324459975]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+columns = 8
+
+[node name="InfoOverlay" type="ColorRect" parent="MarginContainer/Panel" unique_id=1872859007]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.39215687)
+
+[node name="InfoPanel" type="PanelContainer" parent="MarginContainer/Panel/InfoOverlay" unique_id=1254823541]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/InfoOverlay/InfoPanel" unique_id=1905236466]
+layout_mode = 2
+alignment = 1
+
+[node name="Icon" type="TextureRect" parent="MarginContainer/Panel/InfoOverlay/InfoPanel/VBoxContainer" unique_id=155714971]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="MarginContainer/Panel/InfoOverlay/InfoPanel/VBoxContainer" unique_id=1355240058]
+layout_direction = 3
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Description" type="RichTextLabel" parent="MarginContainer/Panel/InfoOverlay/InfoPanel/VBoxContainer" unique_id=190535407]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackButton" type="Button" parent="." unique_id=1415511578]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.02
+anchor_top = 0.97
+anchor_right = 0.02
+anchor_bottom = 0.97
+offset_top = -28.0
+offset_right = 43.0
+grow_vertical = 0
+text = "返回"

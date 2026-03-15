@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CollectibleData" format=3 uid="uid://7yrusuc7gbpi"]
+
+[ext_resource type="Texture2D" uid="uid://cwccs7dwdpjsr" path="res://Data/Collectibles/gummy_bear_common_1.png" id="1_2hxej"]
+[ext_resource type="Script" uid="uid://cennh40dcrbxh" path="res://Data/Collectibles/CollectibleData.gd" id="1_tqq1r"]
+
+[resource]
+script = ExtResource("1_tqq1r")
+id = "gummy_bear_common"
+display_name = "包裝袋 (空)"
+description = "空的包裝袋，看起來還有一點小碎塊"
+icon = ExtResource("1_2hxej")
+metadata/_custom_type_script = "uid://cennh40dcrbxh"

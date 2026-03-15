@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="ClassData" format=3 uid="uid://dbhs0k8omk3ss"]
+
+[ext_resource type="Script" uid="uid://d3vo0qru2isr2" path="res://Resources/Classes/ClassData.gd" id="1_7lnjh"]
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="2_suh6a"]
+[ext_resource type="Resource" uid="uid://dg64tum07tfrb" path="res://Resources/Skill/martial_artist_blitz.tres" id="3_nqdjo"]
+
+[resource]
+script = ExtResource("1_7lnjh")
+class_id = "martial_artist"
+display_name = "武鬥家"
+hp_multiplier = 1.6
+mp_multiplier = 0.6
+str_multiplier = 2.5
+def_multiplier = 1.2
+int_multiplier = 0.4
+dex_multiplier = 1.6
+luk_multiplier = 0.6
+description = "技能為施放物理攻擊
+【營地 buff】魔力 +10、物理攻擊 +10、敏捷 +5 (單人)
+(技能、營地 buff 效果皆持續 3 回合)"
+skill_list = Array[ExtResource("2_suh6a")]([ExtResource("3_nqdjo")])
+camp_buff_ids = Array[String](["martial_artist_stance"])
+metadata/_custom_type_script = "uid://d3vo0qru2isr2"

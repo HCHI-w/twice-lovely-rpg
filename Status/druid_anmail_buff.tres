@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="BuffData" format=3 uid="uid://0vk7x5dcqlpi"]
+
+[ext_resource type="Script" uid="uid://o5byigwq6jju" path="res://Status/BuffData.gd" id="1_ekdh5"]
+
+[resource]
+script = ExtResource("1_ekdh5")
+buff_id = "druid_anmail_buff"
+name = "物理、魔法攻擊、幸運值小幅提升"
+description = "物理、魔法攻擊、幸運值小幅提升"
+is_damage_over_time = true
+stats_flat = {
+"def": 0,
+"dex": 0,
+"hp": 0,
+"int": 5,
+"luk": 5,
+"mp": 0,
+"str": 5
+}
+metadata/_custom_type_script = "uid://o5byigwq6jju"

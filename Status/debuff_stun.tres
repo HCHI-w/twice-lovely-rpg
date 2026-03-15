@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="BuffData" format=3 uid="uid://c51dxgi8qsag3"]
+
+[ext_resource type="Script" uid="uid://o5byigwq6jju" path="res://Status/BuffData.gd" id="1_0gryh"]
+
+[resource]
+script = ExtResource("1_0gryh")
+buff_id = "stun"
+name = "暈眩"
+duration = 1
+prevents_action = true
+metadata/_custom_type_script = "uid://o5byigwq6jju"

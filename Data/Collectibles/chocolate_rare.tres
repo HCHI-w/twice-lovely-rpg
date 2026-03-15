@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CollectibleData" format=3 uid="uid://d4jltgjb3g5ys"]
+
+[ext_resource type="Texture2D" uid="uid://b00jry3uje1iv" path="res://Data/Collectibles/chocolate_rare.png" id="1_b5126"]
+[ext_resource type="Script" uid="uid://cennh40dcrbxh" path="res://Data/Collectibles/CollectibleData.gd" id="1_dcmwj"]
+
+[resource]
+script = ExtResource("1_dcmwj")
+id = "chocolate_rare"
+display_name = "金箔"
+description = "看起來是巧克力上的金箔"
+icon = ExtResource("1_b5126")
+metadata/_custom_type_script = "uid://cennh40dcrbxh"

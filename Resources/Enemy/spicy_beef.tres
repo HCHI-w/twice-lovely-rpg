@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://saix3j5kbs2h"]
+
+[ext_resource type="Resource" uid="uid://bvnlp3xfnh6tg" path="res://Data/Collectibles/spicy_beef_common.tres" id="1_26pi0"]
+[ext_resource type="Script" uid="uid://tsqw8d1qr6ck" path="res://Resources/Enemy/EnemyData.gd" id="1_w6s4j"]
+[ext_resource type="Texture2D" uid="uid://b2hb7vf4s064v" path="res://0Picture/Enemy_pic/spicy_beef.png" id="1_yj0gx"]
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="2_765kk"]
+[ext_resource type="Resource" uid="uid://cxxcys8c6b1jf" path="res://Data/Collectibles/spicy_beef_rare.tres" id="2_yj0gx"]
+[ext_resource type="Resource" uid="uid://bit5lwjsttce2" path="res://Resources/Skill/spicy_beef_punch.tres" id="3_kiuuo"]
+
+[resource]
+script = ExtResource("1_w6s4j")
+enemy_id = "spicy_beef"
+name = "辣牛肉"
+base_hp = 180
+base_mp = 40
+base_str = 20
+base_def = 14
+base_int = 10
+base_dex = 8
+base_luk = 10
+skill_list = Array[ExtResource("2_765kk")]([ExtResource("3_kiuuo")])
+battle_texture = ExtResource("1_yj0gx")
+drop_common = ExtResource("1_26pi0")
+drop_rare = ExtResource("2_yj0gx")
+metadata/_custom_type_script = "uid://tsqw8d1qr6ck"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://c7mhg421yhlk"]
+
+[ext_resource type="Resource" uid="uid://b31tjcyqq6gvh" path="res://Status/knight_command_buff.tres" id="1_p1ve1"]
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="1_ts5c5"]
+
+[resource]
+script = ExtResource("1_ts5c5")
+effect_type = 3
+skill_name = "盾牌緩衝 !"
+mp_cost = 2
+power = 20
+target_type = "all_allies"
+description = "扛起盾牌抵禦攻擊傷害
+提升全體隊友防禦↑↑、物理攻擊↑ (持續 3 回合)"
+buff_data = ExtResource("1_p1ve1")
+metadata/_custom_type_script = "uid://c5uq70lmdvwfw"

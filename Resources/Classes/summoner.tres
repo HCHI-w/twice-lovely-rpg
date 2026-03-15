@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="ClassData" format=3 uid="uid://nfqrghwgx8jh"]
+
+[ext_resource type="Script" uid="uid://d3vo0qru2isr2" path="res://Resources/Classes/ClassData.gd" id="1_ntc7o"]
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="2_288qt"]
+[ext_resource type="Resource" uid="uid://yjygtq1tgaf8" path="res://Resources/Skill/summoner_enchanting.tres" id="3_xks50"]
+
+[resource]
+script = ExtResource("1_ntc7o")
+class_id = "summoner"
+display_name = "煉金術師"
+hp_multiplier = 0.7
+mp_multiplier = 2.0
+str_multiplier = 0.7
+def_multiplier = 0.8
+int_multiplier = 2.0
+dex_multiplier = 0.8
+luk_multiplier = 1.5
+description = "技能為施放魔法攻擊
+【營地 buff】生命值 +15、防禦 +5、魔法攻擊 +5 (單人)
+(技能、營地 buff 效果皆持續 3 回合)"
+skill_list = Array[ExtResource("2_288qt")]([ExtResource("3_xks50")])
+camp_buff_ids = Array[String](["summoner_preparation"])
+metadata/_custom_type_script = "uid://d3vo0qru2isr2"

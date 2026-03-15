@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://dkjeatbrnqvj3"]
+
+[ext_resource type="Resource" uid="uid://7yrusuc7gbpi" path="res://Data/Collectibles/gummy_bear_common.tres" id="1_10w45"]
+[ext_resource type="Script" uid="uid://tsqw8d1qr6ck" path="res://Resources/Enemy/EnemyData.gd" id="1_c2b5u"]
+[ext_resource type="Texture2D" uid="uid://b7m6aksdnkryb" path="res://0Picture/Enemy_pic/gummy_bear.png" id="1_gg5es"]
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="2_4458i"]
+[ext_resource type="Resource" uid="uid://p0ljv0o7vvga" path="res://Data/Collectibles/gummy_bear_rare.tres" id="2_gg5es"]
+[ext_resource type="Resource" uid="uid://dvevrg4o5talu" path="res://Resources/Skill/gummy_bear_sugar.tres" id="3_6phhb"]
+
+[resource]
+script = ExtResource("1_c2b5u")
+enemy_id = "gummy_bear"
+name = "小熊軟糖"
+base_hp = 120
+base_mp = 20
+base_str = 8
+base_def = 10
+base_int = 6
+base_dex = 18
+base_luk = 16
+skill_list = Array[ExtResource("2_4458i")]([ExtResource("3_6phhb")])
+battle_texture = ExtResource("1_gg5es")
+drop_common = ExtResource("1_10w45")
+drop_rare = ExtResource("2_gg5es")
+metadata/_custom_type_script = "uid://tsqw8d1qr6ck"

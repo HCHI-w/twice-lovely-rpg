@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://iokfpv8o4cfm"]
+
+[ext_resource type="Resource" uid="uid://b43pcu6rgksk2" path="res://Status/debuff_poison.tres" id="1_2qu3k"]
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="1_6betr"]
+
+[resource]
+script = ExtResource("1_6betr")
+skill_name = "萬能沾醬"
+mp_cost = 2
+power = 10
+target_type = "all_enemies"
+buff_data = ExtResource("1_2qu3k")
+metadata/_custom_type_script = "uid://c5uq70lmdvwfw"

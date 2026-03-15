@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://27n82qxagswc"]
+
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="1_83l65"]
+[ext_resource type="Resource" uid="uid://c51dxgi8qsag3" path="res://Status/debuff_stun.tres" id="1_lb43v"]
+
+[resource]
+script = ExtResource("1_83l65")
+skill_name = "精準射擊"
+mp_cost = 3
+power = 30
+target_type = "all_enemies"
+effect_chance = 0.6
+description = "千錘百鍊的射擊技巧，對敵人造成物理傷害
+(有機率造成暈眩效果)"
+buff_data = ExtResource("1_lb43v")
+metadata/_custom_type_script = "uid://c5uq70lmdvwfw"

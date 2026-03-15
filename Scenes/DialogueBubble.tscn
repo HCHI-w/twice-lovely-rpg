@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bwutvpr64fpue"]
+
+[ext_resource type="Script" uid="uid://dy2s2nkr0aue1" path="res://Scenes/DialogueBubble.gd" id="1_6rj7d"]
+[ext_resource type="Theme" uid="uid://bbn6ayd5lv4e2" path="res://Fonts/ThemeFonts.tres" id="2_gbqae"]
+
+[node name="DialogueBubble" type="Node2D" unique_id=824646297]
+script = ExtResource("1_6rj7d")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=673619378]
+custom_minimum_size = Vector2(100, 30)
+offset_right = 100.0
+offset_bottom = 40.0
+theme = ExtResource("2_gbqae")
+
+[node name="Label" type="Label" parent="PanelContainer" unique_id=1459622624]
+layout_mode = 2
+horizontal_alignment = 1

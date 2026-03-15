@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://cssxiwynl2wej"]
+
+[ext_resource type="Texture2D" uid="uid://bo7ksqmk45vv5" path="res://0Picture/Enemy_pic/Yogurt.png" id="1_7mn1b"]
+[ext_resource type="Script" uid="uid://tsqw8d1qr6ck" path="res://Resources/Enemy/EnemyData.gd" id="1_87xta"]
+[ext_resource type="Resource" uid="uid://d353l2dpb63cq" path="res://Data/Collectibles/yogurt_common.tres" id="2_7mn1b"]
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="2_cmkwg"]
+[ext_resource type="Resource" uid="uid://cqcjhtmpw3275" path="res://Data/Collectibles/yogurt_rare.tres" id="3_lyaes"]
+[ext_resource type="Resource" uid="uid://c0yll4he3dvg4" path="res://Resources/Skill/yogurt_shoot.tres" id="3_obbk5"]
+
+[resource]
+script = ExtResource("1_87xta")
+enemy_id = "yogurt"
+name = "優格"
+base_hp = 100
+base_str = 6
+base_def = 8
+base_int = 16
+base_dex = 14
+base_luk = 12
+skill_list = Array[ExtResource("2_cmkwg")]([ExtResource("3_obbk5")])
+battle_texture = ExtResource("1_7mn1b")
+drop_common = ExtResource("2_7mn1b")
+drop_rare = ExtResource("3_lyaes")
+metadata/_custom_type_script = "uid://tsqw8d1qr6ck"

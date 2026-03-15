@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://3dhk8vjjv0fc"]
+
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="1_f2pk4"]
+[ext_resource type="Resource" uid="uid://ck6g4w6fau47u" path="res://Status/bard_song_buff.tres" id="1_fkhuv"]
+
+[resource]
+script = ExtResource("1_f2pk4")
+attack_type = 1
+effect_type = 3
+skill_name = "這是buff"
+mp_cost = 2
+power = 15
+target_type = "all_allies"
+description = "乏味的戰鬥，需要點振奮人心的音樂 (持續 3 回合)
+提升全體隊友物理、魔法攻擊 + 20"
+buff_data = ExtResource("1_fkhuv")
+metadata/_custom_type_script = "uid://c5uq70lmdvwfw"

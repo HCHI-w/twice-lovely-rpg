@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://ch28o7eo32vd1"]
+
+[ext_resource type="Script" uid="uid://c23f8i5d0ig5d" path="res://Resources/Characters/CharacterData.gd" id="1_ampf5"]
+[ext_resource type="Texture2D" uid="uid://56p1m0bswl0j" path="res://0Picture/Character_pic/Dahyun.png" id="1_kr6y0"]
+[ext_resource type="SpriteFrames" uid="uid://bek6jesf74hsg" path="res://0Animations/Dahyun.tres" id="2_w5qj0"]
+[ext_resource type="Texture2D" uid="uid://bkk0nlbtade68" path="res://0Picture/CharacterIcon/Dahyun_icon.png" id="3_xp3n5"]
+
+[resource]
+script = ExtResource("1_ampf5")
+id = "Dahyun"
+display_name = "Dahyun"
+base_hp = 70
+base_mp = 17
+base_str = 6
+base_def = 9
+base_int = 15
+base_dex = 9
+base_luk = 11
+battle_texture = ExtResource("1_kr6y0")
+character_icon = ExtResource("3_xp3n5")
+description = "魔法攻擊偏高，其餘數值較平均"
+camp_animations = ExtResource("2_w5qj0")
+metadata/_custom_type_script = "uid://c23f8i5d0ig5d"

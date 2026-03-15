@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="ClassData" format=3 uid="uid://8cx2jpdvx2j4"]
+
+[ext_resource type="Script" uid="uid://d3vo0qru2isr2" path="res://Resources/Classes/ClassData.gd" id="1_ftvb2"]
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="2_gsqvw"]
+[ext_resource type="Resource" uid="uid://4doid1b4bgjn" path="res://Resources/Skill/druid_anmail.tres" id="3_7pae8"]
+
+[resource]
+script = ExtResource("1_ftvb2")
+class_id = "druid"
+display_name = "德魯伊"
+hp_multiplier = 1.3
+mp_multiplier = 1.3
+str_multiplier = 0.9
+def_multiplier = 1.2
+int_multiplier = 1.5
+luk_multiplier = 1.3
+description = "技能為恢復部分生命值 (全體)
+【營地 buff】全數值 +5 (單人)
+(技能、buff 效果皆持續 3 回合)"
+skill_list = Array[ExtResource("2_gsqvw")]([ExtResource("3_7pae8")])
+camp_buff_ids = Array[String](["druid_blessing"])
+metadata/_custom_type_script = "uid://d3vo0qru2isr2"

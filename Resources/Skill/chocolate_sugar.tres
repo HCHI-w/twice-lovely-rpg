@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://bf1qv6py3bunv"]
+
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="1_57cdh"]
+[ext_resource type="Resource" uid="uid://b43pcu6rgksk2" path="res://Status/debuff_poison.tres" id="1_lw1ll"]
+
+[resource]
+script = ExtResource("1_57cdh")
+skill_name = "多巴胺派對"
+mp_cost = 2
+power = 15
+target_type = "all_enemies"
+buff_data = ExtResource("1_lw1ll")
+metadata/_custom_type_script = "uid://c5uq70lmdvwfw"

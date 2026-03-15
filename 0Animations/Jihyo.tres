@@ -1,0 +1,35 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bsgh4uaq3xtvw"]
+
+[ext_resource type="Texture2D" uid="uid://7yaceutpxk7p" path="res://0Picture/CharacterStretch/Jihyo_stretch_00.png" id="1_ch4kl"]
+[ext_resource type="Texture2D" uid="uid://djnrmp7hs6pho" path="res://0Picture/CharacterStretch/Jihyo_stretch_01.png" id="2_qsx6a"]
+[ext_resource type="Texture2D" uid="uid://dhxnc7yn3wl4j" path="res://0Picture/CharacterStretch/Jihyo_stretch_02.png" id="3_7j4s3"]
+[ext_resource type="Texture2D" uid="uid://cu3gnyo5pvlkq" path="res://0Picture/CharacterStretch/Jihyo_stretch_03.png" id="4_0lpyw"]
+[ext_resource type="Texture2D" uid="uid://cr18x1tvqmkxx" path="res://0Picture/CharacterStretch/Jihyo_stretch_04.png" id="5_h6gws"]
+[ext_resource type="Texture2D" uid="uid://485kyy7eho36" path="res://0Picture/CharacterStretch/Jihyo_stretch_05.png" id="6_agxwu"]
+
+[resource]
+resource_name = "Jihyo"
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ch4kl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_qsx6a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7j4s3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0lpyw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_h6gws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_agxwu")
+}],
+"loop": true,
+"name": &"stretch",
+"speed": 1.5
+}]

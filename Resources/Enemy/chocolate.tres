@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://drs080f1d33k2"]
+
+[ext_resource type="Resource" uid="uid://pibh64di7p30" path="res://Data/Collectibles/chocolate_common.tres" id="1_426ga"]
+[ext_resource type="Script" uid="uid://tsqw8d1qr6ck" path="res://Resources/Enemy/EnemyData.gd" id="1_rfhn1"]
+[ext_resource type="Texture2D" uid="uid://cm15tl3h8ci3w" path="res://0Picture/Enemy_pic/chocolate.png" id="1_y7s3o"]
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="2_owf0i"]
+[ext_resource type="Resource" uid="uid://d4jltgjb3g5ys" path="res://Data/Collectibles/chocolate_rare.tres" id="2_y7s3o"]
+[ext_resource type="Resource" uid="uid://bf1qv6py3bunv" path="res://Resources/Skill/chocolate_sugar.tres" id="3_alo0l"]
+
+[resource]
+script = ExtResource("1_rfhn1")
+enemy_id = "chocolate"
+name = "巧克力"
+base_hp = 140
+base_mp = 45
+base_str = 12
+base_def = 12
+base_int = 14
+base_dex = 10
+base_luk = 14
+skill_list = Array[ExtResource("2_owf0i")]([ExtResource("3_alo0l")])
+battle_texture = ExtResource("1_y7s3o")
+drop_common = ExtResource("1_426ga")
+drop_rare = ExtResource("2_y7s3o")
+metadata/_custom_type_script = "uid://tsqw8d1qr6ck"

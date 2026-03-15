@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://bo5kyjexm2k5y"]
+
+[ext_resource type="Texture2D" uid="uid://7ibpmlj1ngnt" path="res://0Picture/Character_pic/Chaeyoung.png" id="1_oaic0"]
+[ext_resource type="Script" uid="uid://c23f8i5d0ig5d" path="res://Resources/Characters/CharacterData.gd" id="1_oxna1"]
+[ext_resource type="SpriteFrames" uid="uid://dn7rb7vps16or" path="res://0Animations/Chaeyoung.tres" id="2_a28xc"]
+[ext_resource type="Texture2D" uid="uid://bi0ux7c31eryj" path="res://0Picture/CharacterIcon/Chaeyoung_icon.png" id="3_q011s"]
+
+[resource]
+script = ExtResource("1_oxna1")
+id = "Chaeyoung"
+display_name = "Chaeyoung"
+base_hp = 60
+base_mp = 18
+base_str = 6
+base_def = 8
+base_int = 13
+base_luk = 13
+battle_texture = ExtResource("1_oaic0")
+character_icon = ExtResource("3_q011s")
+description = "魔力數值較高，其餘數值較平均"
+camp_animations = ExtResource("2_a28xc")
+metadata/_custom_type_script = "uid://c23f8i5d0ig5d"

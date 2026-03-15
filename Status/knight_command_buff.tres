@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="BuffData" format=3 uid="uid://b31tjcyqq6gvh"]
+
+[ext_resource type="Script" uid="uid://o5byigwq6jju" path="res://Status/BuffData.gd" id="1_v8lcc"]
+
+[resource]
+script = ExtResource("1_v8lcc")
+buff_id = "knight_buff"
+name = "防禦提升、物理攻擊小幅提升"
+description = "防禦提升、物理攻擊小幅提升"
+stats_flat = {
+"def": 20,
+"dex": 0,
+"hp": 0,
+"int": 0,
+"luk": 0,
+"mp": 0,
+"str": 10
+}
+metadata/_custom_type_script = "uid://o5byigwq6jju"
