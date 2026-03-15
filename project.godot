@@ -15,17 +15,17 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="TWICE_lovely_RPG"
-run/main_scene="uid://ccqn2y4ifxh5t"
+run/main_scene="res://Scenes/TitleScreen.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 GameManager="*res://Autoload/GameManager.gd"
-GameFlowManager="*uid://bx4022g4q3r75"
-CollectibleManager="*uid://wqwftrqibvni"
-TransitionManager="*uid://dq3jnh68na766"
-WindowManager="*uid://dwdur4d4ajmei"
+GameFlowManager="*res://Autoload/GameFlowManager.gd"
+CollectibleManager="*res://Autoload/CollectibleManager.gd"
+TransitionManager="*res://Autoload/TransitionManager.gd"
+WindowManager="*res://Autoload/WindowManager.gd"
 
 [display]
 
