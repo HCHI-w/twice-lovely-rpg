@@ -21,15 +21,12 @@ jobs:
           godot_executable_download_url: https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_linux.x86_64.zip
           godot_export_templates_download_url: https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_export_templates.tpz
           presets_to_export: "Web"
-          # 這裡我們強制指定一個名字叫 out 的資料夾
+          # 這裡維持 "out"，它會產出到 out/Web
           relative_export_path: "out"
-
-      - name: 檢查檔案在哪裡 (除錯用)
-        run: ls -R
 
       - name: 部署到 GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          # 修正重點：對齊上面的路徑，去 build/out 搬東西
-          publish_dir: ./build/out
+          # 【關鍵修正】：根據你的 ls -R 日誌，路徑應該是這裡
+          publish_dir: ./out/Web
