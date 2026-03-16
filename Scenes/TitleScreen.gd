@@ -8,7 +8,7 @@ extends Control
 @onready var char_grid: GridContainer = $SafeArea/MainVBox/CharacterGrid
 @onready var menu_buttons_container = $SafeArea/MainVBox/MenuButtons
 @onready var memo_label = $SafeArea/MainVBox/MenuButtons/MemoLabel
-
+@onready var version_label = $ColorRect/VersionLabel
 
 @onready var start_button = $SafeArea/MainVBox/MenuButtons/StartButton
 @onready var collectibles_button = $SafeArea/MainVBox/MenuButtons/CollectiblesButton
@@ -105,6 +105,11 @@ func _rearrange_ui() -> void:
 		memo_label.add_theme_font_size_override("font_size", 40)
 	else:
 		memo_label.add_theme_font_size_override("font_size", 24)
+	# 版本文字標籤的調整
+	if window_size.y > window_size.x:
+		version_label.add_theme_font_size_override("font_size", 40)
+	else:
+		version_label.add_theme_font_size_override("font_size", 24)
 	
 	# 強制刷新佈局
 	char_grid.queue_sort()
