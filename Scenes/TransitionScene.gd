@@ -69,9 +69,14 @@ func show_message(text:String, duration := 1.5):
 
 # ---------------------------------------------------
 func fade_in(duration := 0.4) -> void:
-	rect.modulate.a = 0.0
+	self.show()              # 確保 CanvasLayer 是顯示的
+	rect.show()              # 確保黑幕是顯示的
+	rect.modulate.a = 0.0    # 初始透明度
+	
+	await get_tree().process_frame # 給網頁渲染器一幀的時間準備
 	
 	var tween = create_tween()
+	tween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS) # 即使遊戲暫停也要跑動
 	tween.tween_property(rect, "modulate:a", 1.0, duration)
 	
 	await tween.finished
@@ -80,9 +85,12 @@ func fade_out(duration := 0.4) -> void:
 	rect.modulate.a = 1.0
 	
 	var tween = create_tween()
+	tween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
 	tween.tween_property(rect, "modulate:a", 0.0, duration)
 	
 	await tween.finished
+	rect.hide()   # 跑完才藏起來，才不會擋到下面的按鈕
+	self.hide()   # 整個層級藏起來
 
 # 通用淡入 / 淡出 Tween 函式
 # color_from: 起始顏色

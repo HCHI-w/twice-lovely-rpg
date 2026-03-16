@@ -52,10 +52,12 @@ func show_stage_title(stage:int):
 	# 在開始淡入動畫前，先把透明度設為 1 (全黑)
 	# 這樣 show() 的瞬間就是黑的，不會看到後面的場景
 	transition_instance.rect.modulate.a = 1.0
+	transition_instance.rect.show()
 	
+	# 播放文字動畫 (這會觸發 AnimationPlayer)
 	await transition_instance.show_message("第 %d 關" % stage, 2)
-	
-	await transition_instance.fade_out()
+	# 文字播完後，用 Tween 把黑幕拿掉
+	await transition_instance.fade_out(0.8)
 	
 	transition_instance.hide()
 
