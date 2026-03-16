@@ -1,12 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="index.icon.png">
-  <meta property="og:image" content="https://hchi-w.github.io/twice-lovely-rpg/index.png">
   <title>TWICE_lovely_adventure_RPG</title>
+
+  <!-- Favicon PNG -->
+  <link rel="icon" type="image/png" sizes="32x32" href="index.icon.png?v=2">
+  <link rel="icon" type="image/png" sizes="16x16" href="index.icon.png?v=2">
+
+  <!-- Apple touch icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="index.apple-touch-icon.png?v=2">
+
+  <!-- 建議同時提供 favicon.ico，防止瀏覽器自動抓取 /favicon.ico -->
+  <link rel="shortcut icon" href="favicon.ico?v=2">
+
+  <!-- Open Graph / 社群分享圖 -->
+  <meta property="og:image" content="https://hchi-w.github.io/twice-lovely-rpg/index.png?v=2">
+
   <style>
     html,
     body,
@@ -99,9 +111,6 @@
       z-index: 1;
     }
   </style>
-  <link rel="icon" type="image/png" href="index.icon.png?v=2">
-  <link rel="apple-touch-icon" href="index.apple-touch-icon.png?v=2">
-
 </head>
 
 <body>
@@ -114,7 +123,7 @@
   </noscript>
 
   <div id="status">
-    <img id="status-splash" class="show-image--true fullsize--true use-filter--true" src="index.png" alt="">
+    <img id="status-splash" class="show-image--true fullsize--true use-filter--true" src="index.png?v=2" alt="">
     <progress id="status-progress"></progress>
     <div id="status-notice"></div>
   </div>
@@ -134,9 +143,7 @@
       let statusMode = '';
 
       function setStatusMode(mode) {
-        if (statusMode === mode || !initializing) {
-          return;
-        }
+        if (statusMode === mode || !initializing) return;
         if (mode === 'hidden') {
           statusOverlay.remove();
           initializing = false;
@@ -149,9 +156,7 @@
       }
 
       function setStatusNotice(text) {
-        while (statusNotice.lastChild) {
-          statusNotice.removeChild(statusNotice.lastChild);
-        }
+        while (statusNotice.lastChild) statusNotice.removeChild(statusNotice.lastChild);
         const lines = text.split('\n');
         lines.forEach((line) => {
           statusNotice.appendChild(document.createTextNode(line));
@@ -161,49 +166,29 @@
 
       function displayFailureNotice(err) {
         console.error(err);
-        if (err instanceof Error) {
-          setStatusNotice(err.message);
-        } else if (typeof err === 'string') {
-          setStatusNotice(err);
-        } else {
-          setStatusNotice('An unknown error occurred.');
-        }
+        if (err instanceof Error) setStatusNotice(err.message);
+        else if (typeof err === 'string') setStatusNotice(err);
+        else setStatusNotice('An unknown error occurred.');
         setStatusMode('notice');
         initializing = false;
       }
 
-      const missing = Engine.getMissingFeatures({
-        threads: GODOT_THREADS_ENABLED,
-      });
+      const missing = Engine.getMissingFeatures({ threads: GODOT_THREADS_ENABLED });
 
       if (missing.length !== 0) {
         if (GODOT_CONFIG['serviceWorker'] && GODOT_CONFIG['ensureCrossOriginIsolationHeaders'] && 'serviceWorker' in navigator) {
           let serviceWorkerRegistrationPromise;
-          try {
-            serviceWorkerRegistrationPromise = navigator.serviceWorker.getRegistration();
-          } catch (err) {
-            serviceWorkerRegistrationPromise = Promise.reject(new Error('Service worker registration failed.'));
-          }
-          // There's a chance that installing the service worker would fix the issue
+          try { serviceWorkerRegistrationPromise = navigator.serviceWorker.getRegistration(); }
+          catch (err) { serviceWorkerRegistrationPromise = Promise.reject(new Error('Service worker registration failed.')); }
           Promise.race([
             serviceWorkerRegistrationPromise.then((registration) => {
-              if (registration != null) {
-                return Promise.reject(new Error('Service worker already exists.'));
-              }
+              if (registration != null) return Promise.reject(new Error('Service worker already exists.'));
               return registration;
             }).then(() => engine.installServiceWorker()),
-            // For some reason, `getRegistration()` can stall
-            new Promise((resolve) => {
-              setTimeout(() => resolve(), 2000);
-            }),
-          ]).then(() => {
-            // Reload if there was no error.
-            window.location.reload();
-          }).catch((err) => {
-            console.error('Error while registering service worker:', err);
-          });
+            new Promise((resolve) => setTimeout(() => resolve(), 2000)),
+          ]).then(() => window.location.reload())
+            .catch((err) => console.error('Error while registering service worker:', err));
         } else {
-          // Display the message as usual
           const missingMsg = 'Error\nThe following features required to run Godot projects on the Web are missing:\n';
           displayFailureNotice(missingMsg + missing.join('\n'));
         }
@@ -219,9 +204,7 @@
               statusProgress.removeAttribute('max');
             }
           },
-        }).then(() => {
-          setStatusMode('hidden');
-        }, displayFailureNotice);
+        }).then(() => setStatusMode('hidden'), displayFailureNotice);
       }
     }());
   </script>
