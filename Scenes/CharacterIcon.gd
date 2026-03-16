@@ -11,7 +11,7 @@ func _on_mouse_entered() -> void:
 	
 	# 讓圖片向上移動 10 像素，花費 0.1 秒
 	# Vector2(0, -10) 代表向上 (Y 軸負方向是上)
-	tween.tween_property(self, "position:y", position.y - 10, 0.1)
+	tween.tween_property(self, "position:y", position.y - 20, 0.1)
 	
 	# 接著讓它回到原位，花費 0.1 秒
 	tween.tween_property(self, "position:y", position.y, 0.1)

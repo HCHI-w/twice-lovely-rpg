@@ -48,10 +48,10 @@ func _rearrange_ui() -> void:
 		
 		# 將角色變成 3x3  2x5 或其它排列
 		grid_columns = 3
-		icon_size = Vector2(102, 136)   # 手機版：圖示變大 (假設原本是 80)
+		icon_size = Vector2(180, 240)   # 手機版：圖示變大 (假設原本是 80)
 		# 調整容器的間距，讓它在窄螢幕看起來不擁擠
 		main_vbox.add_theme_constant_override("separation", 20)
-		print("手機模式：圖示放大為 102, 136")
+		print("手機模式：圖示放大為 180, 240")
 	else:
 		# --- 橫式畫面 ---
 		# Logo 可以放大
@@ -59,7 +59,7 @@ func _rearrange_ui() -> void:
 		
 		# 回復成標準的排列
 		grid_columns = 9
-		icon_size = Vector2(60, 80)   # 電腦版：圖示縮小排成一列
+		icon_size = Vector2(84,112)   # 電腦版：圖示縮小排成一列
 		# 橫式畫面可以讓間距大一點
 		main_vbox.add_theme_constant_override("separation", 50)
 		print("目前是橫式，圖示為 60, 80")
