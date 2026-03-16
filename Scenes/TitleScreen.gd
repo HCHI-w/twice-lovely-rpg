@@ -111,6 +111,22 @@ func _rearrange_ui() -> void:
 	main_vbox.queue_sort()
 
 # ---------------------------------------------------
+# 依畫面方向載入 Scene
+func load_character_select_scene():
+	var size = DisplayServer.window_get_size()
+	
+	if size.y > size.x:
+		print("載入直式角色選擇")
+		get_tree().change_scene_to_file(
+			"res://Scenes/CharacterSelectScene_Portrait.tscn"
+		)
+	else:
+		print("載入橫式角色選擇")
+		get_tree().change_scene_to_file(
+			"res://Scenes/CharacterSelectScene_Landscape.tscn"
+		)
+
+# ---------------------------------------------------
 # 點擊開始按鈕
 func _on_start_pressed() -> void:
 	print("點擊開始遊戲")
@@ -118,7 +134,8 @@ func _on_start_pressed() -> void:
 	_fade(Color(modulate.r, modulate.g, modulate.b, 1.0), Color(modulate.r, modulate.g, modulate.b, 0.0), 0.5, Callable(self, "_go_to_character_select"))
 
 func _go_to_character_select() -> void:
-	get_tree().change_scene_to_file("res://Scenes/CharacterSelectScene.tscn")
+#	get_tree().change_scene_to_file("res://Scenes/CharacterSelectScene.tscn")
+	load_character_select_scene()
 
 # 物品圖鑑按鈕
 func _on_collectibles_pressed():

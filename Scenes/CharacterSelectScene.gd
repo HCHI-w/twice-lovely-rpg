@@ -94,18 +94,12 @@ func _on_window_resized():
 	var window_size = get_viewport().get_visible_rect().size
 	var is_portrait = window_size.y > window_size.x
 	
-	# 切換上下還是左右排列
-	if main_layout is BoxContainer:
-		main_layout.vertical = is_portrait
-	
 	# 針對直式進行細節微調
 	if is_portrait:
 		_apply_portrait_layout(window_size)
 	else:
 		_apply_landscape_layout(window_size)
 		
-	# 縮放所有文字 (複用之前的邏輯)
-	_update_ui_text_scale(window_size)
 	# 動態調整按鈕高度
 	_adjust_button_height(is_portrait)
 
@@ -119,8 +113,6 @@ func _apply_portrait_layout(_window_size: Vector2):
 	
 	# --- 處理 RightSide ---
 	var right_side = $CharacterSelectPanel/MainLayout/RightSide
-#	right_side.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-#	right_side.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	right_side.size_flags_stretch_ratio = 1.0
 	
 	# --- 處理內部的 CharacterInfoPanel ---
@@ -131,16 +123,12 @@ func _apply_portrait_layout(_window_size: Vector2):
 	_set_grid_columns(3)
 	
 	# 按鈕尺寸
-	character_button_container.columns = 3 # 直式維持 3 列
+	character_button_container.columns = 3   # 直式維持 3 列
 
 # 針對橫式進行細節微調
 func _apply_landscape_layout(_window_size: Vector2):
 	# 橫式：回復比例
-#	$CharacterSelectPanel/MainLayout/LeftSide.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	$CharacterSelectPanel/MainLayout/LeftSide.size_flags_stretch_ratio = 2.0   # 選擇區大一點
-	
-#	$CharacterSelectPanel/MainLayout/RightSide.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-#	$CharacterSelectPanel/MainLayout/RightSide.size_flags_stretch_ratio = 1.0
 	
 	$CharacterSelectPanel/MainLayout/RightSide/CharacterInfoPanel.vertical = true
 	
@@ -173,40 +161,25 @@ func _adjust_button_height(is_portrait: bool):
 	for btn in class_button_container.get_children():
 		if btn is Button:
 			btn.custom_minimum_size.y = target_height
-
-# 處理 RichTextLabel 的字體縮放
-func _update_ui_text_scale(window_size: Vector2):
-	var is_portrait = window_size.y > window_size.x
-	# 計算基礎字體大小
-	var base_font = 26 if is_portrait else 22
-	var desc_font = 24 if is_portrait else 20   # 說明欄位通常稍微小一點
-	
-	# --- 處理左側所有按鈕 (角色與職業) ---
-	var containers = [character_button_container, class_button_container]
-	for container in containers:
-		for btn in container.get_children():
-			if btn is Button:
-				btn.add_theme_font_size_override("font_size", base_font)
-	
-	# --- 處理說明與警告 ---
-	description_label.add_theme_font_size_override("normal_font_size", desc_font)
-	description_label.add_theme_font_size_override("bold_font_size", desc_font)
-	warning_label.add_theme_font_size_override("font_size", base_font)
 	
 	# --- 處理右側數值面板 ---
 	for i in range(3):
 		var container_path = "CharacterSelectPanel/MainLayout/RightSide/CharacterInfoPanel/Panel_%d/MarginContainer/GridContainer/" % i
-		var container_node = get_node_or_null(container_path)
-		if container_node:
-			for child in container_node.get_children():
-				if child is RichTextLabel:
-					child.add_theme_font_size_override("normal_font_size", desc_font)
+		var _container_node = get_node_or_null(container_path)
 	
 	# --- 處理右側動作按鈕 (Confirm 系列) ---
-	var action_panel = $CharacterSelectPanel/MainLayout/RightSide/ActionButtonPanel
-	for btn in action_panel.get_children():
-		if btn is Button:
-			btn.add_theme_font_size_override("font_size", base_font + 2)   # 確認按鈕可以再大一點
+	var _action_panel = $CharacterSelectPanel/MainLayout/RightSide/ActionButtonPanel
+
+# Button 文字大小
+func _get_button_font_size() -> int:
+	var size = get_viewport().size
+	return 40 if size.y > size.x else 26
+
+# 選取順序文字大小
+func _get_order_label_font_size() -> int:
+	var size = get_viewport().size
+	return 34 if size.y > size.x else 18
+
 
 # ----------------------------------------------------------
 # 處理右側面板的輸入事件
@@ -290,7 +263,7 @@ func create_character_buttons():
 		order_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		order_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 		
-		order_label.add_theme_font_size_override("font_size", 16)
+		order_label.add_theme_font_size_override("font_size", _get_order_label_font_size())
 		order_label.add_theme_color_override("font_color", Color.WHITE)
 		
 		# 圓形背景，調整 StyleBox 的邊距 (Content Margin)
@@ -357,6 +330,8 @@ func create_character_buttons():
 			_on_character_selected(char_data)
 		)
 		character_button_container.add_child(btn)
+		
+		btn.add_theme_font_size_override("font_size", _get_button_font_size())
 
 # 生成職業按鈕
 func create_class_buttons():
@@ -378,7 +353,7 @@ func create_class_buttons():
 		order_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		order_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 		
-		order_label.add_theme_font_size_override("font_size", 16)
+		order_label.add_theme_font_size_override("font_size", _get_order_label_font_size())
 		order_label.add_theme_color_override("font_color", Color.WHITE)
 		
 		# 圓形背景，調整 StyleBox 的邊距 (Content Margin)
@@ -435,8 +410,9 @@ func create_class_buttons():
 		)
 		class_button_container.add_child(btn)
 		# 立即套用當前的縮放大小，避免它變回預設的小字
-		var current_size = get_viewport().get_visible_rect().size
-		_update_ui_text_scale(current_size)
+		var _current_size = get_viewport().get_visible_rect().size
+		
+		btn.add_theme_font_size_override("font_size", _get_button_font_size())
 		
 		# 等待一幀 確保所有按鈕都在場景樹裡了
 		await get_tree().process_frame
@@ -589,18 +565,14 @@ func update_panel_with_values(
 # ----------------------------------------------------------
 # 顯示說明欄 - 角色
 func _show_character_description(char_data: CharacterData):
-	var text = "[b]" + char_data.display_name + "[/b]\n\n"
-	
-	text += char_data.description
+	var text = char_data.description
 	
 	description_label.clear()
 	description_label.append_text(text)
 
 # 顯示說明欄 - 職業
 func _show_class_description(class_data: ClassData):
-	var text = "[b]" + class_data.display_name + "[/b]\n\n"
-	
-	text += class_data.description
+	var text = class_data.description
 	
 	description_label.clear()
 	description_label.append_text(text + "[color=gray]  (點擊右側角色面板可移除職業)[/color]")
@@ -830,7 +802,7 @@ func _update_class_button_colors():
 				if order_label.text == "":
 					order_label.text = str(i + 1)
 				else:
-					order_label.text += "." + str(i + 1)
+					order_label.text += "·" + str(i + 1)
 				
 				btn.add_theme_stylebox_override("normal", selected_style)
 				order_label.visible = true

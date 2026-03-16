@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://djk0m3auustoc"]
 
-[ext_resource type="Script" uid="uid://xg8d4ptalsel" path="res://Scenes/CharacterSelectScene.gd" id="1_srmn1"]
-[ext_resource type="Theme" uid="uid://bbn6ayd5lv4e2" path="res://Fonts/ThemeFonts.tres" id="2_sk7s0"]
+[ext_resource type="Script" uid="uid://xg8d4ptalsel" path="res://Scenes/CharacterSelectScene.gd" id="1_6e8rf"]
+[ext_resource type="Theme" uid="uid://bbn6ayd5lv4e2" path="res://Fonts/ThemeFonts.tres" id="2_73301"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sk7s0"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -28,7 +28,7 @@ border_width_bottom = 2
 border_color = Color(0.70980394, 0.70980394, 0.70980394, 1)
 
 [node name="CharacterSelectScene" type="Node" unique_id=1517539876]
-script = ExtResource("1_srmn1")
+script = ExtResource("1_6e8rf")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1515957596]
 anchors_preset = 15
@@ -47,9 +47,9 @@ anchor_right = 0.98
 anchor_bottom = 0.97
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_sk7s0")
+theme = ExtResource("2_73301")
 
-[node name="MainLayout" type="BoxContainer" parent="CharacterSelectPanel" unique_id=470684562]
+[node name="MainLayout" type="HBoxContainer" parent="CharacterSelectPanel" unique_id=948302910]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -104,12 +104,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 10
+theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 10
+theme_override_constants/margin_bottom = 20
 
 [node name="DescriptionLabel" type="RichTextLabel" parent="CharacterSelectPanel/MainLayout/LeftSide/DescriptionPanel/MarginContainer" unique_id=236020991]
 layout_mode = 2
+theme_override_font_sizes/normal_font_size = 24
 fit_content = true
 autowrap_mode = 2
 
@@ -157,6 +158,7 @@ clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 24
 fit_content = true
 
 [node name="HPLabel_0" type="RichTextLabel" parent="CharacterSelectPanel/MainLayout/RightSide/CharacterInfoPanel/Panel_0/MarginContainer/GridContainer" unique_id=1285930802]
@@ -164,6 +166,7 @@ clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 fit_content = true
 
@@ -172,6 +175,7 @@ clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 fit_content = true
 
@@ -180,6 +184,7 @@ clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 fit_content = true
 
@@ -188,6 +193,7 @@ clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 fit_content = true
 
@@ -196,6 +202,7 @@ clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 fit_content = true
 
@@ -204,6 +211,7 @@ clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 fit_content = true
 
@@ -212,6 +220,7 @@ clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 fit_content = true
 
@@ -241,6 +250,7 @@ clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 24
 fit_content = true
 
 [node name="HPLabel_1" type="RichTextLabel" parent="CharacterSelectPanel/MainLayout/RightSide/CharacterInfoPanel/Panel_1/MarginContainer/GridContainer" unique_id=1598934096]
@@ -248,6 +258,7 @@ clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 fit_content = true
 
@@ -256,6 +267,7 @@ clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 fit_content = true
 
@@ -264,6 +276,7 @@ clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 fit_content = true
 
@@ -272,6 +285,7 @@ clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 fit_content = true
 
@@ -280,6 +294,7 @@ clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 fit_content = true
 
@@ -288,6 +303,7 @@ clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 fit_content = true
 
@@ -296,6 +312,7 @@ clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 fit_content = true
 
@@ -325,6 +342,7 @@ clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 24
 fit_content = true
 
 [node name="HPLabel_2" type="RichTextLabel" parent="CharacterSelectPanel/MainLayout/RightSide/CharacterInfoPanel/Panel_2/MarginContainer/GridContainer" unique_id=1846636430]
@@ -332,6 +350,7 @@ clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 fit_content = true
 
@@ -340,6 +359,7 @@ clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 fit_content = true
 
@@ -348,6 +368,7 @@ clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 fit_content = true
 
@@ -356,6 +377,7 @@ clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 fit_content = true
 
@@ -364,6 +386,7 @@ clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 fit_content = true
 
@@ -372,6 +395,7 @@ clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 fit_content = true
 
@@ -380,6 +404,7 @@ clip_contents = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 fit_content = true
 
@@ -390,18 +415,21 @@ theme_override_constants/separation = 6
 
 [node name="ConfirmButton" type="Button" parent="CharacterSelectPanel/MainLayout/RightSide/ActionButtonPanel" unique_id=1947572275]
 layout_mode = 2
+theme_override_font_sizes/font_size = 26
 disabled = true
 text = "確認"
 
 [node name="ConfirmClassButton" type="Button" parent="CharacterSelectPanel/MainLayout/RightSide/ActionButtonPanel" unique_id=486277791]
 visible = false
 layout_mode = 2
+theme_override_font_sizes/font_size = 26
 disabled = true
 text = "確認職業"
 
 [node name="BackToCharacterButton" type="Button" parent="CharacterSelectPanel/MainLayout/RightSide/ActionButtonPanel" unique_id=1854334382]
 visible = false
 layout_mode = 2
+theme_override_font_sizes/font_size = 26
 text = "返回角色選擇"
 
 [connection signal="pressed" from="CharacterSelectPanel/MainLayout/RightSide/ActionButtonPanel/ConfirmButton" to="." method="_on_confirm_button_pressed"]
