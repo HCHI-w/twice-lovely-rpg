@@ -92,19 +92,19 @@ func _rearrange_ui() -> void:
 		if btn is Button:
 			if window_size.y > window_size.x:
 				# 手機版：字體放大，按鈕變高好點擊
-				btn.add_theme_font_size_override("font_size", 26)
+				btn.add_theme_font_size_override("font_size", 40)
 				btn.custom_minimum_size.y = 80
 			else:
 				# 電腦版：字體正常
-				btn.add_theme_font_size_override("font_size", 20)
+				btn.add_theme_font_size_override("font_size", 24)
 				btn.custom_minimum_size.y = 50
 	
 	# 文字標籤的調整
 	# 在直式判斷中
 	if window_size.y > window_size.x:
-		memo_label.add_theme_font_size_override("font_size", 26)
+		memo_label.add_theme_font_size_override("font_size", 40)
 	else:
-		memo_label.add_theme_font_size_override("font_size", 20)
+		memo_label.add_theme_font_size_override("font_size", 24)
 	
 	# 強制刷新佈局
 	char_grid.queue_sort()
@@ -113,7 +113,7 @@ func _rearrange_ui() -> void:
 # ---------------------------------------------------
 # 依畫面方向載入 Scene
 func load_character_select_scene():
-	var size = DisplayServer.window_get_size()
+	var size = get_viewport_rect().size
 	
 	if size.y > size.x:
 		print("載入直式角色選擇")

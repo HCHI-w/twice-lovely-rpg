@@ -420,7 +420,7 @@ layout_mode = 2
 theme_override_constants/separation = 6
 
 [node name="ConfirmButton" type="Button" parent="CharacterSelectPanel/MainLayout/RightSide/ActionButtonPanel" unique_id=1947572275]
-custom_minimum_size = Vector2(0, 30)
+custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 disabled = true
@@ -428,7 +428,7 @@ text = "確認"
 
 [node name="ConfirmClassButton" type="Button" parent="CharacterSelectPanel/MainLayout/RightSide/ActionButtonPanel" unique_id=486277791]
 visible = false
-custom_minimum_size = Vector2(0, 30)
+custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 disabled = true
@@ -436,7 +436,7 @@ text = "確認職業"
 
 [node name="BackToCharacterButton" type="Button" parent="CharacterSelectPanel/MainLayout/RightSide/ActionButtonPanel" unique_id=1854334382]
 visible = false
-custom_minimum_size = Vector2(0, 30)
+custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "返回角色選擇"

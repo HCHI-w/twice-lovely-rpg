@@ -173,7 +173,7 @@ func _adjust_button_height(is_portrait: bool):
 # Button 文字大小
 func _get_button_font_size() -> int:
 	var size = get_viewport().size
-	return 40 if size.y > size.x else 26
+	return 48 if size.y > size.x else 26
 
 # 選取順序文字大小
 func _get_order_label_font_size() -> int:
