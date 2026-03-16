@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://ht8kyrneh2xp"]
 
-[ext_resource type="Texture2D" uid="uid://d3fucfaihvvbm" path="res://0Picture/Character_pic/Yzuyu.png" id="1_6kslt"]
+[ext_resource type="Texture2D" uid="uid://d3fucfaihvvbm" path="res://0Picture/Character_pic/Tzuyu.png" id="1_6kslt"]
 [ext_resource type="Script" uid="uid://c23f8i5d0ig5d" path="res://Resources/Characters/CharacterData.gd" id="1_fhdwg"]
 [ext_resource type="Texture2D" uid="uid://cl75k3eunymn3" path="res://0Picture/CharacterSit/Tzuyu_sit_00.png" id="2_ytso4"]
 [ext_resource type="Texture2D" uid="uid://d1ufy3vs8n5c" path="res://0Picture/CharacterSit/Tzuyu_sit_01.png" id="3_cgvby"]

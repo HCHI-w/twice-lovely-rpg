@@ -7,21 +7,21 @@
 [ext_resource type="Texture2D" uid="uid://bb8gw6kyxyqwe" path="res://0Picture/CharacterBreathing/64pxChaeyoung_up.png" id="5_qu6cc"]
 [ext_resource type="Texture2D" uid="uid://ccn8qlq43xabh" path="res://0Picture/CharacterBreathing/64pxDahyun_up.png" id="6_4hokt"]
 [ext_resource type="Texture2D" uid="uid://djemuok543t6e" path="res://0Picture/CharacterBreathing/64pxChaeyoung_dn.png" id="6_i5sur"]
-[ext_resource type="Texture2D" uid="uid://bu8qvoqsxqoga" path="res://0Picture/CharacterBreathing/64pxTuzyu_up.png" id="7_swiah"]
+[ext_resource type="Texture2D" uid="uid://bu8qvoqsxqoga" path="res://0Picture/CharacterBreathing/64pxTzuyu_up.png" id="7_swiah"]
 [ext_resource type="Texture2D" uid="uid://cm7o5lukjrwbd" path="res://0Picture/CharacterBreathing/64pxDahyun_dn.png" id="8_5c2t2"]
 [ext_resource type="Texture2D" uid="uid://ctcn73f7pvi85" path="res://0Picture/CharacterBreathing/64pxSana_up.png" id="8_75epk"]
 [ext_resource type="Texture2D" uid="uid://c3r0sf51p072v" path="res://0Picture/CharacterBreathing/64pxMina_up.png" id="9_3ah5x"]
 [ext_resource type="Texture2D" uid="uid://gpummy1v0cui" path="res://0Picture/CharacterBreathing/64pxMomo_up.png" id="10_jhb10"]
-[ext_resource type="Texture2D" uid="uid://h5dcxw0c6p0b" path="res://0Picture/CharacterBreathing/64pxTuzyu_dn.png" id="10_qfyqv"]
+[ext_resource type="Texture2D" uid="uid://h5dcxw0c6p0b" path="res://0Picture/CharacterBreathing/64pxTzuyu_dn.png" id="10_qfyqv"]
 [ext_resource type="Texture2D" uid="uid://biuw7lcpqd2y1" path="res://0Picture/CharacterBreathing/64pxNayeon_up.png" id="11_deutk"]
 [ext_resource type="Texture2D" uid="uid://cwio2y42mman8" path="res://0Picture/CharacterBreathing/64pxMina_dn.png" id="12_2jiiu"]
 [ext_resource type="Texture2D" uid="uid://bb030vly0jd1d" path="res://0Picture/CharacterBreathing/64pxJeongyeon_up.png" id="12_fvr0n"]
-[ext_resource type="Texture2D" uid="uid://bwqlvqipn3yga" path="res://0Picture/CharacterBreathing/64pxJiyho_up.png" id="13_o6bmn"]
+[ext_resource type="Texture2D" uid="uid://bwqlvqipn3yga" path="res://0Picture/CharacterBreathing/64pxJihyo_up.png" id="13_o6bmn"]
 [ext_resource type="Texture2D" uid="uid://b43s4tuvtcwgw" path="res://0Picture/CharacterBreathing/64pxSana_dn.png" id="14_qu6cc"]
 [ext_resource type="Texture2D" uid="uid://h5yienxc57qw" path="res://0Picture/CharacterBreathing/64pxMomo_dn.png" id="16_swiah"]
 [ext_resource type="Texture2D" uid="uid://cu5hgerqk347a" path="res://0Picture/CharacterBreathing/64pxNayeon_dn.png" id="18_3ah5x"]
 [ext_resource type="Texture2D" uid="uid://dyccdfkgkmoww" path="res://0Picture/CharacterBreathing/64pxJeongyeon_dn.png" id="20_deutk"]
-[ext_resource type="Texture2D" uid="uid://cahxatqggy0t5" path="res://0Picture/CharacterBreathing/64pxJiyho_dn.png" id="22_o6bmn"]
+[ext_resource type="Texture2D" uid="uid://cahxatqggy0t5" path="res://0Picture/CharacterBreathing/64pxJihyo_dn.png" id="22_o6bmn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7whhf"]
 resource_name = "Chaeyoung"
@@ -193,7 +193,7 @@ offset_bottom = -20.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_colors/font_color = Color(0.3882353, 0.3882353, 0.3882353, 1)
-text = "v0.1"
+text = "v0.1.0"
 
 [node name="SafeArea" type="MarginContainer" parent="." unique_id=1618820919]
 layout_mode = 1

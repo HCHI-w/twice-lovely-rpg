@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://gbb0wh0eq1gx"]
 
-[ext_resource type="Texture2D" uid="uid://cr7mrmrv330od" path="res://0Picture/Character_pic/Jiyho.png" id="1_et3iy"]
+[ext_resource type="Texture2D" uid="uid://cr7mrmrv330od" path="res://0Picture/Character_pic/Jihyo.png" id="1_et3iy"]
 [ext_resource type="Script" uid="uid://c23f8i5d0ig5d" path="res://Resources/Characters/CharacterData.gd" id="1_hqrje"]
 [ext_resource type="SpriteFrames" uid="uid://bsgh4uaq3xtvw" path="res://0Animations/Jihyo.tres" id="2_mj5be"]
 [ext_resource type="Texture2D" uid="uid://ch4frqbs8m5eg" path="res://0Picture/CharacterIcon/Jihyo_icon.png" id="3_wla3u"]

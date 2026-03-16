@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://h5dcxw0c6p0b"
-path="res://.godot/imported/64pxTuzyu_dn.png-1c7aa67734113436af2e53880652aedf.ctex"
+uid="uid://d3fucfaihvvbm"
+path="res://.godot/imported/Tzuyu.png-b99a7a69667fdf5a76d7eeafd14d2d2c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://0Picture/CharacterBreathing/64pxTuzyu_dn.png"
-dest_files=["res://.godot/imported/64pxTuzyu_dn.png-1c7aa67734113436af2e53880652aedf.ctex"]
+source_file="res://0Picture/Character_pic/Tzuyu.png"
+dest_files=["res://.godot/imported/Tzuyu.png-b99a7a69667fdf5a76d7eeafd14d2d2c.ctex"]
 
 [params]
 

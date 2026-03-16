@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3fucfaihvvbm"
-path="res://.godot/imported/Yzuyu.png-4100a817a840930c7c0c6670901dff42.ctex"
+uid="uid://cr7mrmrv330od"
+path="res://.godot/imported/Jihyo.png-19542eec31d8638f5fa9765c7fd16a11.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://0Picture/Character_pic/Yzuyu.png"
-dest_files=["res://.godot/imported/Yzuyu.png-4100a817a840930c7c0c6670901dff42.ctex"]
+source_file="res://0Picture/Character_pic/Jihyo.png"
+dest_files=["res://.godot/imported/Jihyo.png-19542eec31d8638f5fa9765c7fd16a11.ctex"]
 
 [params]
 

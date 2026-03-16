@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr7mrmrv330od"
-path="res://.godot/imported/Jiyho.png-0a3a1daf592df4ef2a6728bb0d0ee0a4.ctex"
+uid="uid://bu8qvoqsxqoga"
+path="res://.godot/imported/64pxTzuyu_up.png-b2e8b8f5b9837fc2028408c5f93af5b0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://0Picture/Character_pic/Jiyho.png"
-dest_files=["res://.godot/imported/Jiyho.png-0a3a1daf592df4ef2a6728bb0d0ee0a4.ctex"]
+source_file="res://0Picture/CharacterBreathing/64pxTzuyu_up.png"
+dest_files=["res://.godot/imported/64pxTzuyu_up.png-b2e8b8f5b9837fc2028408c5f93af5b0.ctex"]
 
 [params]
 
