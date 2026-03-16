@@ -18,7 +18,6 @@ config/name="TWICE_lovely_RPG"
 run/main_scene="res://Scenes/TitleScreen.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/bg_color=Color(0.37, 0.1628, 0.20424007, 1)
-boot_splash/image="uid://djoxqdk335vma"
 config/icon="res://icon.svg"
 
 [autoload]
