@@ -1,43 +1,42 @@
 [gd_scene format=3 uid="uid://dd5ovmg8mc2k4"]
 
 [ext_resource type="Script" uid="uid://ckkijqijj1lpa" path="res://Scenes/CampScene.gd" id="1_do0x7"]
-[ext_resource type="Texture2D" uid="uid://deebks4s8jwcd" path="res://0Picture/CampBackgroung.png" id="2_k4nwx"]
+[ext_resource type="Texture2D" uid="uid://mk13x6pwmphd" path="res://0Picture/CampBackgroung_p.png" id="2_do0x7"]
 [ext_resource type="Theme" uid="uid://bbn6ayd5lv4e2" path="res://Fonts/ThemeFonts.tres" id="3_p4i0x"]
 
 [node name="CampScene" type="Node2D" unique_id=865208504]
 script = ExtResource("1_do0x7")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=344239066]
-position = Vector2(642.99994, 353.99997)
-scale = Vector2(1.1402777, 1.1402777)
-texture = ExtResource("2_k4nwx")
+position = Vector2(363, 643)
+texture = ExtResource("2_do0x7")
 
 [node name="CampCharacterLayer" type="Node2D" parent="." unique_id=1123346288]
 scale = Vector2(2.5, 2.5)
 
 [node name="PlayerSlot1" type="Marker2D" parent="CampCharacterLayer" unique_id=284464463]
-position = Vector2(90, 659.2)
+position = Vector2(90, 714)
 
 [node name="PlayerSlot2" type="Marker2D" parent="CampCharacterLayer" unique_id=245213584]
-position = Vector2(113, 490)
+position = Vector2(113, 544.80005)
 scale = Vector2(2, 2)
 
 [node name="PlayerSlot3" type="Marker2D" parent="CampCharacterLayer" unique_id=1626222811]
-position = Vector2(410, 490)
+position = Vector2(410, 544.80005)
 scale = Vector2(2, 2)
 
 [node name="VisitorSlot" type="Marker2D" parent="CampCharacterLayer" unique_id=1730944484]
-position = Vector2(424.80002, 659.2)
+position = Vector2(424.80002, 714)
 scale = Vector2(2, 2)
 
 [node name="Label" type="Label" parent="." unique_id=410190581]
-offset_left = 312.0
+offset_left = 228.0
 offset_top = 212.0
-offset_right = 1004.0
+offset_right = 1062.0
 offset_bottom = 271.0
 theme = ExtResource("3_p4i0x")
 theme_override_font_sizes/font_size = 50
-text = "營地休息中...獲得專屬Buff..."
+text = "營地休息中...獲得職業專屬 Buff..."
 horizontal_alignment = 1
 
 [node name="CollectionPanel" type="GridContainer" parent="." unique_id=365309177]
@@ -47,13 +46,14 @@ theme = ExtResource("3_p4i0x")
 
 [node name="DepartButton" type="Button" parent="." unique_id=832739827]
 custom_minimum_size = Vector2(280, 120)
-anchors_preset = -1
+anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = 500.0
-offset_top = 1986.0
+offset_top = 2123.0
 offset_right = 780.0
-offset_bottom = 2106.0
+offset_bottom = 2243.0
+grow_horizontal = 2
 theme = ExtResource("3_p4i0x")
 theme_override_font_sizes/font_size = 50
 text = "出發"

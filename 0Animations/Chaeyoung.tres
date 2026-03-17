@@ -6,6 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://unysvskrbguh" path="res://0Picture/CharacterStretch/Chaeyoung_stretch_03.png" id="4_ul1qx"]
 [ext_resource type="Texture2D" uid="uid://djsjw3ttxpemb" path="res://0Picture/CharacterStretch/Chaeyoung_stretch_04.png" id="5_opumj"]
 [ext_resource type="Texture2D" uid="uid://dqwmasdq0jvau" path="res://0Picture/CharacterStretch/Chaeyoung_stretch_05.png" id="6_6t02w"]
+[ext_resource type="Texture2D" uid="uid://de7jumowswtot" path="res://0Picture/CharacterTwist/Chaeyoung_twist_00.png" id="7_w2qvn"]
+[ext_resource type="Texture2D" uid="uid://dgwhie8x1bb7h" path="res://0Picture/CharacterTwist/Chaeyoung_twist_01.png" id="8_w0aqw"]
+[ext_resource type="Texture2D" uid="uid://c0qeae07dqhc3" path="res://0Picture/CharacterTwist/Chaeyoung_twist_02.png" id="9_5u4pa"]
+[ext_resource type="Texture2D" uid="uid://dv6ukhsruv25w" path="res://0Picture/CharacterTwist/Chaeyoung_twist_03.png" id="10_yrcq2"]
+[ext_resource type="Texture2D" uid="uid://bsnxpylj41p87" path="res://0Picture/CharacterTwist/Chaeyoung_twist_04.png" id="11_b4oyk"]
+[ext_resource type="Texture2D" uid="uid://b62amvr6d8vew" path="res://0Picture/CharacterTwist/Chaeyoung_twist_05.png" id="12_y7pti"]
 
 [resource]
 resource_name = "Chaeyoung"
@@ -31,5 +37,28 @@ animations = [{
 }],
 "loop": true,
 "name": &"stretch",
+"speed": 1.3
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_w2qvn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_w0aqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_5u4pa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_yrcq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_b4oyk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_y7pti")
+}],
+"loop": true,
+"name": &"twist",
 "speed": 1.3
 }]
