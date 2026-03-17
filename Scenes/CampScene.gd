@@ -72,11 +72,6 @@ func _on_window_resized():
 	label.position.x = (window_size.x - label.size.x) / 2
 	label.position.y = window_size.y * 0.1 # 放在頂部 10% 處
 	
-	# 調整角色 Slot 的定位 (營地火堆中心點)
-	_adjust_character_slots(window_size, is_portrait)
-	
-	# 調整出發按鈕與面板
-	_adjust_ui_layout(window_size, is_portrait)
 
 # 處理背景縮放 (Cover 模式)
 func _adjust_background(window_size: Vector2):
@@ -94,51 +89,51 @@ func _adjust_background(window_size: Vector2):
 		background.scale = Vector2(scale_factor, scale_factor)
 
 # 處理角色 Slot 的微調
-func _adjust_character_slots(window_size: Vector2, is_portrait: bool):
-	var center = window_size / 2
+#func _adjust_character_slots(window_size: Vector2, is_portrait: bool):
+#	var center = window_size / 2
 	
-	if is_portrait:
+#	if is_portrait:
 		# 直式：角色可以稍微垂直排列或縮小間距
-		slot1.position = center + Vector2(-350, 150)
-		slot2.position = center + Vector2(-400, 550)
-		slot3.position = center + Vector2(360, 550)
-		visitor_slot.position = center + Vector2(370, 150)   # 訪客
-	else:
+#		slot1.position = center + Vector2(-350, 150)
+#		slot2.position = center + Vector2(-400, 550)
+#		slot3.position = center + Vector2(360, 550)
+#		visitor_slot.position = center + Vector2(370, 150)   # 訪客
+#	else:
 		# 橫式：角色扇形圍繞火堆
-		slot1.position = center + Vector2(-200, 90)
-		slot2.position = center + Vector2(-150, 160)
-		slot3.position = center + Vector2(180, 160)
-		visitor_slot.position = center + Vector2(130, 30)
+#		slot1.position = center + Vector2(-200, 90)
+#		slot2.position = center + Vector2(-150, 160)
+#		slot3.position = center + Vector2(180, 160)
+#		visitor_slot.position = center + Vector2(130, 30)
 	
 	# 同步更新已經生成出來的角色位置
-	_update_active_character_positions(is_portrait)
+#	_update_active_character_positions(is_portrait)
 
 # 讓已經在場上的角色瞬移到新的 Slot 位置
-func _update_active_character_positions(is_portrait: bool):
-	var slots = [slot1, slot2, slot3]
+#func _update_active_character_positions(is_portrait: bool):
+#	var slots = [slot1, slot2, slot3]
 	
 	# 修正建議：直式給 1.8 ~ 2.0，橫式維持 1.5 左右
-	var portrait_scale = 1.9
-	var landscape_scale = 1.6
+#	var portrait_scale = 1.9
+#	var landscape_scale = 1.6
 	
-	var s_val = portrait_scale if is_portrait else landscape_scale
-	var fixed_scale = Vector2(s_val, s_val)
+#	var s_val = portrait_scale if is_portrait else landscape_scale
+#	var fixed_scale = Vector2(s_val, s_val)
 	
-	for i in range(min(camp_characters.size(), 3)):
-		camp_characters[i].global_position = slots[i].global_position
+#	for i in range(min(camp_characters.size(), 3)):
+#		camp_characters[i].global_position = slots[i].global_position
 		# 強制設定角色的縮放，避免受到父節點或其他縮放邏輯影響
-		camp_characters[i].scale = fixed_scale
+#		camp_characters[i].scale = fixed_scale
 	
-	if camp_characters.size() > 3:
-		camp_characters[3].global_position = visitor_slot.global_position
-		camp_characters[3].scale = fixed_scale
+#	if camp_characters.size() > 3:
+#		camp_characters[3].global_position = visitor_slot.global_position
+#		camp_characters[3].scale = fixed_scale
 
 
-func _adjust_ui_layout(window_size: Vector2, is_portrait: bool):
+#func _adjust_ui_layout(window_size: Vector2, is_portrait: bool):
 	# DepartButton 置中靠下
-	depart_button.size.x = window_size.x * 0.4 if is_portrait else 200
-	depart_button.position.x = (window_size.x - depart_button.size.x) / 2
-	depart_button.position.y = window_size.y * 0.85
+#	depart_button.size.x = window_size.x * 0.4 if is_portrait else 200
+#	depart_button.position.x = (window_size.x - depart_button.size.x) / 2
+#	depart_button.position.y = window_size.y * 0.85
 
 
 # ---------------------------------------------------
@@ -187,14 +182,12 @@ func spawn_party_characters():
 	var party = GameManager.party.get_members()
 	
 	for i in range(party.size()):
-		var member = party[i]
 		var character = CampCharacterScene.instantiate()
 		camp_layer.add_child(character)
 		
 		character.global_position = slots[i].global_position
 		
-		character.setup(member.character_data)
-		character.clicked.connect(trigger_random_dialogue)
+		character.setup(party[i].character_data)
 		camp_characters.append(character)
 
 # 生成訪客

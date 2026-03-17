@@ -205,14 +205,19 @@ func _show_camp():
 		result_scene.queue_free()
 		result_scene = null
 	
-	var scene = preload("res://Scenes/CampScene.tscn")
+	var scene = load(get_camp_scene_path())
 	camp_scene = scene.instantiate()
-#	add_child(camp_scene)
 	
 	# 加到場景樹根節點，而不是 BattleScene
 	get_tree().root.add_child(camp_scene)
 	
 	camp_scene.depart_pressed.connect(_on_depart_pressed)
+
+# 切換場景 CampScene
+func get_camp_scene_path():
+	var size = get_viewport().get_visible_rect().size
+	return "res://Scenes/CampScene_Portrait.tscn" if size.y > size.x \
+		else "res://Scenes/CampScene_Landscape.tscn"
 
 # 離開營地
 func _on_depart_pressed():

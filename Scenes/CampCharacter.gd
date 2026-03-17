@@ -55,7 +55,7 @@ func setup(data):
 # 當點擊角色範圍時觸發
 func _on_area_2d_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		clicked.emit() # 告訴 CampScene 說：「我被點到了！」
+		clicked.emit()   # 回報給 CampScene
 
 # ---------------------------------------------------
 # 新增對話氣泡
@@ -66,17 +66,15 @@ func show_dialogue(text):
 	current_bubble = bubble_scene.instantiate()
 	$BubbleAnchor.add_child(current_bubble)
 	
-	
 	# --- 反向縮放實作開始 ---
 	# 取得角色當前的縮放倍率 (例如 1.9)
 	var char_scale = self.scale.x
 	# 避免除以 0 的錯誤
 	if char_scale != 0:
 		# 將氣泡的縮放設為倒數，抵消掉角色的放大效果
-		var inverse_s = 1.0 / char_scale
+		var inverse_s = 0.8 / char_scale
 		current_bubble.scale = Vector2(inverse_s, inverse_s)
 	# --- 反向縮放實作結束 ---
-	
 	
 	current_bubble.set_text(text)
 

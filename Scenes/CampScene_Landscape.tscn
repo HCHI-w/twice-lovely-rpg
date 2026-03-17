@@ -1,61 +1,53 @@
 [gd_scene format=3 uid="uid://ecfummwgwbx8"]
 
-[ext_resource type="Script" uid="uid://ckkijqijj1lpa" path="res://Scenes/CampScene.gd" id="1_ekjuf"]
-[ext_resource type="Texture2D" uid="uid://deebks4s8jwcd" path="res://0Picture/CampBackgroung.png" id="2_7uv5n"]
-[ext_resource type="Theme" uid="uid://bbn6ayd5lv4e2" path="res://Fonts/ThemeFonts.tres" id="3_7uv5n"]
+[ext_resource type="Script" uid="uid://ckkijqijj1lpa" path="res://Scenes/CampScene.gd" id="1_c5rqo"]
+[ext_resource type="Texture2D" uid="uid://deebks4s8jwcd" path="res://0Picture/CampBackgroung.png" id="2_s58tf"]
+[ext_resource type="Theme" uid="uid://bbn6ayd5lv4e2" path="res://Fonts/ThemeFonts.tres" id="3_4x36f"]
 
 [node name="CampScene" type="Node2D" unique_id=865208504]
-script = ExtResource("1_ekjuf")
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=6215763]
-visible = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 1280.0
-offset_bottom = 720.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.07450981, 0.07450981, 0.07450981, 1)
+script = ExtResource("1_c5rqo")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=344239066]
 position = Vector2(642.99994, 353.99997)
 scale = Vector2(1.1402777, 1.1402777)
-texture = ExtResource("2_7uv5n")
+texture = ExtResource("2_s58tf")
 
 [node name="CampCharacterLayer" type="Node2D" parent="." unique_id=1123346288]
 
 [node name="PlayerSlot1" type="Marker2D" parent="CampCharacterLayer" unique_id=284464463]
-position = Vector2(467, 523)
+position = Vector2(495, 523)
 
 [node name="PlayerSlot2" type="Marker2D" parent="CampCharacterLayer" unique_id=245213584]
-position = Vector2(517, 383)
+position = Vector2(520, 385)
+scale = Vector2(1.5, 1.5)
 
 [node name="PlayerSlot3" type="Marker2D" parent="CampCharacterLayer" unique_id=1626222811]
-position = Vector2(791, 383)
+position = Vector2(773, 385)
+scale = Vector2(1.5, 1.5)
 
 [node name="VisitorSlot" type="Marker2D" parent="CampCharacterLayer" unique_id=1730944484]
-position = Vector2(825, 530)
+position = Vector2(795, 530)
+scale = Vector2(1.5, 1.5)
 
 [node name="Label" type="Label" parent="." unique_id=410190581]
 offset_left = 61.0
 offset_top = 48.0
 offset_right = 189.0
 offset_bottom = 76.0
-theme = ExtResource("3_7uv5n")
+theme = ExtResource("3_4x36f")
 theme_override_font_sizes/font_size = 20
 text = "營地休息中...獲得Buff..."
 
 [node name="CollectionPanel" type="GridContainer" parent="." unique_id=365309177]
 offset_right = 40.0
 offset_bottom = 40.0
-theme = ExtResource("3_7uv5n")
+theme = ExtResource("3_4x36f")
 
 [node name="DepartButton" type="Button" parent="." unique_id=832739827]
 offset_left = 1083.0
 offset_top = 606.0
-offset_right = 1183.0
+offset_right = 1203.0
 offset_bottom = 666.0
-theme = ExtResource("3_7uv5n")
+theme = ExtResource("3_4x36f")
 theme_override_font_sizes/font_size = 24
 text = "出發"

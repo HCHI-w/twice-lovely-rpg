@@ -9,7 +9,7 @@ size = Vector2(243, 256.625)
 script = ExtResource("1_jb3bp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=999296952]
-scale = Vector2(1.2, 1.2)
+scale = Vector2(1.5, 1.5)
 animation = &""
 offset = Vector2(0, -10)
 
@@ -19,4 +19,4 @@ offset = Vector2(0, -10)
 shape = SubResource("RectangleShape2D_jb3bp")
 
 [node name="BubbleAnchor" type="Marker2D" parent="." unique_id=174378979]
-position = Vector2(10, -90)
+position = Vector2(-30, -90)
