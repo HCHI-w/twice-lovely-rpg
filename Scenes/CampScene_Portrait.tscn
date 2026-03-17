@@ -8,25 +8,26 @@
 script = ExtResource("1_do0x7")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=344239066]
-position = Vector2(363, 643)
+position = Vector2(636, 1130)
+scale = Vector2(1.7652777, 1.7652779)
 texture = ExtResource("2_do0x7")
 
 [node name="CampCharacterLayer" type="Node2D" parent="." unique_id=1123346288]
 scale = Vector2(2.5, 2.5)
 
 [node name="PlayerSlot1" type="Marker2D" parent="CampCharacterLayer" unique_id=284464463]
-position = Vector2(90, 714)
+position = Vector2(171.99994, 654.80005)
 
 [node name="PlayerSlot2" type="Marker2D" parent="CampCharacterLayer" unique_id=245213584]
-position = Vector2(113, 544.80005)
+position = Vector2(193.40002, 564)
 scale = Vector2(2, 2)
 
 [node name="PlayerSlot3" type="Marker2D" parent="CampCharacterLayer" unique_id=1626222811]
-position = Vector2(410, 544.80005)
+position = Vector2(323.2, 564)
 scale = Vector2(2, 2)
 
 [node name="VisitorSlot" type="Marker2D" parent="CampCharacterLayer" unique_id=1730944484]
-position = Vector2(424.80002, 714)
+position = Vector2(343.60004, 654.80005)
 scale = Vector2(2, 2)
 
 [node name="Label" type="Label" parent="." unique_id=410190581]
@@ -49,10 +50,10 @@ custom_minimum_size = Vector2(280, 120)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 500.0
-offset_top = 2123.0
-offset_right = 780.0
-offset_bottom = 2243.0
+offset_left = 504.0
+offset_top = 1979.0
+offset_right = 784.0
+offset_bottom = 2099.0
 grow_horizontal = 2
 theme = ExtResource("3_p4i0x")
 theme_override_font_sizes/font_size = 50
