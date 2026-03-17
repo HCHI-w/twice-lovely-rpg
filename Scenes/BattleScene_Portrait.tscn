@@ -1,0 +1,188 @@
+[gd_scene format=3 uid="uid://b47tmhdsiibi6"]
+
+[ext_resource type="Script" uid="uid://kfew1mw05num" path="res://Scenes/BattleScene.gd" id="1_rhixx"]
+[ext_resource type="Theme" uid="uid://bbn6ayd5lv4e2" path="res://Fonts/ThemeFonts.tres" id="2_bk32l"]
+[ext_resource type="Script" uid="uid://gfhym3f712e0" path="res://Systems/Battle/BattleManager.gd" id="3_j1yh2"]
+[ext_resource type="Script" uid="uid://cabn3kfymbf4x" path="res://BattleScene/CanvasLayer/HUDLayer/BattleUI.gd" id="4_gt8eb"]
+[ext_resource type="PackedScene" uid="uid://dtnhgppkjkhop" path="res://Scenes/EnemySlot.tscn" id="4_j1yh2"]
+[ext_resource type="PackedScene" uid="uid://brhrjcbdddh3s" path="res://Scenes/PlayerSlot.tscn" id="5_gt8eb"]
+[ext_resource type="Script" uid="uid://ddppsgf0an2ve" path="res://BattleScene/CanvasLayer/ActionPanel.gd" id="5_r00vx"]
+[ext_resource type="Script" uid="uid://c004q06cowovf" path="res://BattleScene/CanvasLayer/TurnOrderUI.gd" id="6_nt5pe"]
+
+[node name="BattleScene" type="Node2D" unique_id=480506044]
+script = ExtResource("1_rhixx")
+
+[node name="BattleRoot" type="Control" parent="." unique_id=557540135]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_bk32l")
+
+[node name="ColorRect" type="ColorRect" parent="BattleRoot" unique_id=843082904]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_bk32l")
+color = Color(0.15, 0.15, 0.15, 1)
+
+[node name="BattleManager" type="Node" parent="BattleRoot" unique_id=118453445]
+script = ExtResource("3_j1yh2")
+
+[node name="EnemyContainer" type="HBoxContainer" parent="BattleRoot" unique_id=2147376839]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -320.0
+offset_top = 250.0
+offset_right = -192.0
+offset_bottom = 378.0
+grow_horizontal = 2
+scale = Vector2(2, 2)
+
+[node name="EnemySlot" parent="BattleRoot/EnemyContainer" unique_id=499483559 instance=ExtResource("4_j1yh2")]
+layout_mode = 2
+
+[node name="PlayerContainer" type="HBoxContainer" parent="BattleRoot" unique_id=2029472289]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = 590.0
+offset_right = -48.0
+offset_bottom = 718.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.8, 1.8)
+theme_override_constants/separation = 100
+
+[node name="PlayerSlot1" parent="BattleRoot/PlayerContainer" unique_id=627391295 instance=ExtResource("5_gt8eb")]
+layout_mode = 2
+
+[node name="PlayerSlot2" parent="BattleRoot/PlayerContainer" unique_id=296652888 instance=ExtResource("5_gt8eb")]
+layout_mode = 2
+
+[node name="PlayerSlot3" parent="BattleRoot/PlayerContainer" unique_id=252757776 instance=ExtResource("5_gt8eb")]
+layout_mode = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="BattleRoot" unique_id=1310507896]
+
+[node name="MainBottomUI" type="VBoxContainer" parent="BattleRoot/CanvasLayer" unique_id=1801419329]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.97
+anchor_right = 0.5
+anchor_bottom = 0.97
+offset_left = -620.0
+offset_top = -415.0
+offset_right = 620.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_bk32l")
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="BattleUI" type="Control" parent="BattleRoot/CanvasLayer/MainBottomUI" unique_id=716820607]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+mouse_filter = 2
+theme = ExtResource("2_bk32l")
+script = ExtResource("4_gt8eb")
+
+[node name="TurnLabel" type="Label" parent="BattleRoot/CanvasLayer/MainBottomUI/BattleUI" unique_id=1809996539]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+
+[node name="PlayerStatus" type="HBoxContainer" parent="BattleRoot/CanvasLayer/MainBottomUI/BattleUI" unique_id=1969846054]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ActionPanel" type="VBoxContainer" parent="BattleRoot/CanvasLayer/MainBottomUI" unique_id=586182943]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 30
+alignment = 1
+script = ExtResource("5_r00vx")
+
+[node name="AttackButton" type="Button" parent="BattleRoot/CanvasLayer/MainBottomUI/ActionPanel" unique_id=37525928]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "攻擊"
+
+[node name="SkillButton" type="Button" parent="BattleRoot/CanvasLayer/MainBottomUI/ActionPanel" unique_id=496392995]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "技能"
+
+[node name="DescriptionVBox" type="VBoxContainer" parent="BattleRoot/CanvasLayer/MainBottomUI/ActionPanel" unique_id=1222145388]
+layout_mode = 2
+
+[node name="SkillNameLabel" type="Label" parent="BattleRoot/CanvasLayer/MainBottomUI/ActionPanel/DescriptionVBox" unique_id=1368419511]
+visible = false
+layout_mode = 2
+
+[node name="SkillDescriptionLabel" type="Label" parent="BattleRoot/CanvasLayer/MainBottomUI/ActionPanel/DescriptionVBox" unique_id=1311661706]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+autowrap_mode = 2
+
+[node name="EnemyStatus" type="HBoxContainer" parent="BattleRoot/CanvasLayer" unique_id=592952282]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.05
+anchor_right = 1.0
+anchor_bottom = 0.05
+offset_left = -20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 215.0
+grow_horizontal = 0
+pivot_offset = Vector2(-20, 20)
+
+[node name="TurnOrderPanel" type="PanelContainer" parent="BattleRoot/CanvasLayer" unique_id=537024625]
+anchors_preset = -1
+anchor_left = 0.02
+anchor_top = 0.02
+anchor_right = 0.02
+anchor_bottom = 0.02
+offset_left = 14.400002
+offset_top = 25.6
+offset_right = 14.400002
+offset_bottom = 25.6
+script = ExtResource("6_nt5pe")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BattleRoot/CanvasLayer/TurnOrderPanel" unique_id=82371007]
+layout_mode = 2

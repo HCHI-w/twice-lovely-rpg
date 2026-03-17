@@ -41,10 +41,11 @@ theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
 [node name="Panel" type="Panel" parent="MarginContainer" unique_id=1788195262]
+custom_minimum_size = Vector2(1240, 646)
 layout_mode = 2
 
 [node name="CollectionLabel" type="Label" parent="MarginContainer/Panel" unique_id=1957759410]
-custom_minimum_size = Vector2(100, 30)
+custom_minimum_size = Vector2(100, 40)
 layout_mode = 0
 offset_left = 20.0
 offset_top = 5.0
@@ -53,7 +54,7 @@ offset_bottom = 35.0
 vertical_alignment = 1
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer/Panel" unique_id=1735833565]
-custom_minimum_size = Vector2(1150, 600)
+custom_minimum_size = Vector2(1240, 600)
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.05
@@ -99,7 +100,10 @@ layout_mode = 2
 alignment = 1
 
 [node name="Icon" type="TextureRect" parent="MarginContainer/Panel/InfoOverlay/InfoPanel/VBoxContainer" unique_id=155714971]
+custom_minimum_size = Vector2(240, 240)
 layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Name" type="Label" parent="MarginContainer/Panel/InfoOverlay/InfoPanel/VBoxContainer" unique_id=1355240058]
 layout_direction = 3
@@ -109,7 +113,7 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Description" type="RichTextLabel" parent="MarginContainer/Panel/InfoOverlay/InfoPanel/VBoxContainer" unique_id=190535407]
-custom_minimum_size = Vector2(0, 30)
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1

@@ -130,7 +130,7 @@ func _apply_landscape_layout(_window_size: Vector2):
 	# 橫式：回復比例
 	$CharacterSelectPanel/MainLayout/LeftSide.size_flags_stretch_ratio = 2.0   # 選擇區大一點
 	
-	$CharacterSelectPanel/MainLayout/RightSide/CharacterInfoPanel.vertical = true
+#	$CharacterSelectPanel/MainLayout/RightSide/CharacterInfoPanel.vertical = true
 	
 	# --- 自動切換 GridContainer 為 1 列 ---
 	_set_grid_columns(2)
@@ -812,6 +812,22 @@ func _update_class_button_colors():
 				order_label.reset_size()
 
 # ----------------------------------------------------------
+# 依畫面方向載入 Scene - BattleScene
+func load_battle_scene():
+	var size = get_viewport().get_viewport_rect().size
+	
+	if size.y > size.x:
+		print("載入直式戰鬥")
+		get_tree().change_scene_to_file(
+			"res://Scenes/BattleScene_Portrait.tscn"
+		)
+	else:
+		print("載入橫式戰鬥")
+		get_tree().change_scene_to_file(
+			"res://Scenes/BattleScene_Landscape.tscn"
+		)
+
+# ----------------------------------------------------------
 # 使用 PartyBuilder 建立正式隊伍
 func finalize_party():
 	var builder := PartyBuilder.new()
@@ -820,6 +836,7 @@ func finalize_party():
 	
 	GameManager.party = builder.build_party()
 	# 切換到過場動畫
-	TransitionManager.change_scene("res://Scenes/BattleScene.tscn", "準備開始冒險...", true)
+#	TransitionManager.change_scene("res://Scenes/BattleScene.tscn", "準備開始冒險...", true)
+	TransitionManager.load_battle_scene("準備開始冒險...", true)
 
 # ----------------------------------------------------------

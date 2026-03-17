@@ -73,97 +73,77 @@ func _ready():
 # ---------------------------------------------------
 # 自動調整佈局的邏輯
 # ---------------------------------------------------
+# on_window_resized
 func _on_window_resized():
 	var window_size = get_viewport().get_visible_rect().size
 	var is_portrait = window_size.y > window_size.x
 	
-	# --- 強制更新容器大小 ---
-	player_container.queue_sort()
-	$BattleRoot/EnemyContainer.queue_sort()
-	# 等待一幀，讓 Container 根據裡面的 Control 算出正確的 size
-	await get_tree().process_frame
-	
-	# --- 背景調整 ---
+	update_background(window_size)
+	update_character_positions(window_size, is_portrait)
+	update_ui_layout(window_size, is_portrait)
+	turn_order_ui.refresh()
+
+# 背景
+func update_background(window_size):
 	$BattleRoot/ColorRect.size = window_size
-	
-	var spacing = window_size.x * 0.05   # 螢幕寬度的5%
-	player_container.add_theme_constant_override("separation", spacing)
-	
-	# --- 玩家與敵人容器 ---
-	var center_x = window_size.x / 2
-	
+
+# 玩家敵人位置
+func update_character_positions(window_size, is_portrait):
 	if is_portrait:
-		# 直式：敵人較小靠上，玩家在畫面中間偏上
-		# 水平置中公式：(螢幕中心 - 容器寬度的一半)
 		$BattleRoot/EnemyContainer.global_position = Vector2(
-			center_x - ($BattleRoot/EnemyContainer.size.x / 2), 
+			window_size.x * 0.3,
 			window_size.y * 0.15
 		)
-		$BattleRoot/PlayerContainer.global_position = Vector2(
-			center_x - (player_container.size.x / 2), 
-			window_size.y * 0.4
+	
+		player_container.global_position = Vector2(
+			window_size.x * 0,
+			window_size.y * 0.46
 		)
 	else:
-		# 橫式：左右或原本佈局
-		$BattleRoot/EnemyContainer.global_position = Vector2(window_size.x * 0.58, window_size.y * 0.2)
-		$BattleRoot/PlayerContainer.global_position = Vector2(window_size.x * 0.1, window_size.y * 0.55)
-	
-	# --- MainBottomUI ---
-	# 如果 寬度 < 高度 (代表變成了直向畫面)
-	if window_size.x < window_size.y:
-		# 讓大容器變成垂直排列 (HP在上，按鈕在下)
-		main_bottom_ui.vertical = true
-		# 調整對齊方式，讓內容填滿寬度
-		main_bottom_ui.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		action_panel.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	else:
-		# 讓大容器變成水平排列 (左邊HP，右邊按鈕)
-		main_bottom_ui.vertical = false
-		# 設定比例：HP佔一份，按鈕佔一份 (依喜好調整)
-		main_bottom_ui.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		action_panel.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	
-	# --- ActionPanel ---
-	for btn in action_panel.get_children():
-		if btn is Button:
-			scale_label_font(btn, 20, window_size)
-	
-	# --- 調整戰鬥文字大小 ---
-	scale_label_font(skill_name_label, 20, window_size)
-	scale_label_font(skill_desc_label, 20, window_size)
-	
-	# 更新 BattleUI
-	var battle_ui = get_node_or_null("BattleRoot/CanvasLayer/MainBottomUI/BattleUI")
-	if battle_ui:
-		battle_ui.update_ui()
-	
-	# 更新 TurnOrderUI
-	var turn_order = get_node_or_null("BattleRoot/CanvasLayer/TurnOrderPanel")
-	if turn_order:
-		turn_order.refresh()
+		$BattleRoot/EnemyContainer.global_position = Vector2(
+			window_size.x * 0.58,
+			window_size.y * 0.15
+		)
+		
+		player_container.global_position = Vector2(
+			window_size.x * 0.05,
+			window_size.y * 0.5
+		)
 
-# 縮放 Label 字體
-func scale_label_font(label_control: Control, base_size: int, window_size: Vector2):
-	# 判斷目前是直式還是橫式
-	var is_portrait = window_size.y > window_size.x
-	
-	var scale_factor: float
+# UI
+func update_ui_layout(_window_size, is_portrait):
 	if is_portrait:
-		# 直式：以寬度為基準，但給予更高的倍率（例如基準寬度設小一點，讓字體顯大）
-		scale_factor = window_size.x / 720.0 
+		main_bottom_ui.vertical = true
 	else:
-		# 橫式：以 1920 為基準
-		scale_factor = window_size.x / 1920.0
+		main_bottom_ui.vertical = false
 	
-	var final_size = int(base_size * scale_factor)
+#	scale_label_font(skill_name_label, 20, window_size)
+#	scale_label_font(skill_desc_label, 40, window_size)
+
+
+# ---------------------------------------------------
+# 縮放 Label 字體
+#func scale_label_font(label_control: Control, base_size: int, window_size: Vector2):
+	# 判斷目前是直式還是橫式
+#	var is_portrait = window_size.y > window_size.x
+	
+#	var scale_factor: float
+#	if is_portrait:
+		# 直式：以寬度為基準，但給予更高的倍率（例如基準寬度設小一點，讓字體顯大）
+#		scale_factor = window_size.x / 720.0 
+#	else:
+		# 橫式：以 1920 為基準
+#		scale_factor = window_size.x / 1920.0
+	
+#	var final_size = int(base_size * scale_factor)
 	
 	# 直式模式下，強制提升最小字體大小，避免手機看不清楚
-	var min_font = 24 if is_portrait else 20
-	var max_font = 32 if is_portrait else 28
+#	var min_font = 38 if is_portrait else 36
+#	var max_font = 42 if is_portrait else 40
 	
-	final_size = clamp(final_size, min_font, max_font)
+#	final_size = clamp(final_size, min_font, max_font)
 	# Label 與 Button 都可以用這個方法
-	label_control.add_theme_font_size_override("font_size", final_size)
+#	label_control.add_theme_font_size_override("font_size", final_size)
 
 # ---------------------------------------------------
 # 切換場景
@@ -241,24 +221,20 @@ func _on_depart_pressed():
 # ---------------------------------------------------
 func connect_slot_clicks():
 	for slot in player_slots:
-		var area = slot.get_node("Area2D")
-		area.input_event.connect(_on_slot_clicked.bind(slot))
-		
-	var enemy_slot = $BattleRoot/EnemyContainer/EnemySlot1
-	var enemy_area = enemy_slot.get_node("Area2D")
-	enemy_area.input_event.connect(_on_slot_clicked.bind(enemy_slot))
+		slot.slot_clicked.connect(_on_slot_clicked.bind(slot))
 
-func _on_slot_clicked(_viewport, event, _shape_idx, slot):
-	if event is InputEventMouseButton and event.pressed:
-		if battle_manager.state != BattleManager.BattleState.TARGET_SELECT:
-			return
-		
-		var combatant = get_combatant_from_slot(slot)
-		if combatant == null:
-			return
-		
-		battle_manager.receive_target(combatant)
-		
+
+func _on_slot_clicked(_viewport, _event, _shape_idx, slot):
+	if battle_manager.state != BattleManager.BattleState.TARGET_SELECT:
+		return
+	
+	var combatant = get_combatant_from_slot(slot)
+	if combatant == null:
+		return
+	
+	battle_manager.receive_target(combatant)
+
+
 func get_combatant_from_slot(slot):
 	for c in battle_manager.allies:
 		if c.node_ref == slot:
@@ -294,11 +270,11 @@ func _update_turn_indicator(combatant):
 func _clear_all_highlights():
 	for c in battle_manager.allies:
 		if c.node_ref:
-			c.node_ref.get_node("Sprite2D").modulate = Color(1,1,1)
+			c.node_ref.get_node("TextureRect").modulate = Color(1,1,1)
 	
 	for c in battle_manager.enemies:
 		if c.node_ref:
-			c.node_ref.get_node("Sprite2D").modulate = Color(1,1,1)
+			c.node_ref.get_node("TextureRect").modulate = Color(1,1,1)
 
 # ---------------------------------------------------
 func start_battle():
@@ -347,22 +323,28 @@ func bind_combatant_nodes():
 			var combatant = battle_manager.allies[i]
 			combatant.node_ref = node
 			
-			var sprite = node.get_node("Sprite2D")
-			sprite.texture = combatant.battle_texture
-			sprite.visible = true
+			var texture_rect = node.get_node("TextureRect")
+			texture_rect.texture = combatant.battle_texture
+			texture_rect.visible = true
 		
 	# 綁定敵人
 	for i in range(battle_manager.enemies.size()):
 		var combatant = battle_manager.enemies[i]
-		var node = $BattleRoot/EnemyContainer/EnemySlot1   # 目前只有一個敵人
+		var node = $BattleRoot/EnemyContainer/EnemySlot
 		
-		combatant.node_ref = node
-		node.get_node("Sprite2D").texture = combatant.battle_texture
+		var texture_rect: TextureRect
+		
+		if node is TextureRect:
+			texture_rect = node
+		else:
+			texture_rect = node.get_node("TextureRect")
+			
+		texture_rect.texture = combatant.battle_texture
+
 
 # ---------------------------------------------------
 func _on_player_turn_started():
 	var skills = battle_manager.current_combatant.get_available_skills()
-#	action_panel.current_skill_data = null
 	
 	if skills.size() > 0:
 		action_panel.set_skill(skills[0])   # 先測試第一招

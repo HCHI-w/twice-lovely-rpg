@@ -64,7 +64,7 @@ func scale_label_font(label: Control, base_size: int, window_size: Vector2):
 	
 	var final_size = int(base_size * scale_factor)
 	# 設定直向模式下最小字體，確保清晰
-	var min_font = 22 if is_portrait else 18
+	var min_font = 32 if is_portrait else 24
 	
 	label.add_theme_font_size_override("font_size", clamp(final_size, min_font, 32))
 

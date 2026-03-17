@@ -64,9 +64,9 @@ func _ready():
 func _on_window_resized():
 	var window_size = get_viewport().get_visible_rect().size
 	# 對所有的 Label 執行縮放
-	scale_label_font(name_label, 18, window_size)
-	scale_label_font(hp_label, 16, window_size)
-	scale_label_font(mp_label, 16, window_size)
+	scale_label_font(name_label, 20, window_size)
+	scale_label_font(hp_label, 18, window_size)
+	scale_label_font(mp_label, 18, window_size)
 
 # 為了方便維護，直接把縮放邏輯寫進來，或者調用一個全局的工具函數
 func scale_label_font(label: Control, base_size: int, window_size: Vector2):
@@ -75,8 +75,8 @@ func scale_label_font(label: Control, base_size: int, window_size: Vector2):
 	
 	var final_size = int(base_size * scale_factor)
 	# 設定直向模式下最小字體，確保清晰
-	var min_font = 22 if is_portrait else 18
+	var min_font = 33 if is_portrait else 24
 	
-	label.add_theme_font_size_override("font_size", clamp(final_size, min_font, 32))
+	label.add_theme_font_size_override("font_size", clamp(final_size, min_font, 33))
 
 # ---------------------------------------------------

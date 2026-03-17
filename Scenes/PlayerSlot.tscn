@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://brhrjcbdddh3s"]
+
+[ext_resource type="Script" uid="uid://dnn0ns25gsxb0" path="res://Scenes/PlayerEnemyBattleSlot.gd" id="1_r5n64"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r5n64"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lavlx"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvlkk"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pgh6x"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="PlayerSlot" type="Control" unique_id=627391295]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 3
+script = ExtResource("1_r5n64")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1046865542]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+scale = Vector2(2, 2)
+
+[node name="Button" type="Button" parent="." unique_id=1658963271]
+custom_minimum_size = Vector2(250, 256)
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_r5n64")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lavlx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kvlkk")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_pgh6x")

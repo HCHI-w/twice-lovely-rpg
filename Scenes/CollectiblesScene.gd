@@ -2,6 +2,7 @@
 # 收藏圖鑑
 extends Control
 
+@onready var panel_container = $MarginContainer/Panel/PanelContainer
 @onready var grid = $MarginContainer/Panel/PanelContainer/GridContainer
 @onready var info_overlay = $MarginContainer/Panel/InfoOverlay           # 新增遮罩層
 @onready var info_panel = $MarginContainer/Panel/InfoOverlay/InfoPanel   # 視窗主體
@@ -15,6 +16,8 @@ var all_collectibles := []
 
 # ---------------------------------------------------
 func _ready():
+	panel_container.custom_minimum_size = Vector2(200, 200)
+	
 	load_collectibles()
 	build_grid()
 	update_collection_rate()
@@ -28,6 +31,7 @@ func _ready():
 	
 	get_tree().root.size_changed.connect(_on_window_resized)
 	_on_window_resized()   # 初始化排版
+	print(panel_container.size)
 
 
 # ---------------------------------------------------
@@ -63,7 +67,7 @@ func _on_window_resized():
 	var target_btn_size: Vector2
 	if is_portrait:
 		# 直式：假設你希望按鈕大一點，例如 180x180
-		target_btn_size = Vector2(240, 240)
+		target_btn_size = Vector2(260, 260)
 	else:
 		# 橫式：按鈕小一點，例如 120x120
 		target_btn_size = Vector2(140, 140)
@@ -74,7 +78,7 @@ func _on_window_resized():
 			child.custom_minimum_size = target_btn_size
 	
 	# --- 動態字體調整 ---
-	var base_font_size = 32 if is_portrait else 24
+	var base_font_size = 38 if is_portrait else 26
 	_update_ui_fonts(base_font_size)
 	
 	# --- BackButton 位置固定 ---
@@ -118,7 +122,7 @@ func _adjust_back_button_layout(is_portrait: bool, window_size: Vector2):
 # 輔助函式：Icon 圖片變大
 func _adjust_info_icon():
 	# 強制設定尺寸
-	icon.custom_minimum_size = Vector2(200, 200)
+	icon.custom_minimum_size = Vector2(240, 240)
 	
 	# 設定縮放模式
 	# EXPAND_IGNORE_SIZE 允許圖片大於或小於原始紋理
@@ -143,21 +147,25 @@ func _on_overlay_gui_input(event: InputEvent):
 # ---------------------------------------------------
 # 自動掃描 collectibles 資料夾
 func load_collectibles():
-	var dir = DirAccess.open("res://Data/Collectibles")
+	all_collectibles = CollectibleDB.LIST.duplicate()
 	
-	if dir == null:
-		push_error("Collectibles folder not found")
-		return
+	print("collectibles count:", all_collectibles.size())
 	
-	dir.list_dir_begin()
-	var file = dir.get_next()
+#	var dir = DirAccess.open("res://Data/Collectibles")
 	
-	while file != "":
-		if file.ends_with(".tres"):
-			all_collectibles.append(load("res://Data/Collectibles/" + file))
-		file = dir.get_next()
+#	if dir == null:
+#		push_error("Collectibles folder not found")
+#		return
 	
-	dir.list_dir_end()
+#	dir.list_dir_begin()
+#	var file = dir.get_next()
+	
+#	while file != "":
+#		if file.ends_with(".tres"):
+#			all_collectibles.append(load("res://Data/Collectibles/" + file))
+#		file = dir.get_next()
+	
+#	dir.list_dir_end()
 	
 
 # ---------------------------------------------------
@@ -248,6 +256,7 @@ func update_collection_rate():
 	var total = all_collectibles.size()
 	
 	collection_label.text = "掉落物品： %d / %d" % [owned, total]
+	print("owned:", owned, " total:", total)
 
 # ---------------------------------------------------
 # 返回按鈕

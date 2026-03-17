@@ -92,17 +92,17 @@ func _rearrange_ui() -> void:
 		if btn is Button:
 			if window_size.y > window_size.x:
 				# 手機版：字體放大，按鈕變高好點擊
-				btn.add_theme_font_size_override("font_size", 40)
-				btn.custom_minimum_size.y = 80
+				btn.add_theme_font_size_override("font_size", 46)
+				btn.custom_minimum_size.y = 120
 			else:
 				# 電腦版：字體正常
 				btn.add_theme_font_size_override("font_size", 24)
-				btn.custom_minimum_size.y = 50
+				btn.custom_minimum_size.y = 60
 	
 	# 文字標籤的調整
 	# 在直式判斷中
 	if window_size.y > window_size.x:
-		memo_label.add_theme_font_size_override("font_size", 40)
+		memo_label.add_theme_font_size_override("font_size", 42)
 	else:
 		memo_label.add_theme_font_size_override("font_size", 24)
 	# 版本文字標籤的調整
@@ -116,7 +116,7 @@ func _rearrange_ui() -> void:
 	main_vbox.queue_sort()
 
 # ---------------------------------------------------
-# 依畫面方向載入 Scene
+# 依畫面方向載入 Scene - CharacterSelectScene
 func load_character_select_scene():
 	var size = get_viewport_rect().size
 	
@@ -131,6 +131,7 @@ func load_character_select_scene():
 			"res://Scenes/CharacterSelectScene_Landscape.tscn"
 		)
 
+
 # ---------------------------------------------------
 # 點擊開始按鈕
 func _on_start_pressed() -> void:
@@ -139,7 +140,6 @@ func _on_start_pressed() -> void:
 	_fade(Color(modulate.r, modulate.g, modulate.b, 1.0), Color(modulate.r, modulate.g, modulate.b, 0.0), 0.5, Callable(self, "_go_to_character_select"))
 
 func _go_to_character_select() -> void:
-#	get_tree().change_scene_to_file("res://Scenes/CharacterSelectScene.tscn")
 	load_character_select_scene()
 
 # 物品圖鑑按鈕

@@ -23,13 +23,13 @@ func refresh():
 	var queue = battle_manager.turn_queue
 	var index = battle_manager.turn_index - 1
 	
-	# 重新生成
+	# 重新生成 ▶
 	for i in range(queue.size()):
 		var combatant = queue[i]
 		var label = Label.new()
 		
 		if i == index:
-			label.text = "▶ " + combatant.get_display_name()
+			label.text = "> " + combatant.get_display_name()
 		else:
 			label.text = combatant.get_display_name()
 		
@@ -60,11 +60,8 @@ func scale_label_font(label_control: Control, base_size: int, window_size: Vecto
 	var final_size = int(base_size * scale_factor)
 	
 	# 直式模式下，強制提升最小字體大小，避免手機看不清楚
-	var min_font = 24 if is_portrait else 20
-	var max_font = 28 if is_portrait else 28
-	
-	final_size = clamp(final_size, min_font, max_font)
-	# Label 與 Button 都可以用這個方法
-	label_control.add_theme_font_size_override("font_size", final_size)
+	var min_font = 28 if is_portrait else 18
+	var max_font = 42 if is_portrait else 32
+	label_control.add_theme_font_size_override("font_size", clamp(final_size, min_font, max_font))
 	
 # ---------------------------------------------------

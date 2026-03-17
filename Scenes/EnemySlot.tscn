@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dtnhgppkjkhop"]
+
+[ext_resource type="Script" uid="uid://dnn0ns25gsxb0" path="res://Scenes/PlayerEnemyBattleSlot.gd" id="1_51a23"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_51a23"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kamdg"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0fu3r"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q23bq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="EnemySlot" type="Control" unique_id=499483559]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 64.0
+offset_bottom = 64.0
+size_flags_horizontal = 3
+script = ExtResource("1_51a23")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1293427916]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_left = 20.0
+offset_top = -60.0
+offset_right = 84.0
+offset_bottom = 4.0
+scale = Vector2(2, 2)
+
+[node name="Button" type="Button" parent="." unique_id=891078972]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 0
+offset_left = 75.0
+offset_right = 215.0
+offset_bottom = 140.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_51a23")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kamdg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0fu3r")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_q23bq")

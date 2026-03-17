@@ -56,22 +56,30 @@ func setup(manager: BattleManager):
 		var window_size = get_viewport().get_visible_rect().size
 		var name_label = ui.get_node_or_null("MainGrid/NameLabel")
 		if name_label:
-			scale_label_font(name_label, 18, window_size)
+			scale_label_font(name_label, 20, window_size)
 		
 		var hp_label = ui.get_node_or_null("MainGrid/HPLabel")
 		if hp_label:
 			scale_label_font(hp_label, 18, window_size)
+		
+		var mp_label = ui.get_node_or_null("MainGrid/MPLabel")
+		if mp_label:
+			scale_label_font(mp_label, 18, window_size)
 	
 	for ui in enemy_items:
 		ui.update_stats()
 		var window_size = get_viewport().get_visible_rect().size
 		var name_label = ui.get_node_or_null("MainGrid/NameLabel")
 		if name_label:
-			scale_label_font(name_label, 18, window_size)
+			scale_label_font(name_label, 20, window_size)
 		
 		var hp_label = ui.get_node_or_null("MainGrid/HPLabel")
 		if hp_label:
 			scale_label_font(hp_label, 18, window_size)
+		
+		var mp_label = ui.get_node_or_null("MainGrid/MPLabel")
+		if mp_label:
+			scale_label_font(mp_label, 18, window_size)
 
 # ---------------------------------------------------
 # 更新血條和數值
@@ -82,10 +90,28 @@ func update_ui():
 	for entry in player_items:
 		var ui = entry["ui"]
 		ui.update_stats()
+		_apply_font_to_ui(ui)
 	
 	for ui in enemy_items:
 		ui.update_stats()
+
+
+func _apply_font_to_ui(ui):
+	var window_size = get_viewport().get_visible_rect().size
 	
+	var name_label = ui.get_node_or_null("MainGrid/NameLabel")
+	if name_label:
+		scale_label_font(name_label, 20, window_size)
+	
+	var hp_label = ui.get_node_or_null("MainGrid/HPLabel")
+	if hp_label:
+		scale_label_font(hp_label, 18, window_size)
+	
+	var mp_label = ui.get_node_or_null("MainGrid/MPLabel")
+	if mp_label:
+		scale_label_font(mp_label, 18, window_size)
+
+
 # ---------------------------------------------------
 # 顯示傷害或補血數字
 func _on_damage_dealt(target, amount, is_critical, _damage_type):

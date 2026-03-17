@@ -46,6 +46,20 @@ func change_scene(scene_path: String, message: String = "", play_anim: bool = tr
 	transition_instance.hide()
 
 # ---------------------------------------------------
+# # 依畫面方向載入 Scene - BattleScene
+func load_battle_scene(message: String = "", play_anim: bool = true):
+	var size = get_viewport().size
+	
+	var scene_path := ""
+	
+	if size.y > size.x:
+		scene_path = "res://Scenes/BattleScene_Portrait.tscn"
+	else:
+		scene_path = "res://Scenes/BattleScene_Landscape.tscn"
+	
+	await change_scene(scene_path, message, play_anim)
+
+# ---------------------------------------------------
 # 關卡顯示
 func show_stage_title(stage:int):
 	transition_instance.show()
