@@ -13,7 +13,8 @@ config_version=5
 config/name="TWICE_lovely_RPG"
 run/main_scene="res://Scenes/TitleScreen.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/image="uid://wucdvgfkqg4a"
+config/icon="uid://bsnnneo7pxa74"
 
 [autoload]
 
