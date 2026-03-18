@@ -1,4 +1,4 @@
-# 🎮 Twice Lovely RPG　　　　　　　　 　　　 <img width="128" height="128" alt="twiceLogo_s" src="https://github.com/user-attachments/assets/f7652680-980f-4427-aac4-5ae0b79a8dc3" />       
+#  <img width="128" height="128" alt="twiceLogo_s" src="https://github.com/user-attachments/assets/f7652680-980f-4427-aac4-5ae0b79a8dc3" /> 　　|　Twice Lovely RPG　|　　 　
 ### 🎮 遊戲頁面： https://hchi-w.github.io/twice-lovely-rpg/     
                   
 ![S__512589826](https://github.com/user-attachments/assets/fbff1130-fae7-4ac4-bdbd-947a6cebe052)
