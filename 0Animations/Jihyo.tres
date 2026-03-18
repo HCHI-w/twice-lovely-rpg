@@ -6,6 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://cu3gnyo5pvlkq" path="res://0Picture/CharacterStretch/Jihyo_stretch_03.png" id="4_0lpyw"]
 [ext_resource type="Texture2D" uid="uid://cr18x1tvqmkxx" path="res://0Picture/CharacterStretch/Jihyo_stretch_04.png" id="5_h6gws"]
 [ext_resource type="Texture2D" uid="uid://485kyy7eho36" path="res://0Picture/CharacterStretch/Jihyo_stretch_05.png" id="6_agxwu"]
+[ext_resource type="Texture2D" uid="uid://dnelyhq6bqqpw" path="res://0Picture/CharacterTwist/Jihyo_twist_00.png" id="7_fpbci"]
+[ext_resource type="Texture2D" uid="uid://vwb4tkj0smsq" path="res://0Picture/CharacterTwist/Jihyo_twist_01.png" id="8_md88j"]
+[ext_resource type="Texture2D" uid="uid://eeg055ytaoom" path="res://0Picture/CharacterTwist/Jihyo_twist_02.png" id="9_o06rh"]
+[ext_resource type="Texture2D" uid="uid://cdyk6tb522go3" path="res://0Picture/CharacterTwist/Jihyo_twist_03.png" id="10_nrn82"]
+[ext_resource type="Texture2D" uid="uid://223re7jok3ly" path="res://0Picture/CharacterTwist/Jihyo_twist_04.png" id="11_w7tmw"]
+[ext_resource type="Texture2D" uid="uid://ibqvsuos87n" path="res://0Picture/CharacterTwist/Jihyo_twist_05.png" id="12_wux2i"]
 
 [resource]
 resource_name = "Jihyo"
@@ -31,5 +37,28 @@ animations = [{
 }],
 "loop": true,
 "name": &"stretch",
-"speed": 1.5
+"speed": 1.4
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_fpbci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_md88j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_o06rh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_nrn82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_w7tmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_wux2i")
+}],
+"loop": true,
+"name": &"twist",
+"speed": 1.2
 }]
