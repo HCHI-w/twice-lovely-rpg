@@ -11,7 +11,9 @@ extends Control
 @onready var desc_label = $MarginContainer/Panel/InfoOverlay/InfoPanel/VBoxContainer/Description
 @onready var collection_label = $MarginContainer/Panel/CollectionLabel
 @onready var back_button = $BackButton
+@onready var clear_button = $ClearButton
 
+# 圖鑑
 var all_collectibles := []
 
 # ---------------------------------------------------
@@ -23,6 +25,7 @@ func _ready():
 	update_collection_rate()
 	
 	back_button.pressed.connect(_on_BackButton_pressed)
+	clear_button.pressed.connect(_on_ClearButton_pressed)   # 連接清除按鈕
 	
 	# 初始狀態：隱藏彈窗
 	info_overlay.visible = false
@@ -78,11 +81,11 @@ func _on_window_resized():
 			child.custom_minimum_size = target_btn_size
 	
 	# --- 動態字體調整 ---
-	var base_font_size = 38 if is_portrait else 26
+	var base_font_size = 42 if is_portrait else 26
 	_update_ui_fonts(base_font_size)
 	
 	# --- BackButton 位置固定 ---
-	_adjust_back_button_layout(is_portrait, window_size)
+	#_adjust_back_button_layout(is_portrait, window_size)
 
 
 # 輔助函式：統一更新所有文字字體
@@ -90,7 +93,8 @@ func _update_ui_fonts(base_size: int):
 	# 圖鑑進度文字
 	collection_label.add_theme_font_size_override("font_size", base_size)
 	# 返回按鈕文字
-	back_button.add_theme_font_size_override("font_size", base_size)
+	back_button.add_theme_font_size_override("font_size", base_size + 10)
+	clear_button.add_theme_font_size_override("font_size", base_size + 10)
 	# 彈窗內的文字
 	name_label.add_theme_font_size_override("font_size", base_size + 2)   # 名字大一點
 	desc_label.add_theme_font_size_override("normal_font_size", base_size - 1)   # 描述小一點
@@ -263,5 +267,18 @@ func update_collection_rate():
 func _on_BackButton_pressed():
 	print("返回 Title")
 	get_tree().change_scene_to_file("res://Scenes/TitleScreen.tscn")
+
+# 重製圖鑑按鈕
+func _on_ClearButton_pressed():
+	print("開始重製圖鑑...")
+	
+	# 呼叫 Manager 的重製功能
+	CollectibleManager.reset_all()
+	
+	# 即時更新畫面
+	build_grid()               # 重新建立網格（會變回問號）
+	update_collection_rate()   # 更新 0 / 16 文字
+	print("圖鑑介面已刷新！")
+
 
 # ---------------------------------------------------

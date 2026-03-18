@@ -8,7 +8,7 @@ script = ExtResource("1_oyi5s")
 attack_type = 1
 skill_name = "元素召喚！"
 mp_cost = 3
-power = 15
+power = 25
 target_type = "all_enemies"
 description = "活用各式元素，猶如化學般引發爆炸造成傷害
 (造成持續傷害 3 回合)"

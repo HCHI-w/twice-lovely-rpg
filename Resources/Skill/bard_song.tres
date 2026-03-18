@@ -11,7 +11,7 @@ skill_name = "這是buff"
 mp_cost = 2
 power = 15
 target_type = "all_allies"
-description = "乏味的戰鬥，需要點振奮人心的音樂 (持續 3 回合)
-提升全體隊友物理、魔法攻擊 + 20"
+description = "乏味的戰鬥，來點振奮的音樂吧
+提升全體隊友物理、魔法攻擊 +30 (持續 3 回合)"
 buff_data = ExtResource("1_fkhuv")
 metadata/_custom_type_script = "uid://c5uq70lmdvwfw"

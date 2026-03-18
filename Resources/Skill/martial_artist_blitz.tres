@@ -6,7 +6,7 @@
 script = ExtResource("1_3veqd")
 skill_name = "大步奔走！"
 mp_cost = 2
-power = 20
+power = 25
 target_type = "all_enemies"
 effect_chance = 0.6
 description = "奔走的加速，讓打擊更有威力

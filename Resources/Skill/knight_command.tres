@@ -11,6 +11,6 @@ mp_cost = 2
 power = 20
 target_type = "all_allies"
 description = "扛起盾牌抵禦攻擊傷害
-提升全體隊友防禦↑↑、物理攻擊↑ (持續 3 回合)"
+提升全體隊友防禦、物理攻擊 +30 (持續 3 回合)"
 buff_data = ExtResource("1_p1ve1")
 metadata/_custom_type_script = "uid://c5uq70lmdvwfw"

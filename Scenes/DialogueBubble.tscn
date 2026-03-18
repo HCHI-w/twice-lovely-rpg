@@ -11,8 +11,10 @@ script = ExtResource("1_6rj7d")
 
 [node name="PanelContainer" type="MarginContainer" parent="." unique_id=1378117281]
 custom_minimum_size = Vector2(250, 40)
-offset_right = 200.0
-offset_bottom = 40.0
+offset_left = -51.0
+offset_top = -68.0
+offset_right = 215.0
+offset_bottom = -13.0
 theme = ExtResource("2_gbqae")
 theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 10
@@ -20,7 +22,7 @@ theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 10
 
 [node name="Label" type="Label" parent="PanelContainer" unique_id=1459622624]
-custom_minimum_size = Vector2(250, 40)
+custom_minimum_size = Vector2(250, 35)
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_gbqae")

@@ -10,8 +10,8 @@ const SAVE_PATH := "user://collectibles.save"
 
 # ---------------------------------------------------
 # 存檔資料
-#func _ready():
-#	load_data()
+func _ready():
+	load_data()
 
 # 新增收藏
 func add_collectible(data: CollectibleData):
@@ -37,10 +37,24 @@ func clear_new(id:String):
 func total_collected() -> int:
 	return collected.size()
 
+# 重置存檔
+func reset_all():
+	collected = {}   # 清空已收集字典
+	new_items = {}   # 清空 NEW 標記
+	
+	# 刪除物理檔案
+	if FileAccess.file_exists(SAVE_PATH):
+		DirAccess.remove_absolute(SAVE_PATH)
+		print("存檔檔案已實體刪除")
+	
+	# 如果你想保留空的檔案也可以呼叫 save()，但刪除是最徹底的
+	print("記憶體資料已清空")
+
 # 存檔
 func save():
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	file.store_var(collected)
+	
 
 # 讀檔
 func load_data():

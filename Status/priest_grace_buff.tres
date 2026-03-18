@@ -8,12 +8,12 @@ buff_id = "priest_grace_buff"
 name = "全數值小幅提升"
 description = "全數值小幅提升"
 stats_flat = {
-"def": 5,
-"dex": 5,
+"def": 10,
+"dex": 10,
 "hp": 0,
-"int": 5,
-"luk": 5,
+"int": 10,
+"luk": 10,
 "mp": 0,
-"str": 5
+"str": 10
 }
 metadata/_custom_type_script = "uid://o5byigwq6jju"

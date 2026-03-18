@@ -11,9 +11,9 @@ stats_flat = {
 "def": 0,
 "dex": 0,
 "hp": 0,
-"int": 20,
+"int": 30,
 "luk": 0,
 "mp": 0,
-"str": 20
+"str": 30
 }
 metadata/_custom_type_script = "uid://o5byigwq6jju"

@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://dc8o4q4t4kep1"]
 
 [ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="1_7n3uq"]
+[ext_resource type="Resource" uid="uid://w6midy0ypjgy" path="res://Status/priest_grace_buff.tres" id="1_x6igt"]
 
 [resource]
 script = ExtResource("1_7n3uq")
@@ -8,8 +9,9 @@ attack_type = 1
 effect_type = 2
 skill_name = "起床！"
 mp_cost = 5
-power = 30
+power = 35
 target_type = "single_ally"
 description = "起床！別睡了！
 把瀕死的隊友拉起來，恢復部分生命值↑"
+buff_data = ExtResource("1_x6igt")
 metadata/_custom_type_script = "uid://c5uq70lmdvwfw"

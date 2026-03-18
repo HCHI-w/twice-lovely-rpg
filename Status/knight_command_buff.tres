@@ -8,10 +8,10 @@ buff_id = "knight_buff"
 name = "防禦提升、物理攻擊小幅提升"
 description = "防禦提升、物理攻擊小幅提升"
 stats_flat = {
-"def": 20,
+"def": 30,
 "dex": 0,
 "hp": 0,
-"int": 0,
+"int": 30,
 "luk": 0,
 "mp": 0,
 "str": 10

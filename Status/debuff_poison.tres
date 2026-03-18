@@ -6,6 +6,6 @@
 script = ExtResource("1_t4fx1")
 buff_id = "poison"
 name = "中毒"
-damage_ratio = 5.0
+damage_ratio = 1.5
 is_damage_over_time = true
 metadata/_custom_type_script = "uid://o5byigwq6jju"

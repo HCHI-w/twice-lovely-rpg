@@ -15,10 +15,10 @@ texture = ExtResource("2_s58tf")
 [node name="CampCharacterLayer" type="Node2D" parent="." unique_id=1123346288]
 
 [node name="PlayerSlot1" type="Marker2D" parent="CampCharacterLayer" unique_id=284464463]
-position = Vector2(495, 523)
+position = Vector2(520, 385)
 
 [node name="PlayerSlot2" type="Marker2D" parent="CampCharacterLayer" unique_id=245213584]
-position = Vector2(520, 385)
+position = Vector2(495, 523)
 scale = Vector2(1.5, 1.5)
 
 [node name="PlayerSlot3" type="Marker2D" parent="CampCharacterLayer" unique_id=1626222811]
