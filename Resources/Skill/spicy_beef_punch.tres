@@ -7,7 +7,7 @@
 script = ExtResource("1_seoql")
 skill_name = "牛肉大醬湯"
 mp_cost = 2
-power = 15
+power = 10
 target_type = "all_enemies"
 buff_data = ExtResource("1_rmexr")
 metadata/_custom_type_script = "uid://c5uq70lmdvwfw"

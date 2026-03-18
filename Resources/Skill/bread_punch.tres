@@ -7,7 +7,7 @@
 script = ExtResource("1_5qaor")
 skill_name = "碳水炸彈"
 mp_cost = 2
-power = 15
+power = 10
 target_type = "all_enemies"
 effect_chance = 0.6
 buff_data = ExtResource("1_eagkc")

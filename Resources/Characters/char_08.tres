@@ -7,7 +7,7 @@
 
 [resource]
 script = ExtResource("1_oxna1")
-id = "Chaeyoung"
+id = "chaeyoung"
 display_name = "Chaeyoung"
 base_hp = 60
 base_mp = 18

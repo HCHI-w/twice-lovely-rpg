@@ -7,7 +7,7 @@
 
 [resource]
 script = ExtResource("1_3t38r")
-id = "Mina"
+id = "mina"
 display_name = "Mina"
 base_hp = 60
 base_str = 5

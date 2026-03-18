@@ -6,7 +6,7 @@
 script = ExtResource("1_tvg00")
 skill_name = "去吧 ! 玻璃獸"
 mp_cost = 3
-power = 20
+power = 30
 target_type = "all_enemies"
 effect_chance = 0.5
 description = "趁玻璃獸讓敵人分心之際，繞到背後對敵人造成傷害

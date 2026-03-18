@@ -46,9 +46,9 @@ func _on_window_resized():
 	
 	# 調整 DropPanel (主要的文字與掉落物區)
 	# 讓它寬度隨螢幕縮放，並置中
-	drop_panel.size.x = window_size.x * 0.9
+	drop_panel.size.x = window_size.x * 0.95
 	drop_panel.position.x = (window_size.x - drop_panel.size.x) / 2
-	drop_panel.position.y = window_size.y * 0.25
+	drop_panel.position.y = window_size.y * 0.40
 	
 	# 調整 WalkContainer (角色跑步區)
 	# 讓它在直式時水平排列，並位於畫面中下段
@@ -59,7 +59,7 @@ func _on_window_resized():
 	if is_portrait:
 		# 直式：掉落清單如果太多，可以考慮改成 Grid 或讓它自動換行
 		drop_list.alignment = BoxContainer.ALIGNMENT_CENTER
-		_update_fonts(36, 28) # 直式字體加大 (標題, 內文)
+		_update_fonts(46, 36) # 直式字體加大 (標題, 內文)
 	else:
 		# 橫式
 		drop_list.alignment = BoxContainer.ALIGNMENT_CENTER

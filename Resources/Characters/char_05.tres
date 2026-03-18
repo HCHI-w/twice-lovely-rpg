@@ -7,7 +7,7 @@
 
 [resource]
 script = ExtResource("1_hqrje")
-id = "Jihyo"
+id = "jihyo"
 display_name = "Jihyo"
 base_mp = 14
 base_str = 18

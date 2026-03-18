@@ -26,10 +26,22 @@ var dialogue_lines = []
 var dialogue_index = 0
 var dialogue_active = false
 
+# 存放從 JSON 讀進來的對話
+var group_data = {}
+var current_group_sequence = []   # 存放當前觸發的劇本清單
+var sequence_index = 0            # 紀錄演到第幾句
+
 # ---------------------------------------------------
 func _ready():
+	# 載入 JSON 文檔
+	load_group_dialogue_json()
 	# 安全機制：先把按鈕停用，防止玩家在黑畫面時亂點
 	depart_button.disabled = true
+	
+	# 連接視窗縮放
+	get_tree().root.size_changed.connect(_on_window_resized)
+	_on_window_resized()
+	
 	# 覆蓋黑畫面
 	TransitionManager.transition_instance.show()
 	TransitionManager.transition_instance.rect.modulate.a = 1.0
@@ -50,12 +62,10 @@ func _ready():
 	
 	spawn_party_characters()
 	spawn_random_visitor()
-	# 在所有人都生成完畢後，進場自動觸發一次對話
+	
+	# 在所有人都生成完畢後，進場自動觸發一次對話 (自動判斷要用組合對話還是個人對話)
 	trigger_random_dialogue()
 	
-	# 連接視窗縮放
-	get_tree().root.size_changed.connect(_on_window_resized)
-	_on_window_resized()
 
 # ---------------------------------------------------
 # 核心：處理排版與背景縮放
@@ -87,53 +97,6 @@ func _adjust_background(window_size: Vector2):
 			scale_factor = window_size.x / tex_size.x
 		
 		background.scale = Vector2(scale_factor, scale_factor)
-
-# 處理角色 Slot 的微調
-#func _adjust_character_slots(window_size: Vector2, is_portrait: bool):
-#	var center = window_size / 2
-	
-#	if is_portrait:
-		# 直式：角色可以稍微垂直排列或縮小間距
-#		slot1.position = center + Vector2(-350, 150)
-#		slot2.position = center + Vector2(-400, 550)
-#		slot3.position = center + Vector2(360, 550)
-#		visitor_slot.position = center + Vector2(370, 150)   # 訪客
-#	else:
-		# 橫式：角色扇形圍繞火堆
-#		slot1.position = center + Vector2(-200, 90)
-#		slot2.position = center + Vector2(-150, 160)
-#		slot3.position = center + Vector2(180, 160)
-#		visitor_slot.position = center + Vector2(130, 30)
-	
-	# 同步更新已經生成出來的角色位置
-#	_update_active_character_positions(is_portrait)
-
-# 讓已經在場上的角色瞬移到新的 Slot 位置
-#func _update_active_character_positions(is_portrait: bool):
-#	var slots = [slot1, slot2, slot3]
-	
-	# 修正建議：直式給 1.8 ~ 2.0，橫式維持 1.5 左右
-#	var portrait_scale = 1.9
-#	var landscape_scale = 1.6
-	
-#	var s_val = portrait_scale if is_portrait else landscape_scale
-#	var fixed_scale = Vector2(s_val, s_val)
-	
-#	for i in range(min(camp_characters.size(), 3)):
-#		camp_characters[i].global_position = slots[i].global_position
-		# 強制設定角色的縮放，避免受到父節點或其他縮放邏輯影響
-#		camp_characters[i].scale = fixed_scale
-	
-#	if camp_characters.size() > 3:
-#		camp_characters[3].global_position = visitor_slot.global_position
-#		camp_characters[3].scale = fixed_scale
-
-
-#func _adjust_ui_layout(window_size: Vector2, is_portrait: bool):
-	# DepartButton 置中靠下
-#	depart_button.size.x = window_size.x * 0.4 if is_portrait else 200
-#	depart_button.position.x = (window_size.x - depart_button.size.x) / 2
-#	depart_button.position.y = window_size.y * 0.85
 
 
 # ---------------------------------------------------
@@ -220,7 +183,37 @@ func spawn_random_visitor():
 	visitor.clicked.connect(trigger_random_dialogue)
 	camp_characters.append(visitor)
 
-# 隨機觸發一個人的對話
+
+# ---------------------------------------------------
+# --- 核心功能：讀取 JSON ---
+func load_group_dialogue_json():
+	var file_path = "res://CampDialogue/group_dialogues.json"   # 確保路徑正確
+	if not FileAccess.file_exists(file_path):
+		print("找不到對話 JSON 檔案")
+		return
+	
+	var file = FileAccess.open(file_path, FileAccess.READ)
+	var content = file.get_as_text()
+	
+	# 將文字轉成 Godot 的 Dictionary (字典)
+	var json_data = JSON.parse_string(content)
+	if json_data != null:
+		group_data = json_data
+		print("成功載入組合對話庫")
+
+
+# --- 核心功能：產生組合 Key ---
+func get_current_group_key() -> String:
+	var ids = []
+	for c in camp_characters:
+		# 收集目前在場所有人的 ID
+		ids.append(c.character_data.id.to_lower())
+	
+	ids.sort()   # 排序：確保不管順序如何，結果都是 A_B_C_D
+	return "_".join(ids)
+
+
+# --- 修改後的對話觸發邏輯 ---
 func trigger_random_dialogue():
 	# 安全檢查：如果營地裡沒人，就直接結束
 	if camp_characters.is_empty():
@@ -231,19 +224,64 @@ func trigger_random_dialogue():
 		if c.current_bubble != null:
 			c.current_bubble.queue_free()
 			c.current_bubble = null
-	# 從陣列中隨機抽籤選出一個角色
-	# pick_random() 是 Godot 4 內建的超好用功能
+	
+	# 如果目前「劇本」還沒演完，就繼續演下一句
+	if sequence_index < current_group_sequence.size():
+		play_next_in_sequence()
+		return
+	
+	# 如果劇本演完了（或還沒開始），檢查有沒有新的組合劇本
+	var group_key = get_current_group_key()
+	print("當前營地組合 Key: ", group_key)   # 確認組合
+	
+	# 判定：如果 JSON 裡有這個組合，就用組合對話
+	if group_data.has(group_key):
+		print("✅ 成功匹配到劇本對話！")
+		# 載入新劇本，重置索引
+		current_group_sequence = group_data[group_key]
+		sequence_index = 0
+		play_next_in_sequence()
+	else:
+		print("❌ 找不到劇本，執行個人隨機對話")
+		# 沒劇本就退回原本的「個人隨機對話」
+		current_group_sequence = [] # 清空劇本
+		var random_speaker = camp_characters.pick_random()
+		var id = random_speaker.character_data.id
+		var lines = DialogueRegistry.dialogues.get(id, ["..."])
+		# 執行原本的單人說話邏輯
+		random_speaker.show_dialogue(lines.pick_random())
+
+
+# 執行劇本中的下一行
+func play_next_in_sequence():
+	if sequence_index >= current_group_sequence.size():
+		sequence_index = 0   # 播完了就重頭循環，或是可以設為停止
+	
+	var line_data = current_group_sequence[sequence_index]
+	var target_id = line_data["id"]   # 取得 JSON 裡的 slot 編號
+	var text = line_data["text"]      # 取得內容
+	
+	# 在場上所有角色中尋找 ID 匹配的人
+	var speaker_found = false
+	for c in camp_characters:
+		if c.character_data.id.to_lower() == target_id.to_lower():
+			c.show_dialogue(text)
+			speaker_found = true
+			break # 找到就停止循環
+	
+	# 如果 JSON 寫錯名字，或是該角色不在場，就印出錯誤方便除錯
+	if not speaker_found:
+		print("除錯：找不到 ID 為 ", target_id, " 的發言者。請檢查 JSON 拼字。")
+	
+	# 準備下一句
+	sequence_index += 1
+
+
+func play_random_individual_dialogue():
 	var random_speaker = camp_characters.pick_random()
-	
-	# 取得該角色的對話資料
 	var id = random_speaker.character_data.id
-	var lines = DialogueRegistry.dialogues.get(id, ["..."])   # 如果找不到就用 "..." 代替
-	
-	# 隨機選一句話來顯示
-	var random_text = lines.pick_random()
-	
-	# 叫那個角色把話說出來
-	random_speaker.show_dialogue(random_text)
+	var lines = DialogueRegistry.dialogues.get(id, ["..."])
+	random_speaker.show_dialogue(lines.pick_random())
 
 
 # 偵測輸入（點擊畫面）

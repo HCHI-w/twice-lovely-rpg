@@ -7,7 +7,7 @@
 script = ExtResource("1_bq6og")
 skill_name = "快樂兒童餐"
 mp_cost = 2
-power = 15
+power = 10
 target_type = "all_enemies"
 effect_chance = 0.6
 buff_data = ExtResource("1_kfolj")

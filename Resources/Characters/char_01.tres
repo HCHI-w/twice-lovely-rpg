@@ -7,7 +7,7 @@
 
 [resource]
 script = ExtResource("1_0b21f")
-id = "Nayeon"
+id = "nayeon"
 display_name = "Nayeon"
 base_hp = 70
 base_mp = 16

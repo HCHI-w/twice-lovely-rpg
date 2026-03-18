@@ -19,11 +19,11 @@ scale = Vector2(2.3, 2.3)
 position = Vector2(209, 699.891)
 
 [node name="PlayerSlot2" type="Marker2D" parent="CampCharacterLayer" unique_id=245213584]
-position = Vector2(190, 794.1914)
+position = Vector2(189, 794.191)
 scale = Vector2(2, 2)
 
 [node name="PlayerSlot3" type="Marker2D" parent="CampCharacterLayer" unique_id=1626222811]
-position = Vector2(354, 699.891)
+position = Vector2(357, 699.891)
 scale = Vector2(2, 2)
 
 [node name="VisitorSlot" type="Marker2D" parent="CampCharacterLayer" unique_id=1730944484]
@@ -37,7 +37,7 @@ offset_right = 1062.0
 offset_bottom = 271.0
 theme = ExtResource("3_p4i0x")
 theme_override_font_sizes/font_size = 50
-text = "營地休息中...獲得職業專屬 Buff..."
+text = "營地休息中, 獲得職業專屬 Buff..."
 horizontal_alignment = 1
 
 [node name="CollectionPanel" type="GridContainer" parent="." unique_id=365309177]

@@ -7,7 +7,7 @@
 script = ExtResource("1_83l65")
 skill_name = "精準射擊"
 mp_cost = 3
-power = 30
+power = 35
 target_type = "all_enemies"
 effect_chance = 0.6
 description = "千錘百鍊的射擊技巧，對敵人造成物理傷害

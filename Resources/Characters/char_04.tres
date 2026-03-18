@@ -7,7 +7,7 @@
 
 [resource]
 script = ExtResource("1_twjwk")
-id = "Sana"
+id = "sana"
 display_name = "Sana"
 base_hp = 60
 base_mp = 16

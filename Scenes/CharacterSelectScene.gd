@@ -457,7 +457,6 @@ func _on_class_selected(class_data: ClassData):
 	
 	# --- 重新整理介面 ---
 	refresh_after_class_change()
-	print("目前職業組合：", temp_selected_classes)
 
 # ----------------------------------------------------------
 # 封裝一個重新整理的流程
@@ -671,7 +670,7 @@ func _animate_stat_change(
 	
 	label.bbcode_enabled = true
 	label.fit_content = true
-	label.autowrap_mode = TextServer.AUTOWRAP_OFF # 關鍵：直式 2 列時防止它亂換行
+	label.autowrap_mode = TextServer.AUTOWRAP_OFF   # 關鍵：直式 2 列時防止它亂換行
 	
 	# 如果沒有基準值 → 直接顯示
 	if base_value == null:

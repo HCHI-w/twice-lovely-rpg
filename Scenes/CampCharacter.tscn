@@ -19,4 +19,4 @@ offset = Vector2(0, -10)
 shape = SubResource("RectangleShape2D_jb3bp")
 
 [node name="BubbleAnchor" type="Marker2D" parent="." unique_id=174378979]
-position = Vector2(-30, -90)
+position = Vector2(-50, -110)
