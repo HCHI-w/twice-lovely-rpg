@@ -1,22 +1,25 @@
-🎮 GAME PAGE        
-                
-https://hchi-w.github.io/twice-lovely-rpg/        
+# 🎮 Twice Lovely RPG　　　　 <img width="128" height="128" alt="twiceLogo_s" src="https://github.com/user-attachments/assets/f7652680-980f-4427-aac4-5ae0b79a8dc3" />       
+### 🎮 遊戲頁面： https://hchi-w.github.io/twice-lovely-rpg/     
+                  
+![S__512589826](https://github.com/user-attachments/assets/fbff1130-fae7-4ac4-bdbd-947a6cebe052)
 
-🎮 ------------------------------------------------------------------------------------ 🎮    
-
+= --------------------------------------------------------------------------------------------------------------------------------------------------------- =  
         
-🎮 Twice Lovely RPG - 專案開發日誌    
-這是一個使用 Godot 4.6 開發的 2D RPG 遊戲。本專案旨在為玩家打造一個溫馨且充滿細節的冒險世界。    
-    
+## 🎮 Twice Lovely RPG - 專案開發日誌    
+這是一個使用 Godot 4.6 開發的 2D RPG 遊戲。本專案旨打造一個有趣的冒險世界。    
+最初的契機，是看到團原本在節目中聊到玩 RPG 遊戲會想扮演什麼職業角色，所以才開始了這個專案。    
+從決定要開始做這件事情的時候是 2 月初，但又想在 3 月的演唱會前完成，時間上其實非常的趕，尤其本身根本對程式不熟，現在想想好像有點瘋狂。    
+不過這中間開發過程的既緊張又有趣，推薦大家一起嘗試看看（？    
 
-🛠️ 開發環境 (Tech Stack)    
+
+## 🛠️ 開發環境 (Tech Stack)    
 。引擎: Godot Engine 4.6 (Stable)    
 。語言: GDScript (符合 4.x 最新語法規範)    
 。解析度: 1280 x 720 (預設)    
 。類型: 2D 角色扮演遊戲 (Top-down RPG)    
 
     
-📂 專案結構    
+## 📂 專案結構    
 目前專案的主要模組規劃如下：    
 。Player/: 玩家角色的腳本、動畫與狀態機。    
 。Maps/: 場景切換邏輯。    
@@ -24,18 +27,18 @@ https://hchi-w.github.io/twice-lovely-rpg/
 。UI/: 說明欄、對話框與主選單。    
 
 
-📝 給開發者的筆記 (新手教學)    
-如果你是剛拉下這個專案的新手，請注意以下 Godot 4.x 的設定：    
+## 📝 給開發者的筆記 (新手教學)    
+請注意以下 Godot 4.x 的設定：    
 1. 節點掛載: 確保腳本掛載在正確的類型上。例如：玩家腳本應掛載於 CharacterBody2D。    
 2. 信號連接: 本專案優先使用代碼連接信號（例如 area_entered.connect(_on_area_entered)），而非僅依賴編輯器面板。    
 3. 座標系統: 記住 Godot 的 Y 軸向下為正。Vector2.ZERO: 靜止不動。Vector2.UP: 往螢幕上方移動 (0, -1)。
 
 
-🐞 除錯指南 (Debugging)    
+## 🐞 除錯指南 (Debugging)    
 如果你在執行遊戲時遇到閃退或紅色報錯：    
 。查看底部的 Output 視窗: 這裡會顯示你的 print() 訊息。    
 。查看 Debugger 視窗: 這是最重要的！它會告訴你哪一行代碼出錯。
 
 
-🎨 聲明與致謝    
+## 🎨 聲明與致謝    
 本專案為粉絲自製作品，所有素材權利歸原創作者所有。
