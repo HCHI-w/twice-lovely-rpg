@@ -15,6 +15,7 @@ run/main_scene="res://Scenes/TitleScreen.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/image="uid://wucdvgfkqg4a"
 config/icon="uid://bsnnneo7pxa74"
+config/windows_native_icon="res://favicon.ico"
 
 [autoload]
 
