@@ -16,18 +16,18 @@ texture = ExtResource("2_do0x7")
 scale = Vector2(2.3, 2.3)
 
 [node name="PlayerSlot1" type="Marker2D" parent="CampCharacterLayer" unique_id=284464463]
-position = Vector2(190.69553, 836.83514)
+position = Vector2(209, 699.891)
 
 [node name="PlayerSlot2" type="Marker2D" parent="CampCharacterLayer" unique_id=245213584]
-position = Vector2(212.0957, 742.5569)
+position = Vector2(190, 794.1914)
 scale = Vector2(2, 2)
 
 [node name="PlayerSlot3" type="Marker2D" parent="CampCharacterLayer" unique_id=1626222811]
-position = Vector2(349.28705, 742.5569)
+position = Vector2(354, 699.891)
 scale = Vector2(2, 2)
 
 [node name="VisitorSlot" type="Marker2D" parent="CampCharacterLayer" unique_id=1730944484]
-position = Vector2(369.687, 836.8345)
+position = Vector2(372, 794.191)
 scale = Vector2(2, 2)
 
 [node name="Label" type="Label" parent="." unique_id=410190581]
