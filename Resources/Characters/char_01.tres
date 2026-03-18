@@ -9,7 +9,7 @@
 script = ExtResource("1_0b21f")
 id = "nayeon"
 display_name = "Nayeon"
-base_hp = 70
+base_hp = 90
 base_mp = 16
 base_str = 6
 base_def = 8

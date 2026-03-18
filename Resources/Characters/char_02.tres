@@ -9,7 +9,7 @@
 script = ExtResource("1_to5p1")
 id = "jeongyeon"
 display_name = "Jeongyeon"
-base_hp = 90
+base_hp = 110
 base_mp = 14
 base_str = 11
 base_def = 20

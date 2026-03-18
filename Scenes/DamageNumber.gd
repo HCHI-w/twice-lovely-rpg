@@ -6,29 +6,42 @@ class_name DamageNumber
 # ---------------------------------------------------
 func _ready():
 	add_child(label)
+	
+	var my_font = preload("res://Fonts/Cubic_11.ttf")
+	label.add_theme_font_override("font", my_font)
+	
+	# 讓文字置中，這樣縮放時才會從中心點擴散
 	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	
 
 func show_damage(amount: int, is_critical: bool, damage_type: String):
 	label.text = str(amount)
 	
+	# --- 設定字體大小 ---
+	var font_size: int = 30   # 普通傷害
+		
 	# 顏色與樣式設定
 	if is_critical:
 		# 爆擊給它鮮艷的橘紅色，並且加上驚嘆號！
+		font_size = 48
 		label.text = str(amount)
-		modulate = Color(1.0, 0.8, 0.0) # 亮金色/橘色
+		modulate = Color(1.0, 0.8, 0.0)   # 亮金色/橘色
 	else:
 		match damage_type:
 			"PHYSICAL":
-				modulate = Color(1, 0.3, 0.3) # 紅
+				modulate = Color(1, 0.3, 0.3)   # 紅
 			"MAGIC":
-				modulate = Color(0.3, 0.6, 1) # 藍
+				modulate = Color(0.3, 0.6, 1)   # 藍
 			_:
 				modulate = Color.WHITE
-		
+	# 它會覆蓋掉主題設定，強制指定字體大小
+	label.add_theme_font_size_override("font_size", font_size)
+	# ----------------------------
+	
 	# 初始縮放 (爆擊一開始要超大！)
 	if is_critical:
-		scale = Vector2(2.5, 2.5) # 爆擊一開始放大 2.5 倍
+		scale = Vector2(1.5, 1.5)   # 爆擊一開始放大 2.5 倍
 	else:
 		scale = Vector2.ONE
 		
@@ -37,7 +50,7 @@ func show_damage(amount: int, is_critical: bool, damage_type: String):
 	# 爆擊彈跳動畫 (Tween)
 	if is_critical:
 		# 快速縮小回一點點大的狀態 (1.5倍)，製造「撞擊感」
-		tween.tween_property(self, "scale", Vector2(1.5, 1.5), 0.1)\
+		tween.tween_property(self, "scale", Vector2(1.0, 1.0), 0.1)\
 			.set_trans(Tween.TRANS_BOUNCE)\
 			.set_ease(Tween.EASE_OUT)
 		

@@ -9,7 +9,7 @@
 script = ExtResource("1_3t38r")
 id = "mina"
 display_name = "Mina"
-base_hp = 60
+base_hp = 80
 base_str = 5
 base_def = 5
 base_int = 20

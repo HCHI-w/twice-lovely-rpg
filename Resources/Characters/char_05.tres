@@ -9,6 +9,7 @@
 script = ExtResource("1_hqrje")
 id = "jihyo"
 display_name = "Jihyo"
+base_hp = 120
 base_mp = 14
 base_str = 18
 base_def = 11

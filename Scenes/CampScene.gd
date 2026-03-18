@@ -234,22 +234,32 @@ func trigger_random_dialogue():
 	var group_key = get_current_group_key()
 	print("當前營地組合 Key: ", group_key)   # 確認組合
 	
-	# 判定：如果 JSON 裡有這個組合，就用組合對話
-	if group_data.has(group_key):
-		print("✅ 成功匹配到劇本對話！")
-		# 載入新劇本，重置索引
-		current_group_sequence = group_data[group_key]
+	# --- 尋找所有匹配的劇本 (包含 v2, v3...) ---
+	var matched_scripts = []
+	
+	# 遍歷 JSON 字典裡所有的 Key
+	for k in group_data.keys():
+		# 如果 Key 完全相同，或者是該 Key 加上了 "_v" 開頭的後綴
+		# 例如 "mina_momo_nayeon_tzuyu" 會匹配到 "mina_momo_nayeon_tzuyu" 和 "mina_momo_nayeon_tzuyu_v2"
+		if k == group_key or k.begins_with(group_key + "_v"):
+			matched_scripts.append(group_data[k])
+	
+	# 如果有找到任何匹配的劇本
+	if matched_scripts.size() > 0:
+		print("✅ 成功匹配到組合劇本，數量：", matched_scripts.size())
+		# 隨機從匹配清單中挑選一個劇本
+		current_group_sequence = matched_scripts.pick_random()
 		sequence_index = 0
 		play_next_in_sequence()
 	else:
-		print("❌ 找不到劇本，執行個人隨機對話")
+		print("❌ 找不到匹配劇本，執行個人隨機對話 (Key: ", group_key, ")")
 		# 沒劇本就退回原本的「個人隨機對話」
 		current_group_sequence = [] # 清空劇本
-		var random_speaker = camp_characters.pick_random()
-		var id = random_speaker.character_data.id
-		var lines = DialogueRegistry.dialogues.get(id, ["..."])
+		sequence_index = 0
+		play_random_individual_dialogue()
+
 		# 執行原本的單人說話邏輯
-		random_speaker.show_dialogue(lines.pick_random())
+#		random_speaker.show_dialogue(lines.pick_random())
 
 
 # 執行劇本中的下一行

@@ -240,21 +240,21 @@
 	{ "id": "nayeon", "text": "哈哈哈！Sana 妳被當成貨物處理了！" }
   ],
   "dahyun_nayeon_sana_tzuyu": [
-	{ "id": "tzuyu", "text": "多賢歐尼，左邊一點。Sana 歐尼，別一直親多賢歐尼的臉。" },
+	{ "id": "tzuyu", "text": "(無意識強勢) 多賢歐尼，左邊一點。Sana 歐尼，別一直親多賢歐尼的臉。" },
 	{ "id": "sana", "text": "（乖乖照做）好的子瑜小隊長！" },
 	{ "id": "dahyun", "text": "（小聲）子瑜啊，救救我，Sana 歐尼快把我吃掉了。" },
 	{ "id": "nayeon", "text": "（看戲）沒用的多賢，子瑜現在只負責構圖，不負責救人。" }
   ],
   "dahyun_jihyo_nayeon_tzuyu_v2": [
-	{ "id": "tzuyu", "text": "娜漣歐尼負責這一塊。志效歐尼去倒垃圾。" },
+	{ "id": "tzuyu", "text": "(指著吸塵器) 娜漣歐尼，請負責這⼀塊志效歐尼，請去倒垃圾。" },
 	{ "id": "jihyo", "text": "（不自覺地接過垃圾袋）好的...咦？我為什麼要聽妳的？" },
 	{ "id": "nayeon", "text": "（已經乖乖開始吸地）別問了志效，子瑜的眼神很可怕。" },
 	{ "id": "dahyun", "text": "（偷笑）子瑜真的是無意識地在統治我們啊。" }
   ],
   "jeongyeon_jihyo_momo_tzuyu_v2": [
 	{ "id": "jeongyeon", "text": "Momo！這襪子是誰的？是不是妳的？" },
-	{ "id": "momo", "text": "可能是...山的吧？" },
-	{ "id": "tzuyu", "text": "（指令）定延歐尼，別吵了，先把地掃乾淨。" },
+	{ "id": "momo", "text": "(⼼虛) 可能是...山的吧？" },
+	{ "id": "tzuyu", "text": "(無意識強勢) 定延歐尼，別吵了，先把地掃乾淨。" },
 	{ "id": "jeongyeon", "text": "（乖乖拿起掃把）喔...好，我這就掃。" }
   ],
   "chaeyoung_dahyun_mina_nayeon": [
@@ -265,9 +265,9 @@
   ],
   "jihyo_momo_sana_tzuyu": [
 	{ "id": "jihyo", "text": "我跟 Momo 去提水吧，我們體力比較好。" },
-	{ "id": "sana", "text": "那我跟子瑜留在這裡看家！" },
-	{ "id": "tzuyu", "text": "（指令）志效歐尼，順便帶兩瓶可樂回來，冰的那種。" },
-	{ "id": "jihyo", "text": "（點頭）知道了，冰的可樂...等等，我為什麼要聽妳的？" }
+	{ "id": "sana", "text": "(撒嬌) 那我跟子瑜留在這裡看家！" },
+	{ "id": "tzuyu", "text": "志效歐尼，順便帶兩瓶可樂回來，冰的那種～" },
+	{ "id": "jihyo", "text": "（點頭）知道了，冰的可樂...等等，為什麼在點餐了？" }
   ],
   "jeongyeon_mina_momo_nayeon_v2": [
 	{ "id": "jeongyeon", "text": "我想煮豆芽湯。" },
@@ -278,12 +278,12 @@
   ],
   "chaeyoung_dahyun_jihyo_sana_v2": [
 	{ "id": "dahyun", "text": "（左閃右躲）歐尼！攝影機在拍！" },
-	{ "id": "sana", "text": "拍到才好啊，讓大家知道妳是我的豆腐！" },
-	{ "id": "chaeyoung", "text": "沒錯，多賢歐尼，逃避是沒有用的，放棄掙扎吧。" },
+	{ "id": "sana", "text": "(開朗狗狗模式)拍到才好啊，讓大家知道妳是我的豆腐！" },
+	{ "id": "chaeyoung", "text": "(幫腔) 沒錯，多賢歐尼，逃避是沒有用的，放棄掙扎吧。" },
 	{ "id": "jihyo", "text": "（大笑）Sana 今天的能量真的突破天際了。" }
   ],
   "jeongyeon_nayeon_sana_tzuyu": [
-	{ "id": "tzuyu", "text": "定延歐尼放這邊，娜漣歐尼拿椅子，Sana 歐尼別亂跑。" },
+	{ "id": "tzuyu", "text": "(⼿⼀指) 定延歐尼放這邊，娜漣歐尼拿椅子，Sana 歐尼別亂跑。" },
 	{ "id": "jeongyeon", "text": "（乖乖搬桌子）是，子瑜大人。" },
 	{ "id": "sana", "text": "（偷偷從背後抱住子瑜）遵命！" },
 	{ "id": "nayeon", "text": "（碎碎唸）我可是大姊耶...算了，子瑜高興就好。" }
@@ -308,20 +308,495 @@
   ],
   "jihyo_jeongyeon_mina_tzuyu": [
 	{ "id": "mina", "text": "這樣看著火光，感覺心靈都被淨化了。" },
-	{ "id": "jeongyeon", "text": "（溫柔地看著）是啊，跟妳們在一起的時候最舒服了。" },
+	{ "id": "jeongyeon", "text": "(溫柔地看著妹妹們) 是啊，跟妳們在一起的時候最舒服了。" },
 	{ "id": "tzuyu", "text": "歐尼，那妳明年也要帶我們來喔。" },
-	{ "id": "jihyo", "text": "沒問題，每年都辦。" }
+	{ "id": "jihyo", "text": "沒問題，只要妳們不嫌麻煩，我每年都辦。" }
   ],
   "jeongyeon_jihyo_nayeon_tzuyu": [
 	{ "id": "jeongyeon", "text": "這條圍巾最厚，給子瑜圍。" },
 	{ "id": "jihyo", "text": "子瑜啊，腳會冷嗎？要不要換雙厚一點的襪子？" },
-	{ "id": "nayeon", "text": "（塞進暖暖包）這裡也有一個，不要凍到了喔。" },
-	{ "id": "tzuyu", "text": "歐尼們，我已經快被包成一顆球了，我不能走路了。" }
+	{ "id": "nayeon", "text": "（塞暖暖包）這裡也有一個，不要凍到了喔。" },
+	{ "id": "tzuyu", "text": "歐尼們，我已經快被妳們包成⼀顆球了，我不能走路了。" }
   ],
   "dahyun_jihyo_mina_nayeon": [
 	{ "id": "jihyo", "text": "我跟多賢一組，我們比較早起。" },
 	{ "id": "nayeon", "text": "那 Mina 跟我一組，我們可以睡晚一點再慢慢收。" },
 	{ "id": "mina", "text": "謝謝娜漣歐尼。" },
 	{ "id": "dahyun", "text": "（吐槽）娜漣歐尼，妳是想跟著 Mina 歐尼一起賴床吧？" }
+  ],
+  "chaeyoung_jeongyeon_nayeon_sana": [
+	{ "id": "chaeyoung", "text": "這個燈串我想掛在這裡。" },
+	{ "id": "nayeon", "text": "會不會太低？等一下我會撞到。" },
+	{ "id": "jeongyeon", "text": "我好像也會撞到。" },
+	{ "id": "sana", "text": "（笑）但現在的畫面會很好看。" },
+	{ "id": "chaeyoung", "text": "因為我很重視氛圍～！" },
+	{ "id": "nayeon", "text": "但我重視我的頭！" }
+  ],
+  "dahyun_mina_nayeon_sana": [
+	{ "id": "sana", "text": "晚上真的有點冷。" },
+	{ "id": "mina", "text": "我有帶毯子。" },
+	{ "id": "dahyun", "text": "不愧是 Mina 歐尼。" },
+	{ "id": "nayeon", "text": "那我也要用。" },
+	{ "id": "mina", "text": "（笑）可以一起。" },
+	{ "id": "sana", "text": "感覺要變成小窩了。" }
+  ],
+  "jihyo_mina_nayeon_tzuyu": [
+	{ "id": "jihyo", "text": "孩子們，我們該收拾餐桌了。" },
+	{ "id": "nayeon", "text": "現在就開始要收了嗎？" },
+	{ "id": "tzuyu", "text": "這樣之後會比較輕鬆。" },
+	{ "id": "mina", "text": "而且晚上比較不會亂。" },
+	{ "id": "nayeon", "text": "好啦好啦，我知道了。" }
+  ],
+  "dahyun_jihyo_momo_sana": [
+	{ "id": "momo", "text": "這個烤肉好了嗎？" },
+	{ "id": "jihyo", "text": "還沒，再等一下。" },
+	{ "id": "sana", "text": "Momo 已經問第三次了。" },
+	{ "id": "dahyun", "text": "（笑）她一直盯著那塊肉。" },
+	{ "id": "momo", "text": "因為看起來很好吃。" },
+	{ "id": "jihyo", "text": "等熟了我第一個給妳。" }
+  ],
+  "dahyun_momo_sana_tzuyu": [
+	{ "id": "dahyun", "text": "剛剛誰把飲料放在火旁邊？" },
+	{ "id": "tzuyu", "text": "好像是我。" },
+	{ "id": "sana", "text": "差點變熱飲。" },
+	{ "id": "momo", "text": "（笑）那也可以喝。" },
+	{ "id": "dahyun", "text": "Momo 歐尼真的什麼都可以。" },
+	{ "id": "tzuyu", "text": "下次會注意的（低頭笑）。" }
+  ],
+  "chaeyoung_momo_sana_tzuyu": [
+	{ "id": "chaeyoung", "text": "這個時間的天空顏色很好看。" },
+	{ "id": "tzuyu", "text": "有一點粉色。" },
+	{ "id": "sana", "text": "很適合拍照。" },
+	{ "id": "momo", "text": "先拍再吃。" },
+	{ "id": "chaeyoung", "text": "（笑）我們沒有提到吃的。" },
+	{ "id": "momo", "text": "這很重要。" }
+  ],
+  "dahyun_jihyo_sana_tzuyu": [
+	{ "id": "sana", "text": "剛剛風有點大。" },
+	{ "id": "dahyun", "text": "帳篷差點飛走。" },
+	{ "id": "jihyo", "text": "幸好我有壓住一邊。" },
+	{ "id": "tzuyu", "text": "我有看到，嚇到我了。" },
+	{ "id": "sana", "text": "這才有露營感～～" },
+	{ "id": "jihyo", "text": "Sana 妳太樂觀了。" }
+  ],
+  "chaeyoung_jeongyeon_jihyo_momo": [
+	{ "id": "momo", "text": "這個湯可以了嗎？" },
+	{ "id": "jihyo", "text": "我再試一下味道。" },
+	{ "id": "jeongyeon", "text": "妳剛剛已經試三次了。" },
+	{ "id": "chaeyoung", "text": "Jihyo 歐尼很認真。" },
+	{ "id": "jihyo", "text": "因為要好吃。" },
+	{ "id": "momo", "text": "我可以幫忙試（舉手）。" }
+  ],
+  "chaeyoung_jeongyeon_mina_momo": [
+	{ "id": "mina", "text": "火看起來有點小。" },
+	{ "id": "jeongyeon", "text": "我來調整一下。" },
+	{ "id": "momo", "text": "我幫忙扇風。" },
+	{ "id": "chaeyoung", "text": "畫面好像野外求生。" },
+	{ "id": "mina", "text": "（笑）但其實很安全。" },
+	{ "id": "jeongyeon", "text": "怎麼突然變成節目拍攝啦。" }
+  ],
+  "dahyun_jeongyeon_sana_tzuyu": [
+	{ "id": "dahyun", "text": "剛剛那個聲音是什麼？" },
+	{ "id": "tzuyu", "text": "好像是風。" },
+	{ "id": "sana", "text": "不要嚇我。" },
+	{ "id": "jeongyeon", "text": "露營在戶外本來就會有各種聲音嘛。" },
+	{ "id": "dahyun", "text": "（小聲）但剛剛真的有點大。" },
+	{ "id": "tzuyu", "text": "（笑）歐尼有點膽小呢。" }
+  ],
+  "chaeyoung_jeongyeon_sana_tzuyu": [
+	{ "id": "chaeyoung", "text": "我想在這邊畫一下風景。" },
+	{ "id": "sana", "text": "現在嗎？" },
+	{ "id": "jeongyeon", "text": "她隨時都可以。" },
+	{ "id": "tzuyu", "text": "這裡真的很漂亮。" },
+	{ "id": "chaeyoung", "text": "光線剛剛好。" },
+	{ "id": "sana", "text": "（看著）這片景色真的很療癒啊～" }
+  ],
+  "dahyun_jeongyeon_jihyo_mina": [
+	{ "id": "jihyo", "text": "油囉本，等一下吃完要記得收垃圾喔！" },
+	{ "id": "jeongyeon", "text": "隊長模式又出現了。" },
+	{ "id": "dahyun", "text": "（笑）但收垃圾真的很重要。" },
+	{ "id": "mina", "text": "而且這樣明天會比較輕鬆。" },
+	{ "id": "jihyo", "text": "你們終於站我這邊了。" },
+	{ "id": "jeongyeon", "text": "呀，我也會做啦。" }
+  ],
+  "mina_momo_nayeon_tzuyu": [
+	{ "id": "momo", "text": "這個真的很好吃。" },
+	{ "id": "tzuyu", "text": "妳已經說好幾次了。" },
+	{ "id": "nayeon", "text": "但她每次都很真心。" },
+	{ "id": "mina", "text": "（笑）表情也一樣。" },
+	{ "id": "momo", "text": "因為真的好吃。" },
+	{ "id": "nayeon", "text": "好啦再給妳一塊。" }
+  ],
+  "chaeyoung_dahyun_momo_nayeon": [
+	{ "id": "dahyun", "text": "剛剛那段我拍到影片了。" },
+	{ "id": "chaeyoung", "text": "我要看。" },
+	{ "id": "nayeon", "text": "我是不是看起來很好笑？" },
+	{ "id": "momo", "text": "（笑）有一點。" },
+	{ "id": "dahyun", "text": "妳滑倒那一瞬間很自然。" },
+	{ "id": "nayeon", "text": "不要散播出去！！" }
+  ],
+  "chaeyoung_momo_nayeon_tzuyu": [
+	{ "id": "chaeyoung", "text": "這個地方很適合拍封面照。" },
+	{ "id": "tzuyu", "text": "背景很乾淨。" },
+	{ "id": "nayeon", "text": "那我站中間。" },
+	{ "id": "momo", "text": "那我在旁邊吃。" },
+	{ "id": "chaeyoung", "text": "（笑）很有妳的風格。" },
+	{ "id": "tzuyu", "text": "畫面會很真實。" }
+  ],
+  "chaeyoung_dahyun_jihyo_nayeon": [
+	{ "id": "dahyun", "text": "我剛剛差點把鍋子弄倒。" },
+	{ "id": "jihyo", "text": "還好有抓住。" },
+	{ "id": "nayeon", "text": "不然今晚沒東西吃。" },
+	{ "id": "chaeyoung", "text": "會變成野外求生節目。" },
+	{ "id": "dahyun", "text": "...我會負責的！" },
+	{ "id": "jihyo", "text": "沒事的，我們趕緊來吃吧。" }
+  ],
+  "chaeyoung_dahyun_mina_nayeon": [
+	{ "id": "mina", "text": "這邊的風很舒服。" },
+	{ "id": "chaeyoung", "text": "聽起來也有點像白噪音。" },
+	{ "id": "dahyun", "text": "這裡也很適合聊天。" },
+	{ "id": "nayeon", "text": "也很適合睡覺。" },
+	{ "id": "chaeyoung", "text": "歐尼妳又想睡。" },
+	{ "id": "nayeon", "text": "（笑）真的有點睏。" }
+  ],
+  "dahyun_mina_momo_tzuyu": [
+	{ "id": "tzuyu", "text": "這個火有點太大。" },
+	{ "id": "mina", "text": "我調一下。" },
+	{ "id": "momo", "text": "小心燙到。" },
+	{ "id": "dahyun", "text": "我們這組很像料理節目。" },
+	{ "id": "mina", "text": "（笑）但沒有主持人。" },
+	{ "id": "momo", "text": "我可以當評審。" }
+  ],
+  "chaeyoung_mina_momo_tzuyu": [
+	{ "id": "chaeyoung", "text": "剛剛那段我想再拍一次。" },
+	{ "id": "tzuyu", "text": "好，那我站這邊。" },
+	{ "id": "mina", "text": "我幫你們看畫面。" },
+	{ "id": "momo", "text": "那我做什麼？" },
+	{ "id": "chaeyoung", "text": "（笑）妳自由活動。" },
+	{ "id": "momo", "text": "那我去找吃的。" }
+  ],
+  "chaeyoung_dahyun_momo_tzuyu": [
+	{ "id": "dahyun", "text": "這個火是不是快熄了？" },
+	{ "id": "momo", "text": "等一下，我再加一點木頭。" },
+	{ "id": "tzuyu", "text": "我幫忙拿。" },
+	{ "id": "chaeyoung", "text": "畫面好像很專業。" },
+	{ "id": "dahyun", "text": "（笑）但其實剛剛差點失敗。" },
+	{ "id": "momo", "text": "現在成功就好啦。" }
+  ],
+  "jeongyeon_momo_nayeon_tzuyu": [
+	{ "id": "nayeon", "text": "子瑜剛剛那張照片很好看，太漂亮了。" },
+	{ "id": "tzuyu", "text": "（害羞笑）光線幫忙很多。" },
+	{ "id": "jeongyeon", "text": "我們子本來就好看。" },
+	{ "id": "momo", "text": "我也想拍。" },
+	{ "id": "nayeon", "text": "妳先把手擦乾淨。" },
+	{ "id": "momo", "text": "（笑）好啦。" }
+  ],
+  "dahyun_jeongyeon_mina_nayeon": [
+	{ "id": "mina", "text": "這個毯子好暖。" },
+	{ "id": "dahyun", "text": "我剛剛找了好久。" },
+	{ "id": "nayeon", "text": "為什麼只有一條？" },
+	{ "id": "jeongyeon", "text": "因為有人沒準備。" },
+	{ "id": "nayeon", "text": "呀！" },
+	{ "id": "mina", "text": "（笑）可以一起用。" }
+  ],
+  "jihyo_mina_nayeon_sana": [
+	{ "id": "mina", "text": "這邊的星星很清楚。" },
+	{ "id": "sana", "text": "真的欸。" },
+	{ "id": "jihyo", "text": "天氣很好。" },
+	{ "id": "nayeon", "text": "我已經很久沒看星星。" },
+	{ "id": "sana", "text": "有點浪漫。" },
+	{ "id": "mina", "text": "（輕笑）氣氛很好呢。" }
+  ],
+  "chaeyoung_mina_nayeon_sana": [
+	{ "id": "chaeyoung", "text": "我想畫一下這個場景。" },
+	{ "id": "sana", "text": "現在畫嗎？" },
+	{ "id": "mina", "text": "她應該有靈感了。" },
+	{ "id": "nayeon", "text": "那我們不要吵她。" },
+	{ "id": "chaeyoung", "text": "沒關係，可以邊聽你們聊天。" },
+	{ "id": "sana", "text": "（笑）那我們就不客氣地吵妳囉。" }
+  ],
+  "chaeyoung_dahyun_nayeon_sana": [
+	{ "id": "dahyun", "text": "剛剛那段我有錄下來。" },
+	{ "id": "nayeon", "text": "不要剪得太奇怪。" },
+	{ "id": "chaeyoung", "text": "這段可好適合剪進 vlog。" },
+	{ "id": "sana", "text": "感覺 ONCE 們會很喜歡。" },
+	{ "id": "dahyun", "text": "（笑）Nayeon 歐尼這段點擊率應該會很高。" },
+	{ "id": "nayeon", "text": "我會先審過影片！" }
+  ],
+  "chaeyoung_nayeon_sana_tzuyu": [
+	{ "id": "tzuyu", "text": "風有點變大了。" },
+	{ "id": "sana", "text": "頭髮都要被吹亂了。" },
+	{ "id": "nayeon", "text": "但這樣的畫面其實挺好看的。" },
+	{ "id": "chaeyoung", "text": "有點電影感？" },
+	{ "id": "tzuyu", "text": "（笑）太大自然了一點。" }
+  ],
+  "chaeyoung_jihyo_mina_nayeon": [
+	{ "id": "jihyo", "text": "等一下要不要再練一次舞？" },
+	{ "id": "nayeon", "text": "在這裡？" },
+	{ "id": "chaeyoung", "text": "Jihyo 歐尼幹勁滿滿。" },
+	{ "id": "mina", "text": "不過地面有點不平。" },
+	{ "id": "jihyo", "text": "那就簡單帶一下。" },
+	{ "id": "nayeon", "text": "妳真的停不下來。" }
+  ],
+  "jihyo_mina_nayeon_tzuyu_v2": [
+	{ "id": "mina", "text": "剛剛的音樂很棒呢。" },
+	{ "id": "tzuyu", "text": "很適合這個氛圍。" },
+	{ "id": "jihyo", "text": "嘿嘿，我的品味不錯吧。" },
+	{ "id": "nayeon", "text": "播完換我的，我也要讓你們聽聽我的歌單！" },
+	{ "id": "jihyo", "text": "（笑）知道了。" }
+  ],
+  "jeongyeon_jihyo_nayeon_tzuyu": [
+	{ "id": "jihyo", "text": "明天早上誰要負責弄早餐？" },
+	{ "id": "nayeon", "text": "我可以幫忙吃。" },
+	{ "id": "jeongyeon", "text": "這不算幫忙。" },
+	{ "id": "tzuyu", "text": "（笑）我可以早起。" },
+	{ "id": "jihyo", "text": "那我們一起準備。" },
+	{ "id": "nayeon", "text": "好啦，我也會起來幫忙（應該...）。" }
+  ],
+  "mina_momo_nayeon_tzuyu_v2": [
+	{ "id": "momo", "text": "早上真的好冷。" },
+	{ "id": "nayeon", "text": "我完全不想起來。" },
+	{ "id": "tzuyu", "text": "外面空氣很清新。" },
+	{ "id": "mina", "text": "但被窩比較舒服。" },
+	{ "id": "momo", "text": "（笑）我也是這樣想。" },
+	{ "id": "nayeon", "text": "再五分鐘就好......" }
+  ],
+  "mina_momo_sana_tzuyu": [
+	{ "id": "sana", "text": "早餐要吃什麼？" },
+	{ "id": "momo", "text": "有什麼都可以。" },
+	{ "id": "tzuyu", "text": "我可以幫忙煎蛋。" },
+	{ "id": "mina", "text": "我負責擺盤。" },
+	{ "id": "sana", "text": "那我負責試吃。" },
+	{ "id": "momo", "text": "（笑）妳怎麼學我。" }
+  ],
+  "chaeyoung_dahyun_jihyo_nayeon_v2": [
+	{ "id": "jihyo", "text": "油囉本，早餐之後就要開始陸續收東西啦。" },
+	{ "id": "nayeon", "text": "這麼快嗎？" },
+	{ "id": "chaeyoung", "text": "有點捨不得。" },
+	{ "id": "dahyun", "text": "昨天才剛來。" },
+	{ "id": "jihyo", "text": "開心的時間過很快。" },
+	{ "id": "chaeyoung", "text": "好想再待一下啊～" }
+  ],
+  "dahyun_momo_sana_tzuyu_v2": [
+	{ "id": "dahyun", "text": "早餐味道很不錯欸。" },
+	{ "id": "momo", "text": "我有幫忙。" },
+	{ "id": "sana", "text": "她負責試吃。" },
+	{ "id": "tzuyu", "text": "（笑）很重要的角色。" },
+	{ "id": "momo", "text": "品質控管。" },
+	{ "id": "dahyun", "text": "歐尼很有說服力。" }
+  ],
+  "jeongyeon_momo_sana_tzuyu": [
+	{ "id": "jeongyeon", "text": "子瑜早上起得很早呢。" },
+	{ "id": "tzuyu", "text": "我好像習慣早起了。" },
+	{ "id": "momo", "text": "我完全起不來。" },
+	{ "id": "sana", "text": "我也是被叫醒。" },
+	{ "id": "jeongyeon", "text": "你們兩個怎麼連睡覺習慣都那麼一致？" }
+  ],
+  "dahyun_jihyo_mina_tzuyu": [
+	{ "id": "jihyo", "text": "這邊收好了嗎？" },
+	{ "id": "dahyun", "text": "差不多了。" },
+	{ "id": "mina", "text": "剩下這一點。" },
+	{ "id": "tzuyu", "text": "我來幫歐尼。" },
+	{ "id": "jihyo", "text": "不錯不錯，效率很好。" },
+	{ "id": "dahyun", "text": "（笑）Jihyo 歐尼很滿意呢。" }
+  ],
+  "dahyun_jeongyeon_momo_nayeon": [
+	{ "id": "nayeon", "text": "這個東西要怎麼收啊？" },
+	{ "id": "jeongyeon", "text": "妳剛剛不是才用過。" },
+	{ "id": "momo", "text": "我也不太會。" },
+	{ "id": "dahyun", "text": "（笑）總覺得我們這組有點危險。" },
+	{ "id": "jeongyeon", "text": "我來吧。" },
+	{ "id": "nayeon", "text": "空幫窩～～" }
+  ],
+  "jeongyeon_momo_nayeon_sana": [
+	{ "id": "sana", "text": "這個地方真的很漂亮。" },
+	{ "id": "momo", "text": "下次還想來。" },
+	{ "id": "nayeon", "text": "天氣不要太冷就好。" },
+	{ "id": "jeongyeon", "text": "妳昨天也這樣說。" },
+	{ "id": "sana", "text": "（笑）但還是玩得很開心。" },
+	{ "id": "momo", "text": "馬甲。" }
+  ],
+  "chaeyoung_jeongyeon_jihyo_nayeon": [
+	{ "id": "jihyo", "text": "等一下大家確認一下有沒有漏了東西。" },
+	{ "id": "nayeon", "text": "leader mode 啟動了。" },
+	{ "id": "jeongyeon", "text": "習慣了。" },
+	{ "id": "chaeyoung", "text": "（笑）很安心。" },
+	{ "id": "jihyo", "text": "這是必要的。" },
+	{ "id": "nayeon", "text": "好啦好啦。" }
+  ],
+  "dahyun_momo_nayeon_tzuyu": [
+	{ "id": "dahyun", "text": "這個袋子誰的？" },
+	{ "id": "tzuyu", "text": "應該是我的。" },
+	{ "id": "momo", "text": "裡面是吃的嗎？" },
+	{ "id": "nayeon", "text": "妳怎麼先關心這個？" },
+	{ "id": "dahyun", "text": "（笑）很像 Momo 歐尼會說的話。" },
+	{ "id": "tzuyu", "text": "不是食物啦。" }
+  ],
+  "chaeyoung_jihyo_nayeon_sana": [
+	{ "id": "jihyo", "text": "大家收拾好了嗎？" },
+	{ "id": "sana", "text": "差不多了～" },
+	{ "id": "chaeyoung", "text": "我剩最後一點點。" },
+	{ "id": "nayeon", "text": "終於要回去了。" },
+	{ "id": "sana", "text": "但是有點捨不得呢。" },
+	{ "id": "jihyo", "text": "下次大家再一起來吧！" }
+  ],
+  "mina_nayeon_sana_tzuyu": [
+	{ "id": "sana", "text": "子瑜剛剛那張真的很好看。" },
+	{ "id": "tzuyu", "text": "是 Mina 歐尼幫我看的角度。" },
+	{ "id": "mina", "text": "光線也很剛好。" },
+	{ "id": "nayeon", "text": "妳們兩個站在一起感覺就很適合拍一張。" },
+	{ "id": "sana", "text": "（笑）畫面總覺得很純淨。" },
+	{ "id": "tzuyu", "text": "（害羞笑）那再幫我們拍一張？" }
+  ],
+  "chaeyoung_jihyo_nayeon_tzuyu": [
+	{ "id": "chaeyoung", "text": "這段我想再拍一個版本。" },
+	{ "id": "jihyo", "text": "可以，時間還夠。" },
+	{ "id": "tzuyu", "text": "我站剛剛那裡嗎？" },
+	{ "id": "nayeon", "text": "我幫妳看畫面。" },
+	{ "id": "chaeyoung", "text": "好，這次要自然一點。" },
+	{ "id": "jihyo", "text": "我看到子瑜又偷笑了。" }
+  ],
+  "chaeyoung_jihyo_momo_tzuyu": [
+	{ "id": "jihyo", "text": "等一下最後整理一次。" },
+	{ "id": "tzuyu", "text": "好，我負責這邊。" },
+	{ "id": "chaeyoung", "text": "我收這邊的桌子。" },
+	{ "id": "momo", "text": "那我做什麼？" },
+	{ "id": "jihyo", "text": "妳先不要亂放就好。" },
+	{ "id": "momo", "text": "（傻笑）好。" }
+  ],
+  "chaeyoung_mina_sana_tzuyu": [
+	{ "id": "chaeyoung", "text": "我剛剛畫了一點。" },
+	{ "id": "tzuyu", "text": "可以看嗎？" },
+	{ "id": "mina", "text": "（靠過去）這裡很像。" },
+	{ "id": "sana", "text": "（一起看）真的欸。" },
+	{ "id": "chaeyoung", "text": "（笑）你們是不是靠太近了？" },
+	{ "id": "tzuyu", "text": "（繼續靠近）這樣看比較清楚。" }
+  ],
+  "jeongyeon_mina_nayeon_sana": [
+	{ "id": "nayeon", "text": "這裡真的很舒服。" },
+	{ "id": "sana", "text": "有點不想回去。" },
+	{ "id": "jeongyeon", "text": "妳昨天也這樣說。" },
+	{ "id": "mina", "text": "（笑）但還是會回去。" },
+	{ "id": "nayeon", "text": "現實很殘酷。" },
+	{ "id": "sana", "text": "但有跟大家一起的回憶，我覺得很好呢！" }
+  ],
+  "jeongyeon_momo_nayeon_sana_v2": [
+	{ "id": "nayeon", "text": "昨天真的玩得很開心。" },
+	{ "id": "momo", "text": "吃得也很開心，食物很豐富。" },
+	{ "id": "jeongyeon", "text": "妳是不是只記得吃？" },
+	{ "id": "sana", "text": "（笑）但氣氛很好。" },
+	{ "id": "momo", "text": "馬甲。" }
+  ],
+  "chaeyoung_jeongyeon_jihyo_nayeon_v2": [
+	{ "id": "jihyo", "text": "最後再確認一次。" },
+	{ "id": "nayeon", "text": "真的最後了嗎？" },
+	{ "id": "jeongyeon", "text": "她還會再確認。" },
+	{ "id": "chaeyoung", "text": "Jihyo 歐尼讓人很安心。" },
+	{ "id": "jihyo", "text": "這是責任！" },
+	{ "id": "nayeon", "text": "內～～" }
+  ],
+  "chaeyoung_momo_nayeon_sana": [
+	{ "id": "chaeyoung", "text": "我想做一個露營 vlog。" },
+	{ "id": "nayeon", "text": "記得留我好看的片段。" },
+	{ "id": "momo", "text": "那要把吃的過程也放進去。" },
+	{ "id": "sana", "text": "那會變美食節目。" },
+	{ "id": "chaeyoung", "text": "（笑）好像不錯。" },
+	{ "id": "nayeon", "text": "ONCE 們一定會喜歡的。" }
+  ],
+  "dahyun_momo_nayeon_tzuyu_v2": [
+	{ "id": "dahyun", "text": "剛剛那段很好笑。" },
+	{ "id": "tzuyu", "text": "Momo 歐尼表情很真實。" },
+	{ "id": "momo", "text": "因為我嚇到。" },
+	{ "id": "nayeon", "text": "（笑）完全沒修飾。" },
+	{ "id": "dahyun", "text": "很有綜藝感。" },
+	{ "id": "tzuyu", "text": "把這段放進 vlog 裡面吧。" }
+  ],
+  "chaeyoung_momo_nayeon_tzuyu_v2": [
+	{ "id": "chaeyoung", "text": "這次素材很多。" },
+	{ "id": "tzuyu", "text": "可以剪好幾個版本。" },
+	{ "id": "momo", "text": "我要先看。" },
+	{ "id": "nayeon", "text": "我也是。" },
+	{ "id": "chaeyoung", "text": "（笑）大家都要審過一遍。" },
+	{ "id": "nayeon", "text": "外貌 check 很重要！" }
+  ],
+  "dahyun_momo_sana_tzuyu_v3": [
+	{ "id": "momo", "text": "這個可以直接吃嗎？" },
+	{ "id": "sana", "text": "要再加熱一下吧。" },
+	{ "id": "dahyun", "text": "我幫妳開火。" },
+	{ "id": "tzuyu", "text": "（看鍋子）這樣火會不會太大？" },
+	{ "id": "momo", "text": "我覺得剛好。" },
+	{ "id": "sana", "text": "（笑）她只在意快不快。" }
+  ],
+  "chaeyoung_jeongyeon_jihyo_mina_v2": [
+	{ "id": "jeongyeon", "text": "這邊要再拉緊一點。" },
+	{ "id": "jihyo", "text": "我這邊固定好了。" },
+	{ "id": "mina", "text": "這樣風應該不會進來。" },
+	{ "id": "chaeyoung", "text": "（看一圈）看起來很穩。" },
+	{ "id": "jeongyeon", "text": "終於好了。" },
+	{ "id": "jihyo", "text": "合作成功！" }
+  ],
+  "mina_nayeon_sana_tzuyu_v2": [
+	{ "id": "sana", "text": "這裡真的很安靜。" },
+	{ "id": "mina", "text": "風很舒服。" },
+	{ "id": "tzuyu", "text": "（看遠方）很放鬆。" },
+	{ "id": "nayeon", "text": "我剛剛差點睡著。" },
+	{ "id": "sana", "text": "（笑）歐尼妳真的很容易睡著。" },
+	{ "id": "mina", "text": "（輕笑）很幸福。" }
+  ],
+  "chaeyoung_momo_sana_tzuyu_v2": [
+	{ "id": "momo", "text": "這個真的很好吃。" },
+	{ "id": "chaeyoung", "text": "妳今天第幾次說了？" },
+	{ "id": "sana", "text": "至少第五次。" },
+	{ "id": "tzuyu", "text": "（笑）但是真的不錯。" },
+	{ "id": "momo", "text": "對吧。" },
+	{ "id": "chaeyoung", "text": "好啦相信妳。" }
+  ],
+  "jeongyeon_momo_sana_tzuyu_v2": [
+	{ "id": "jeongyeon", "text": "這個要切一下。" },
+	{ "id": "momo", "text": "我來。" },
+	{ "id": "sana", "text": "（看著）小心手。" },
+	{ "id": "tzuyu", "text": "我幫忙拿盤子。" },
+	{ "id": "jeongyeon", "text": "配合得很好耶。" },
+	{ "id": "momo", "text": "（笑）專業吧。" }
+  ],
+  "dahyun_jeongyeon_momo_nayeon_v2": [
+	{ "id": "nayeon", "text": "妳剛剛是不是偷懶？" },
+	{ "id": "momo", "text": "沒有。" },
+	{ "id": "dahyun", "text": "（笑）她有停一下。" },
+	{ "id": "jeongyeon", "text": "我也看到。" },
+	{ "id": "momo", "text": "（笑）一下而已。" },
+	{ "id": "nayeon", "text": "被我抓到了吧。" }
+  ],
+  "jeongyeon_momo_nayeon_sana_v3": [
+	{ "id": "sana", "text": "這個口味很好耶。" },
+	{ "id": "momo", "text": "是我選的。" },
+	{ "id": "jeongyeon", "text": "難得。" },
+	{ "id": "nayeon", "text": "（笑）今天很準。" },
+	{ "id": "sana", "text": "給妳加分。" },
+	{ "id": "momo", "text": "（得意）謝謝。" }
+  ],
+  "dahyun_mina_nayeon_sana_v2": [
+	{ "id": "mina", "text": "這樣坐著感覺要睡著了。" },
+	{ "id": "sana", "text": "（輕聲）很安靜呢。" },
+	{ "id": "dahyun", "text": "...zZ" },
+	{ "id": "nayeon", "text": "（笑）看來大家都一樣。" },
+	{ "id": "mina", "text": "（看 Sana）睡個午覺吧。" },
+	{ "id": "sana", "text": "（湊過去）內～" }
+  ],
+  "dahyun_mina_momo_sana_v2": [
+	{ "id": "momo", "text": "我真的有點餓。" },
+	{ "id": "sana", "text": "妳不是剛吃？" },
+	{ "id": "dahyun", "text": "（笑）她一直在吃。" },
+	{ "id": "mina", "text": "是不是因為氣氛很好？" },
+	{ "id": "momo", "text": "馬甲，而且食物又好吃。" },
+	{ "id": "sana", "text": "（笑）怎麼結論又是這個。" }
+  ],
+  "jeongyeon_mina_nayeon_sana_v2": [
+	{ "id": "nayeon", "text": "今天真的做很多事。" },
+	{ "id": "jeongyeon", "text": "但今天大家做事情都很順暢。" },
+	{ "id": "sana", "text": "而且很好玩。" },
+	{ "id": "mina", "text": "（點頭）很充實。" },
+	{ "id": "nayeon", "text": "（笑）這種感覺很好。" },
+	{ "id": "sana", "text": "下次還要跟大家一起來！" }
   ]
 }

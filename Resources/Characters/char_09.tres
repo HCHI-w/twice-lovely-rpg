@@ -37,7 +37,6 @@ animations = [{
 script = ExtResource("1_fhdwg")
 id = "tzuyu"
 display_name = "Tzuyu"
-base_hp = 80
 base_mp = 13
 base_str = 13
 base_def = 8

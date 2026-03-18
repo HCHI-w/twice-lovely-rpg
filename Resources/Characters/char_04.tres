@@ -9,7 +9,7 @@
 script = ExtResource("1_twjwk")
 id = "sana"
 display_name = "Sana"
-base_hp = 60
+base_hp = 80
 base_mp = 16
 base_str = 6
 base_def = 6

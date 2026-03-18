@@ -7,7 +7,7 @@
 script = ExtResource("1_6betr")
 skill_name = "萬能沾醬"
 mp_cost = 2
-power = 2
+power = 1
 target_type = "all_enemies"
 buff_data = ExtResource("1_2qu3k")
 metadata/_custom_type_script = "uid://c5uq70lmdvwfw"

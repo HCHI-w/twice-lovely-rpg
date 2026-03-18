@@ -9,7 +9,7 @@
 script = ExtResource("1_4ohqo")
 id = "momo"
 display_name = "Momo"
-base_hp = 70
+base_hp = 90
 base_mp = 10
 base_str = 20
 base_def = 9

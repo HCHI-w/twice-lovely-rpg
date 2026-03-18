@@ -9,7 +9,7 @@
 script = ExtResource("1_oxna1")
 id = "chaeyoung"
 display_name = "Chaeyoung"
-base_hp = 60
+base_hp = 80
 base_mp = 18
 base_str = 6
 base_def = 8
