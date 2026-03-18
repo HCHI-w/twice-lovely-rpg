@@ -29,7 +29,7 @@ func refresh():
 		var label = Label.new()
 		
 		if i == index:
-			label.text = "▶ " + combatant.get_display_name()
+			label.text = ">> " + combatant.get_display_name()
 		else:
 			label.text = combatant.get_display_name()
 		

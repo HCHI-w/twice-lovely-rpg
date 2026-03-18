@@ -4,7 +4,11 @@
 [ext_resource type="Theme" uid="uid://bbn6ayd5lv4e2" path="res://Fonts/ThemeFonts.tres" id="2_gbqae"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gbqae"]
-bg_color = Color(0.14, 0.14, 0.14, 0.4509804)
+bg_color = Color(0, 0, 0, 0.54901963)
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
 
 [node name="DialogueBubble" type="Node2D" unique_id=824646297]
 script = ExtResource("1_6rj7d")
@@ -16,10 +20,6 @@ offset_top = -68.0
 offset_right = 215.0
 offset_bottom = -13.0
 theme = ExtResource("2_gbqae")
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 10
 
 [node name="Label" type="Label" parent="PanelContainer" unique_id=1459622624]
 custom_minimum_size = Vector2(250, 35)
@@ -27,4 +27,5 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_gbqae")
 horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 3
