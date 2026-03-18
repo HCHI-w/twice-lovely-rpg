@@ -1,9 +1,9 @@
-# 🎮 Twice Lovely RPG　　　　 <img width="128" height="128" alt="twiceLogo_s" src="https://github.com/user-attachments/assets/f7652680-980f-4427-aac4-5ae0b79a8dc3" />       
+# 🎮 Twice Lovely RPG　　　　　　　　 <img width="128" height="128" alt="twiceLogo_s" src="https://github.com/user-attachments/assets/f7652680-980f-4427-aac4-5ae0b79a8dc3" />       
 ### 🎮 遊戲頁面： https://hchi-w.github.io/twice-lovely-rpg/     
                   
 ![S__512589826](https://github.com/user-attachments/assets/fbff1130-fae7-4ac4-bdbd-947a6cebe052)
 
-= --------------------------------------------------------------------------------------------------------------------------------------------------------- =  
+= ------------------------------------------------------------------------------------------------------------------------------ =  
         
 ## 🎮 Twice Lovely RPG - 專案開發日誌    
 這是一個使用 Godot 4.6 開發的 2D RPG 遊戲。本專案旨打造一個有趣的冒險世界。    
