@@ -1,10 +1,10 @@
-　　　　　　　　　　　　<img width="128" height="128" alt="twiceLogo_s" src="https://github.com/user-attachments/assets/f7652680-980f-4427-aac4-5ae0b79a8dc3" /> 
-#  　　|　Twice Lovely RPG　|　　 　
+　　　　　　　　<img width="128" height="128" alt="twiceLogo_s" src="https://github.com/user-attachments/assets/f7652680-980f-4427-aac4-5ae0b79a8dc3" /> 
+#  　|　Twice Lovely RPG　|　　 　
 ### 🎮 遊戲頁面： https://hchi-w.github.io/twice-lovely-rpg/     
                   
 ![S__512589826](https://github.com/user-attachments/assets/fbff1130-fae7-4ac4-bdbd-947a6cebe052)
 
-= ------------------------------------------------------------------------------- =  
+= --------------------------------------------------------------------------------------- =  
         
 ## 🎮 Twice Lovely RPG - 專案開發日誌    
 這是一個使用 Godot 4.6 開發的 2D RPG 遊戲。本專案旨打造一個有趣的冒險世界。    
@@ -13,6 +13,15 @@
 美術部分是我自己一直都很喜歡的點陣風格，Lovely 們有幫她們畫了幾個簡單的小動作，在遊戲裡面可以稍微留意找找看。    
 整體遊戲內容還非常的簡陋，UI 也有需多地方還不完整，也許未來有餘裕的時候，會再回來調整、把自己想添加的功能補齊。    
 不過這中間開發的過程既爆炸又有趣，推薦大家一起嘗試看看（？    
+
+
+## 🕹️ 遊玩方式    
+1. 回合制戰鬥，沒有地圖探索要素。
+2. 每次選取 3 個角色為一個小隊。
+3. 可以選取重複職業，但目前每個職業的技能都只有一種。
+4. 總共有 5 個關卡，敵人隨機並不固定。
+5. 營地可以提供職業 buff 的加乘。
+6. 有物品蒐集要素，在開始畫面有物品圖鑑可以確認內容。
 
 
 ## 🛠️ 開發環境 (Tech Stack)    
