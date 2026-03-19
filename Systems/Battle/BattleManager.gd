@@ -6,6 +6,7 @@ class_name BattleManager
 signal targets_updated(targets)
 signal player_turn_started
 signal stats_changed
+signal buffs_changed
 signal damage_dealt(target, amount, is_critical, damage_type)
 signal battle_finished(victory: bool)
 signal turn_started(combatant)
@@ -108,6 +109,7 @@ func process_turn_start():
 		return
 	# 回合開始先處理狀態
 	current_combatant.update_buffs()
+	buffs_changed.emit()
 	# 如果因持續傷害 → 死亡
 	if not current_combatant.is_alive:
 		start_next_turn()
@@ -243,8 +245,14 @@ func execute_action(action: BattleAction):
 	var results = []
 	
 	for t in targets:
-		# --- 被攻擊者晃動 ---
-		_play_shake_anim(t)
+		if action is SkillAction:
+			match action.skill_data.effect_type:
+				SkillData.EffectType.DAMAGE:
+					_play_shake_anim(t)   # 被攻擊者晃動
+				SkillData.EffectType.HEAL, SkillData.EffectType.BUFF, SkillData.EffectType.REVIVE:
+					_play_effect_react_anim(t)
+		else:
+			_play_shake_anim(t)
 		
 		# ------------------------
 		var r = action.execute(current_combatant, t)
@@ -266,6 +274,7 @@ func execute_action(action: BattleAction):
 					result.get("damage_type", "PHYSICAL")
 				)
 		stats_changed.emit()
+		buffs_changed.emit()
 	
 	# 清空選擇
 	selected_action = null
@@ -390,6 +399,25 @@ func player_chose_skill(skill_data: SkillData):
 
 # ---------------------------------------------------
 # --- 演出動畫工具 (Tween) ---
+func _play_effect_react_anim(combatant: Combatant):
+	var node = combatant.node_ref
+	if not node: return
+	
+	var tween = create_tween()
+	var orig = node.position
+	
+	tween.set_parallel(false)
+	
+	# 微跳（比攻擊小）
+	tween.tween_property(node, "position", orig + Vector2(0, -15), 0.08)
+	tween.tween_property(node, "position", orig, 0.08)
+	
+	# 左右晃（比受傷小）
+	tween.tween_property(node, "position", orig + Vector2(6, 0), 0.04)
+	tween.tween_property(node, "position", orig + Vector2(-6, 0), 0.04)
+	tween.tween_property(node, "position", orig, 0.04)
+
+
 # 跳躍動畫 (攻擊者用)
 func _play_jump_anim(combatant: Combatant):
 	var node = combatant.node_ref

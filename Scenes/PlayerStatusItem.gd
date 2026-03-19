@@ -8,6 +8,7 @@ var combatant
 @onready var mp_bar = $MainGrid/MPBar
 @onready var hp_label = $MainGrid/HPLabel
 @onready var mp_label = $MainGrid/MPLabel
+@onready var buff_container = $MainGrid/BuffContainer
 
 # ---------------------------------------------------
 func setup(c):
@@ -44,7 +45,7 @@ func update_stats():
 		combatant.current_mp,
 		0
 	).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
-	
+
 func show_damage(amount: int, is_critical: bool, damage_type := "PHYSICAL"):
 	var dmg_scene = preload("res://Scenes/DamageNumber.tscn")
 	var dmg = dmg_scene.instantiate()
@@ -53,6 +54,20 @@ func show_damage(amount: int, is_critical: bool, damage_type := "PHYSICAL"):
 	
 	dmg.position = Vector2(0, -40)
 	dmg.show_damage(amount, is_critical, damage_type)
+
+# buff icon
+func update_buffs():
+	# 清空
+	for child in buff_container.get_children():
+		child.queue_free()
+	
+	# 重新建立
+	for buff in combatant.active_buffs:
+		var icon = TextureRect.new()
+		icon.texture = buff.get_icon()
+		icon.custom_minimum_size = Vector2(24, 24)
+		buff_container.add_child(icon)
+
 
 # ---------------------------------------------------
 func _ready():

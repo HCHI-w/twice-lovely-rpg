@@ -2,6 +2,8 @@
 extends Control
 
 
+signal buffs_changed
+
 @onready var enemy_status_container = %EnemyStatus
 
 var battle_manager: BattleManager
@@ -47,6 +49,9 @@ func setup(manager: BattleManager):
 		
 	if not battle_manager.damage_dealt.is_connected(_on_damage_dealt):
 		battle_manager.damage_dealt.connect(_on_damage_dealt)
+		
+	if not battle_manager.buffs_changed.is_connected(_on_buffs_changed):
+		battle_manager.buffs_changed.connect(_on_buffs_changed)
 	
 	# 玩家/敵人狀態的字體縮放
 	for entry in player_items:
@@ -89,11 +94,16 @@ func _on_stats_changed():
 func update_ui():
 	for entry in player_items:
 		var ui = entry["ui"]
+#		var combatant = entry["combatant"]
+		
 		ui.update_stats()
+		ui.update_buffs()
+		
 		_apply_font_to_ui(ui)
 	
 	for ui in enemy_items:
 		ui.update_stats()
+		ui.update_buffs()
 
 
 func _apply_font_to_ui(ui):
@@ -150,6 +160,21 @@ func _on_damage_dealt(target, amount, is_critical, _damage_type):
 
 	# 同步更新血條與數值
 	ui_node.update_stats()
+
+# buff icon
+func _on_buffs_changed():
+	update_buffs_only()
+
+# buff icon 更新
+func update_buffs_only():
+	# 玩家
+	for entry in player_items:
+		var ui = entry["ui"]
+		ui.update_buffs()
+	
+	# 敵人
+	for ui in enemy_items:
+		ui.update_buffs()
 
 # ---------------------------------------------------
 # 縮放 Label 字體

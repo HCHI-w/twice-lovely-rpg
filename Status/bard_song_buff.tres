@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="BuffData" format=3 uid="uid://ck6g4w6fau47u"]
 
+[ext_resource type="Texture2D" uid="uid://dslxmx74xs3ln" path="res://0Picture/BuffIcon/Buff.png" id="1_eymsy"]
 [ext_resource type="Script" uid="uid://o5byigwq6jju" path="res://Status/BuffData.gd" id="1_pmyq0"]
 
 [resource]
@@ -7,6 +8,7 @@ script = ExtResource("1_pmyq0")
 buff_id = "bard_song_buff"
 name = "物理、魔法攻擊提升"
 description = "物理、魔法攻擊提升"
+buff_icon = ExtResource("1_eymsy")
 stats_flat = {
 "def": 0,
 "dex": 0,

@@ -6,6 +6,7 @@ var combatant
 @onready var name_label = $MainGrid/NameLabel
 @onready var hp_bar = $MainGrid/HPBar
 @onready var hp_label = $MainGrid/HPLabel
+@onready var buff_container = $MainGrid/BuffContainer
 
 # ---------------------------------------------------
 func setup(c):
@@ -31,18 +32,28 @@ func update_stats():
 		0.4
 	).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
 
-func show_damage(amount: int, is_critical: bool):
-	$DamageLabel.text = str(amount)
+func show_damage(amount: int, is_critical: bool, damage_type := "PHYSICAL"):
+	var dmg_scene = preload("res://Scenes/DamageNumber.tscn")
+	var dmg = dmg_scene.instantiate()
+	
+	add_child(dmg)
+	
+	dmg.position = Vector2(0, -40)
+	dmg.show_damage(amount, is_critical, damage_type)
 
-	if is_critical:
-		$DamageLabel.modulate = Color.RED
-	else:
-		$DamageLabel.modulate = Color.WHITE
 
-	$DamageLabel.visible = true
-
-	await get_tree().create_timer(0.8).timeout
-	$DamageLabel.visible = false
+# buff icon
+func update_buffs():
+	# 清空
+	for child in buff_container.get_children():
+		child.queue_free()
+	
+	# 重新建立
+	for buff in combatant.active_buffs:
+		var icon = TextureRect.new()
+		icon.texture = buff.get_icon()
+		icon.custom_minimum_size = Vector2(24, 24)
+		buff_container.add_child(icon)
 
 # ---------------------------------------------------
 func _ready():

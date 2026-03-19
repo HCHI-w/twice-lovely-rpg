@@ -1,11 +1,13 @@
 [gd_resource type="Resource" script_class="BuffData" format=3 uid="uid://c51dxgi8qsag3"]
 
 [ext_resource type="Script" uid="uid://o5byigwq6jju" path="res://Status/BuffData.gd" id="1_0gryh"]
+[ext_resource type="Texture2D" uid="uid://dsxhratp5o6jm" path="res://0Picture/BuffIcon/Debuff_stun.png" id="1_l3mdc"]
 
 [resource]
 script = ExtResource("1_0gryh")
 buff_id = "stun"
 name = "暈眩"
-duration = 1
+duration = 2
 prevents_action = true
+buff_icon = ExtResource("1_l3mdc")
 metadata/_custom_type_script = "uid://o5byigwq6jju"

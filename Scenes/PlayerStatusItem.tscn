@@ -29,7 +29,7 @@ columns = 2
 [node name="NameLabel" type="Label" parent="MainGrid" unique_id=347835534]
 layout_mode = 2
 
-[node name="Empty" type="Control" parent="MainGrid" unique_id=774385098]
+[node name="Control" type="Control" parent="MainGrid" unique_id=593469020]
 layout_mode = 2
 
 [node name="HPBar" type="ProgressBar" parent="MainGrid" unique_id=1260163944]
@@ -57,3 +57,7 @@ show_percentage = false
 
 [node name="MPLabel" type="Label" parent="MainGrid" unique_id=720106990]
 layout_mode = 2
+
+[node name="BuffContainer" type="HBoxContainer" parent="MainGrid" unique_id=1757822860]
+layout_mode = 2
+theme_override_constants/separation = 6

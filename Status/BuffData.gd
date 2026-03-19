@@ -10,6 +10,7 @@ class_name BuffData
 @export var damage_ratio: float = 0.0
 @export var prevents_action: bool = false   # 不能行動 → 暈眩
 @export var is_damage_over_time: bool = false   # 持續傷害
+@export var buff_icon: Texture2D
 
 #純數值，不寫邏輯
 @export var stats_flat = {

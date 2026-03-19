@@ -226,30 +226,30 @@ func _on_depart_pressed():
 # ---------------------------------------------------
 func connect_slot_clicks():
 	for slot in player_slots:
-		slot.slot_clicked.connect(_on_slot_clicked.bind(slot))
+		slot.slot_clicked.connect(_on_slot_clicked)
 
 
-func _on_slot_clicked(_viewport, _event, _shape_idx, slot):
+func _on_slot_clicked(slot, _unit, _team, _index):
 	if battle_manager.state != BattleManager.BattleState.TARGET_SELECT:
 		return
 	
-	var combatant = get_combatant_from_slot(slot)
+	var combatant = slot.combatant
 	if combatant == null:
 		return
 	
 	battle_manager.receive_target(combatant)
 
 
-func get_combatant_from_slot(slot):
-	for c in battle_manager.allies:
-		if c.node_ref == slot:
-			return c
+#func get_combatant_from_slot(slot):
+#	for c in battle_manager.allies:
+#		if c.node_ref == slot:
+#			return c
 	
-	for c in battle_manager.enemies:
-		if c.node_ref == slot:
-			return c
+#	for c in battle_manager.enemies:
+#		if c.node_ref == slot:
+#			return c
 	
-	return null
+#	return null
 
 func _on_targets_updated(_targets):
 	print("進入目標選擇模式")
@@ -327,6 +327,7 @@ func bind_combatant_nodes():
 		if i < battle_manager.allies.size():
 			var combatant = battle_manager.allies[i]
 			combatant.node_ref = node
+			node.combatant = combatant
 			
 			var texture_rect = node.get_node("TextureRect")
 			texture_rect.texture = combatant.battle_texture

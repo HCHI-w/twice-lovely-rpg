@@ -119,6 +119,7 @@ visible = false
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
+theme_override_font_sizes/font_size = 24
 
 [node name="RightSide" type="VBoxContainer" parent="CharacterSelectPanel/MainLayout" unique_id=958798831]
 layout_mode = 2

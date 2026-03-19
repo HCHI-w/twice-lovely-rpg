@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="BuffData" format=3 uid="uid://b31tjcyqq6gvh"]
 
+[ext_resource type="Texture2D" uid="uid://dslxmx74xs3ln" path="res://0Picture/BuffIcon/Buff.png" id="1_27hcw"]
 [ext_resource type="Script" uid="uid://o5byigwq6jju" path="res://Status/BuffData.gd" id="1_v8lcc"]
 
 [resource]
@@ -7,6 +8,7 @@ script = ExtResource("1_v8lcc")
 buff_id = "knight_buff"
 name = "防禦提升、物理攻擊小幅提升"
 description = "防禦提升、物理攻擊小幅提升"
+buff_icon = ExtResource("1_27hcw")
 stats_flat = {
 "def": 30,
 "dex": 0,

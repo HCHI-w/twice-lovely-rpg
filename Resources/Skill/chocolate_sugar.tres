@@ -5,9 +5,9 @@
 
 [resource]
 script = ExtResource("1_57cdh")
+attack_type = 1
 skill_name = "多巴胺派對"
 mp_cost = 2
-power = 1
-target_type = "all_enemies"
+power = 2
 buff_data = ExtResource("1_lw1ll")
 metadata/_custom_type_script = "uid://c5uq70lmdvwfw"

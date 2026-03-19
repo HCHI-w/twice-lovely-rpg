@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="BuffData" format=3 uid="uid://b43pcu6rgksk2"]
 
+[ext_resource type="Texture2D" uid="uid://c8vo1fsokmkj" path="res://0Picture/BuffIcon/Debuff_poison.png" id="1_awkbl"]
 [ext_resource type="Script" uid="uid://o5byigwq6jju" path="res://Status/BuffData.gd" id="1_t4fx1"]
 
 [resource]
@@ -8,4 +9,5 @@ buff_id = "poison"
 name = "中毒"
 damage_ratio = 1.5
 is_damage_over_time = true
+buff_icon = ExtResource("1_awkbl")
 metadata/_custom_type_script = "uid://o5byigwq6jju"

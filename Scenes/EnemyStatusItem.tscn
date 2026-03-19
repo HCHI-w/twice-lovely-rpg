@@ -22,7 +22,7 @@ columns = 2
 [node name="NameLabel" type="Label" parent="MainGrid" unique_id=1028660071]
 layout_mode = 2
 
-[node name="Empty" type="Control" parent="MainGrid" unique_id=702777025]
+[node name="Control" type="Control" parent="MainGrid" unique_id=1706048742]
 layout_mode = 2
 
 [node name="HPBar" type="ProgressBar" parent="MainGrid" unique_id=960395548]
@@ -38,3 +38,6 @@ show_percentage = false
 layout_mode = 2
 horizontal_alignment = 2
 vertical_alignment = 1
+
+[node name="BuffContainer" type="HBoxContainer" parent="MainGrid" unique_id=603400763]
+layout_mode = 2

@@ -9,6 +9,9 @@ func _init(buff_data: BuffData, turns: int):
 	data = buff_data
 	remaining_turns = turns
 
+func get_icon():
+	return data.buff_icon
+
 func tick():
 	remaining_turns -= 1
 	
