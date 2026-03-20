@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CollectibleData" format=3 uid="uid://bw61kuef1vn04"]
+
+[ext_resource type="Script" uid="uid://cennh40dcrbxh" path="res://Data/Collectibles/CollectibleData.gd" id="1_6cdhi"]
+[ext_resource type="Texture2D" uid="uid://bv2ge7v6bcx3j" path="res://Data/Collectibles/kimbap_common.png" id="1_l37pp"]
+
+[resource]
+script = ExtResource("1_6cdhi")
+id = "kimbap_common"
+display_name = "邊角料"
+description = "剩下的邊角料最好吃～"
+icon = ExtResource("1_l37pp")
+metadata/_custom_type_script = "uid://cennh40dcrbxh"

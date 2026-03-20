@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CollectibleData" format=3 uid="uid://ctp3juhcmmudw"]
+
+[ext_resource type="Texture2D" uid="uid://duo0a2v5aftan" path="res://0Picture/Enemy_pic/taiwan_rice_dog.png" id="1_jq5hy"]
+[ext_resource type="Script" uid="uid://cennh40dcrbxh" path="res://Data/Collectibles/CollectibleData.gd" id="2_8kg37"]
+
+[resource]
+script = ExtResource("2_8kg37")
+id = "taiwan_rice_dog_rare"
+display_name = "大腸包小腸"
+description = "你好，我是台式熱狗堡"
+icon = ExtResource("1_jq5hy")
+rarity = "Rare"
+metadata/_custom_type_script = "uid://cennh40dcrbxh"

@@ -9,4 +9,5 @@ id = "bread_rare"
 display_name = "巧克力麵包"
 description = "大人與小朋友都喜歡的巧克力麵包！"
 icon = ExtResource("1_la1d0")
+rarity = "Rare"
 metadata/_custom_type_script = "uid://cennh40dcrbxh"

@@ -49,7 +49,10 @@ func _ready():
 		preload("res://Resources/Enemy/jokbal.tres"),
 		preload("res://Resources/Enemy/ketchup.tres"),
 		preload("res://Resources/Enemy/spicy_beef.tres"),
-		preload("res://Resources/Enemy/yogurt.tres")
+		preload("res://Resources/Enemy/yogurt.tres"),
+		preload("res://Resources/Enemy/bubble_tea.tres"),
+		preload("res://Resources/Enemy/kimbap.tres"),
+		preload("res://Resources/Enemy/taiwan_rice_dog.tres")
 	]
 	
 	battle_manager.turn_started.connect(_on_turn_started)

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CollectibleData" format=3 uid="uid://bl74ho88rseg3"]
+
+[ext_resource type="Texture2D" uid="uid://ckwhtmfr1axyf" path="res://Data/Collectibles/bubble_tea_common.png" id="1_h2k6e"]
+[ext_resource type="Script" uid="uid://cennh40dcrbxh" path="res://Data/Collectibles/CollectibleData.gd" id="1_lpq8k"]
+
+[resource]
+script = ExtResource("1_lpq8k")
+id = "bubble_tea_common"
+display_name = "黑糖珍珠"
+description = "被剩下的黑糖珍珠，奶茶比較好喝呢"
+icon = ExtResource("1_h2k6e")
+metadata/_custom_type_script = "uid://cennh40dcrbxh"

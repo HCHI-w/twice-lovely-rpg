@@ -9,4 +9,5 @@ id = "chocolate_rare"
 display_name = "金箔"
 description = "看起來是巧克力上的金箔"
 icon = ExtResource("1_b5126")
+rarity = "Rare"
 metadata/_custom_type_script = "uid://cennh40dcrbxh"

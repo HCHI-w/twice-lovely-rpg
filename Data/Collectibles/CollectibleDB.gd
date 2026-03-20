@@ -18,7 +18,13 @@ const LIST = [
 	preload("res://Data/Collectibles/spicy_beef_common.tres"),
 	preload("res://Data/Collectibles/spicy_beef_rare.tres"),
 	preload("res://Data/Collectibles/yogurt_common.tres"),
-	preload("res://Data/Collectibles/yogurt_rare.tres")
+	preload("res://Data/Collectibles/yogurt_rare.tres"),
+	preload("res://Data/Collectibles/bubble_tea_common.tres"),
+	preload("res://Data/Collectibles/bubble_tea_rare.tres"),
+	preload("res://Data/Collectibles/kimbap_common.tres"),
+	preload("res://Data/Collectibles/kimbap_rare.tres"),
+	preload("res://Data/Collectibles/taiwan_rice_dog_common.tres"),
+	preload("res://Data/Collectibles/taiwan_rice_dog_rare.tres")
 ]
 
 

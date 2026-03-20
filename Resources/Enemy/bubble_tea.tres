@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://b0g6fb1mr54ig"]
+
+[ext_resource type="Texture2D" uid="uid://bikd1456ageiu" path="res://0Picture/Enemy_pic/bubble_tea.png" id="1_0yup4"]
+[ext_resource type="Resource" uid="uid://bl74ho88rseg3" path="res://Data/Collectibles/bubble_tea_common.tres" id="1_g8175"]
+[ext_resource type="Resource" uid="uid://daltjwruvdfvp" path="res://Data/Collectibles/bubble_tea_rare.tres" id="2_0yup4"]
+[ext_resource type="Resource" uid="uid://djjbo6lhuw0xt" path="res://Resources/Skill/bubble_tea_shoot.tres" id="3_sbtk3"]
+[ext_resource type="Script" uid="uid://tsqw8d1qr6ck" path="res://Resources/Enemy/EnemyData.gd" id="4_vsn7l"]
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="5_cnkju"]
+
+[resource]
+script = ExtResource("4_vsn7l")
+enemy_id = "bubble_tea"
+name = "珍珠奶茶"
+base_hp = 130
+base_str = 4
+base_def = 5
+base_int = 17
+base_dex = 9
+base_luk = 6
+skill_list = Array[ExtResource("5_cnkju")]([ExtResource("3_sbtk3")])
+battle_texture = ExtResource("1_0yup4")
+drop_common = ExtResource("1_g8175")
+drop_rare = ExtResource("2_0yup4")
+metadata/_custom_type_script = "uid://tsqw8d1qr6ck"

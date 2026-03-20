@@ -113,7 +113,7 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Description" type="RichTextLabel" parent="MarginContainer/Panel/InfoOverlay/InfoPanel/VBoxContainer" unique_id=190535407]
-custom_minimum_size = Vector2(0, 80)
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 horizontal_alignment = 1
 vertical_alignment = 1

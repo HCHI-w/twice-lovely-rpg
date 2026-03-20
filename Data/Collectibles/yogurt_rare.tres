@@ -9,4 +9,5 @@ id = "yogurt_rare"
 display_name = "水果優格"
 description = "有許多繽紛的水果組合"
 icon = ExtResource("1_2ohw2")
+rarity = "Rare"
 metadata/_custom_type_script = "uid://cennh40dcrbxh"

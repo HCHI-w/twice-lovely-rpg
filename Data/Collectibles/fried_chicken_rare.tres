@@ -9,4 +9,5 @@ id = "fried_chicken_rare"
 display_name = "炸雞腿"
 description = "鮮嫩多汁炸雞腿"
 icon = ExtResource("1_qqr8i")
+rarity = "Rare"
 metadata/_custom_type_script = "uid://cennh40dcrbxh"

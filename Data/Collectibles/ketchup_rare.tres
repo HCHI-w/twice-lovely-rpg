@@ -9,4 +9,5 @@ id = "ketchup_rare"
 display_name = "番茄醬"
 description = "跟任何東西都很搭，家中必備"
 icon = ExtResource("1_obg2e")
+rarity = "Rare"
 metadata/_custom_type_script = "uid://cennh40dcrbxh"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CollectibleData" format=3 uid="uid://dhphvcvmtc3ay"]
+
+[ext_resource type="Script" uid="uid://cennh40dcrbxh" path="res://Data/Collectibles/CollectibleData.gd" id="1_87m56"]
+[ext_resource type="Texture2D" uid="uid://bmf3r65rfs2ik" path="res://0Picture/Enemy_pic/kimbap.png" id="1_tw6by"]
+
+[resource]
+script = ExtResource("1_87m56")
+id = "kimbap_rare"
+display_name = "起司飯捲？"
+description = "你最喜歡什麼口味呢？"
+icon = ExtResource("1_tw6by")
+rarity = "Rare"
+metadata/_custom_type_script = "uid://cennh40dcrbxh"

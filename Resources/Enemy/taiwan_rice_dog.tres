@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://ckh8awnmcpi1a"]
+
+[ext_resource type="Resource" uid="uid://drevcgebipyil" path="res://Data/Collectibles/taiwan_rice_dog_common.tres" id="1_e22dy"]
+[ext_resource type="Texture2D" uid="uid://duo0a2v5aftan" path="res://0Picture/Enemy_pic/taiwan_rice_dog.png" id="1_ly0xi"]
+[ext_resource type="Script" uid="uid://tsqw8d1qr6ck" path="res://Resources/Enemy/EnemyData.gd" id="1_s55b1"]
+[ext_resource type="Resource" uid="uid://ctp3juhcmmudw" path="res://Data/Collectibles/taiwan_rice_dog_rare.tres" id="2_ly0xi"]
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="2_t2fyd"]
+[ext_resource type="Resource" uid="uid://po5jkx3m5ny8" path="res://Resources/Skill/taiwan_rice_dog_punch.tres" id="3_t2fyd"]
+
+[resource]
+script = ExtResource("1_s55b1")
+enemy_id = "taiwan_rice_dog"
+name = "大腸包小腸"
+base_hp = 160
+base_mp = 35
+base_str = 16
+base_def = 11
+base_int = 5
+base_dex = 9
+base_luk = 8
+skill_list = Array[ExtResource("2_t2fyd")]([ExtResource("3_t2fyd")])
+battle_texture = ExtResource("1_ly0xi")
+drop_common = ExtResource("1_e22dy")
+drop_rare = ExtResource("2_ly0xi")
+metadata/_custom_type_script = "uid://tsqw8d1qr6ck"

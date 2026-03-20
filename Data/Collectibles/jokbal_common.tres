@@ -9,4 +9,5 @@ id = "jokbal_common"
 display_name = "骨頭"
 description = "只剩下骨頭了，啃得好乾淨"
 icon = ExtResource("1_d63wq")
+rarity = "Rare"
 metadata/_custom_type_script = "uid://cennh40dcrbxh"

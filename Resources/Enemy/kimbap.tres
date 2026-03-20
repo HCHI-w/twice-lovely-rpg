@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://dkrnosbgougyl"]
+
+[ext_resource type="Resource" uid="uid://bw61kuef1vn04" path="res://Data/Collectibles/kimbap_common.tres" id="1_06m8b"]
+[ext_resource type="Script" uid="uid://tsqw8d1qr6ck" path="res://Resources/Enemy/EnemyData.gd" id="1_qox8y"]
+[ext_resource type="Texture2D" uid="uid://bmf3r65rfs2ik" path="res://0Picture/Enemy_pic/kimbap.png" id="1_wjcwk"]
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="2_sxpe1"]
+[ext_resource type="Resource" uid="uid://dhphvcvmtc3ay" path="res://Data/Collectibles/kimbap_rare.tres" id="2_wjcwk"]
+[ext_resource type="Resource" uid="uid://dmjh36nqmj876" path="res://Resources/Skill/kimbap_punch.tres" id="3_sxpe1"]
+
+[resource]
+script = ExtResource("1_qox8y")
+enemy_id = "kimbap"
+name = "飯捲"
+base_hp = 140
+base_mp = 35
+base_str = 15
+base_def = 10
+base_int = 6
+base_dex = 10
+base_luk = 6
+skill_list = Array[ExtResource("2_sxpe1")]([ExtResource("3_sxpe1")])
+battle_texture = ExtResource("1_wjcwk")
+drop_common = ExtResource("1_06m8b")
+drop_rare = ExtResource("2_wjcwk")
+metadata/_custom_type_script = "uid://tsqw8d1qr6ck"

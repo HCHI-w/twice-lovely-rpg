@@ -92,7 +92,7 @@ func _adjust_background(window_size: Vector2):
 		# 這樣圖片的「垂直尺寸」就會剛好撐滿螢幕，且比例不變
 		var scale_factor = window_size.y / tex_size.y
 		
-		# 如果希望在橫式時不要露出左右黑邊，可以加一個保險：
+		# 如果希望在橫式時不要露出左右黑邊
 		if (tex_size.x * scale_factor) < window_size.x:
 			scale_factor = window_size.x / tex_size.x
 		
@@ -246,13 +246,13 @@ func trigger_random_dialogue():
 	
 	# 如果有找到任何匹配的劇本
 	if matched_scripts.size() > 0:
-		print("✅ 成功匹配到組合劇本，數量：", matched_scripts.size())
+		print("成功匹配到組合劇本，數量：", matched_scripts.size())
 		# 隨機從匹配清單中挑選一個劇本
 		current_group_sequence = matched_scripts.pick_random()
 		sequence_index = 0
 		play_next_in_sequence()
 	else:
-		print("❌ 找不到匹配劇本，執行個人隨機對話 (Key: ", group_key, ")")
+		print("找不到匹配劇本，執行個人隨機對話 (Key: ", group_key, ")")
 		# 沒劇本就退回原本的「個人隨機對話」
 		current_group_sequence = [] # 清空劇本
 		sequence_index = 0

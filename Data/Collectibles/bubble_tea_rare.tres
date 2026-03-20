@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CollectibleData" format=3 uid="uid://daltjwruvdfvp"]
+
+[ext_resource type="Texture2D" uid="uid://bikd1456ageiu" path="res://0Picture/Enemy_pic/bubble_tea.png" id="1_iuhd0"]
+[ext_resource type="Script" uid="uid://cennh40dcrbxh" path="res://Data/Collectibles/CollectibleData.gd" id="1_ljju2"]
+
+[resource]
+script = ExtResource("1_ljju2")
+id = "bubble_tea_rare"
+display_name = "珍珠奶茶"
+description = "家喻戶曉，手搖飲界的世界名人"
+icon = ExtResource("1_iuhd0")
+rarity = "Rare"
+metadata/_custom_type_script = "uid://cennh40dcrbxh"

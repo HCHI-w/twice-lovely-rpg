@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://dmjh36nqmj876"]
+
+[ext_resource type="Resource" uid="uid://c51dxgi8qsag3" path="res://Status/debuff_stun.tres" id="1_2w5bp"]
+[ext_resource type="Script" uid="uid://c5uq70lmdvwfw" path="res://Resources/Skill/SkillData.gd" id="2_bk1j3"]
+
+[resource]
+script = ExtResource("2_bk1j3")
+attack_type = 1
+skill_name = "醃蘿蔔打擊！"
+mp_cost = 2
+power = 10
+target_type = "all_enemies"
+effect_chance = 0.6
+buff_data = ExtResource("1_2w5bp")
+metadata/_custom_type_script = "uid://c5uq70lmdvwfw"

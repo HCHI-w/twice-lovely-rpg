@@ -9,4 +9,5 @@ id = "gummy_bear_rare"
 display_name = "小熊軟糖"
 description = "坐在其他小熊身上的小熊軟糖"
 icon = ExtResource("1_f1ygo")
+rarity = "Rare"
 metadata/_custom_type_script = "uid://cennh40dcrbxh"
